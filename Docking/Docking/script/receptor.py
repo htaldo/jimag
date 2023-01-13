@@ -1,24 +1,10 @@
-import os
+import sys
 import chimera
+
 from chimera import runCommand
 
 #MODULE
-def print_het(recep):
-    freq_table = []
-    for r in recep.residues:
-        if r.isHet:
-            in_table = 0
-            for row in freq_table:
-                #check if current r.type is in the freq_table
-                if row['htype'] == r.type:
-                    row['freq'] += 1
-                    in_table = 1
-                    break
-            if in_table == 0:
-                #append new entry if not in table
-                freq_table.append({'htype': r.type, 'freq': 1})
-    print(freq_table)
-            
+           
 def del_res(recep, residue_list):
     for res_type in residue_list:
         for r in recep.residues:
@@ -33,21 +19,20 @@ def prot_only(recep):
 def chain_names(recep):
     print(recep.sequences(asDict = True).keys())
 
-def chain_only(recep, chain_name):
+def chain_only(recep, chain_names):
     chains = recep.sequences(asDict = True)
-    for r in recep.residues:
-        if r not in chains[chain_name].residues:
-            recep.deleteResidue(r)
+    for chain in chains:
+        if chain not in chain_names:
+            for r in recep.sequence(chain).residues:
+                if r is not None:
+                    recep.deleteResidue(r)
         
-#SCRIPT
-#model = chimera.openModels.open("4kg5", type="PDB")
+#MAIN
 model = chimera.openModels.open('input/receptor.pdb')
 recep = model[0]
 
-#inp = raw_input("Type the residues you want to delete: ")
-#del_res(recep, inp.split())
-
-print_het(recep)
-#prot_only(recep)
-chain_only(recep, 'A')
+#can we delete "r"
+chain_names = open("input/config","r").read().split()
+chain_only(recep, chain_names)
+prot_only(recep)
 runCommand("write format pdb 0 output/receptor.pdb")

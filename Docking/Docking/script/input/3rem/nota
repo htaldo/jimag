@@ -1,0 +1,5 @@
+en total el algoritmo tarda 23 segundos para esta proteína
+el algoritmo se basa en los átomos del bolsillo para construir la caja, 
+pero para dibujar el bolsillo se usan los residuos. La diferencia es notable
+aquí: la caja está dibujada correctamente, pero p2rank parece involucrar
+residuos que no corresponden a la zona

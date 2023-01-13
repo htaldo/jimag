@@ -1,4 +1,0 @@
-#n this n suppresses automatic output
-/^MODEL/,/^ENDMODEL/{
-	s/^ATOM//p
-}
