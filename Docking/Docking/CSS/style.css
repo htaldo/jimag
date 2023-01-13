@@ -104,6 +104,9 @@ body{
 .contenido {
     text-align: left;
 }
+.info-img{
+    text-align: center;
+}
 .init{
     color: blue;
     letter-spacing: 5px;
@@ -141,4 +144,15 @@ body{
 .border{
     border: solid 2px gray;
 
+}
+p {
+    text-align: justify;
+
+}
+.img {
+    width: 200px;
+    height: 200px;
+    
+    
+    
 }
