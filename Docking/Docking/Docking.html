@@ -31,9 +31,9 @@
          </div>
     
         
-         <div class="info-img">
+            <div class="info-img">
            
-             <tr>
+                <tr>
                 <td><img src="static/proteina.jpeg" class="img" alt="Proteína" ></td>
                 <td><img src="static/pgif2.gif" class="img" alt="Imagen en 3-D" > </td>
                 <td><img src="static/ligando1.jpeg" class="img" alt="Ligando" ></td>
@@ -63,33 +63,20 @@
                     <td>Insert Protein</td>
                     <td>Protein-Ligand</td>
                     <td>Insert Ligand</td>
-              
                     </tr>
            
                     <tr>
-                 <form action="#" method="post" enctype="application/x-www-form-urlencoded">
-                    <td><label for="pdb1">Insert P</label><br> 
-                    <input type="file" name="pdb1" id="pdb1" required> 
-                    </td>
-                    <td> 
-                   
-                    </td>
-                    <td>
-                       <label for="pdb1">Insert P</label><br> 
-                    <input type="file" name="pdb1" id="pdb1" required> 
-                        
-                    </td>
-                    <input type="submit" value="login"> 
-           
-                 </form>
-           
-                    </tr> 
-
+                 <form action="doc.php" method="post" enctype="multipart/form-data">
+                    <label for="pdb1">Insert Protein</label><br> 
+                    <input type="file" name="Archivo" required><br>  
+                    <label for="pdb1">Insert Ligand</label><br> 
+                    <input type="file" name="Archivo1" required> <br>
+                    <button type="submit"> Subir documentos</button>
+                </tr>  
+                </form>
+       
                   </table>
                 </div> 
-
-            
-
 
             <div class="group-btn">
             <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3543563/" class="btn btn-yellow"> Click para formatos pdb </a>
