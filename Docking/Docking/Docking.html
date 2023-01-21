@@ -57,30 +57,26 @@
             </div>
                   <br> 
                  
-                <div class="info-img"> 
-                 <table >
-                    <tr>
-                    <td>Insert Protein</td>
-                    <td>Protein-Ligand</td>
-                    <td>Insert Ligand</td>
-                    </tr>
-           
-                    <tr>
+                <div class="info-img"> </div> 
+                <br>
                  <form action="doc.php" method="post" enctype="multipart/form-data">
                     <label for="pdb1">Insert Protein</label><br> 
-                    <input type="file" name="Archivo" required><br>  
-                    <label for="pdb1">Insert Ligand</label><br> 
-                    <input type="file" name="Archivo" required> <br>
-                    <button type="submit"> Subir documentos</button>
-                </tr>  
+                    <input type="file" name="Protein" required><br> 
+                    <input type="submit" value="Upload">
+                 </form> <br>
+                 <form  action="doc1.php" method="post" enctype="multipart/form-data">
+                    <br> 
+                    <input type="file" name="uploaded_file" required> <br>
+                    <input type="submit" value="Upload">
                 </form>
+                <br>
        
-                  </table>
-                </div> 
+                
+                
 
             <div class="group-btn">
             <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3543563/" class="btn btn-yellow"> Click para formatos pdb </a>
-            <a href="script(1).zip" class="btn border">Descarga el contenido</a> </div>
+            <a href="script(1).zip" class="btn border">Descarga el script</a> </div>
             </div> <br>
 
           <br>
