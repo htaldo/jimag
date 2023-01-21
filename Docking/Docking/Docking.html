@@ -70,19 +70,18 @@
                     <input type="submit" value="Upload">
                 </form>
                 <br>
-                <button onclick="runCommand()">Run Command</button>
-
+                <button onclick="runCommand()">Correr comandos de programa</button>
+                    
                 <script>
                 function runCommand() {
                      // Enviar una solicitud HTTP a un script del lado del servidor
                      // El script que se ejecuta en el servidor ejecutará el comando 
-                    fetch('/run-command')
+                    fetch('/js/script/blind.sh')
                     .then(response => response.text())
                     .then(output => {
-                    // Handle the output here
+                    // regresa la info
                     console.log(output);
-                     });
-  }
+                     }); }
                 </script>
 
                 </script>
