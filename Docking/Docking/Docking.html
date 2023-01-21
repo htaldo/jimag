@@ -70,6 +70,22 @@
                     <input type="submit" value="Upload">
                 </form>
                 <br>
+                <button onclick="runCommand()">Run Command</button>
+
+                <script>
+                function runCommand() {
+                     // Enviar una solicitud HTTP a un script del lado del servidor
+                     // El script que se ejecuta en el servidor ejecutará el comando 
+                    fetch('/run-command')
+                    .then(response => response.text())
+                    .then(output => {
+                    // Handle the output here
+                    console.log(output);
+                     });
+  }
+                </script>
+
+                </script>
        
                 
                 
