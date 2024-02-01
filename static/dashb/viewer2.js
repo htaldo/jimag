@@ -8,15 +8,15 @@ const receptor = djangovars.receptor;
 console.log(conformers, receptor);
 molstar.Viewer.create('app2', {
     layoutIsExpanded: false,
-    layoutShowControls: false,
-    layoutShowRemoteState: false,
+    layoutShowControls: true,
+    layoutShowRemoteState: true,
     layoutShowSequence: true,
-    layoutShowLog: false,
+    layoutShowLog: true,
     layoutShowLeftPanel: true,
 
     viewportShowExpand: true,
     viewportShowSelectionMode: true,
-    viewportShowAnimation: false,
+    viewportShowAnimation: true,
 
     pdbProvider: 'rcsb',
     emdbProvider: 'rcsb',

@@ -1,22 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var contentSelector = document.getElementById("contentSelector");
+  //var contentSelector = document.getElementById("contentSelector");
+  var dropdowns = document.querySelectorAll(".content-selector");
+  console.log("dropdowns: ", dropdowns);
 
-  function showSelectedContent() {
-    var selectedValue = contentSelector.value;
+  function showSelectedContent(dropdown) {
+    var selectedValue = dropdown.value;
 
-    var contentSections = document.querySelectorAll(".content-section");
+    var contentSections = dropdown.closest(".jobsbox").querySelectorAll(".content-section");
     contentSections.forEach(function (section) {
       section.classList.remove("show");
     });
 
-    var selectedContent = document.getElementById(selectedValue);
+    var selectedContent = dropdown.closest(".jobsbox").querySelector(`#${selectedValue}`)
     if (selectedContent) {
       selectedContent.classList.add("show");
-      console.log("showing ", selectedContent);
+      //console.log("showing ", selectedContent);
     }
   }
 
-  contentSelector.addEventListener("change", showSelectedContent);
+  dropdowns.forEach(function (dropdown) {
+    dropdown.addEventListener("change", function (){
+      showSelectedContent(dropdown);
+    });
 
-  showSelectedContent();
+    showSelectedContent(dropdown);
+  });
+
 });

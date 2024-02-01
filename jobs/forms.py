@@ -11,7 +11,3 @@ class LigandForm(forms.ModelForm):
     class Meta:
         model = Ligand
         fields = ('ligand_name', 'ligand_file')
-
-class DockingForm(forms.Form):
-    pform = ProteinForm()
-    lform = LigandForm()

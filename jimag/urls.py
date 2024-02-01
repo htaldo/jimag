@@ -19,7 +19,7 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from core.views import home, about
-from jobs.views import jobs, rundocking, check_progress
+from jobs.views import jobs, rundocking, check_progress, process_protein
 from users.views import register, log_in, log_out
 from dashboard.views import results, delete_job, download_output
 from uploader.views import UploadView
@@ -31,6 +31,7 @@ urlpatterns = [
     path('about/', about, name='about'),
     path('register/', register, name='register'),
     path('jobs/', jobs, name='jobs'),
+    path('process_protein/', process_protein, name='process_protein'),
     path('logout/', log_out, name='logout'),
     path('login/', log_in, name='login'),
     path('run-docking/', rundocking, name='run_docking'),

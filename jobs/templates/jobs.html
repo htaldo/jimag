@@ -12,47 +12,136 @@
 </head>
 <body>
     <h1>New job</h1>
-        <br>
-  <br>
-  <br>
-  <form method="post" enctype="multipart/form-data">
-  {% csrf_token %}
-  <div class="jobscontainer">
-      <!--jobsbox is each of the three columns that separate
-      the menus for protein, chain and ligand-->
-      <div class="jobsbox">
-          <h2>Protein</h2>
-          <label for="contentSelector">Select from:</label>
-          <select id="contentSelector">
-            <option value="uploadfile">Upload file</option>
-            <option value="fetchpdb">Fetch from PDB</option>
-          </select>
+    <div class="jobscontainer">
+        {% if message %}
+            <div class="result-message">
+                {{ message }}
+            </div>
+        {% endif %}
 
-          <!-- show the upload file option by default -->
-          <div id="uploadfile" class="content-section show">
-            {{ docking_form.pform }}
-          </div>
+        <!--jobsbox is each of the three columns that separate
+        the menus for protein, chain and ligand-->
+        <div class="jobsbox">
+            <h2>Protein</h2>
+            <label for="contentSelector1">Select from:</label>
+            <select id="contentSelector1" class="content-selector">
+                <option value="uploadfile1">Upload file</option>
+                <option value="fetchpdb">Fetch from PDB</option>
+            </select>
 
-          <div id="fetchpdb" class="content-section">
-            <h2>Fetch from PDB</h2>
-            <p>This is the content for option 2.</p>
-          </div>
+            <!-- show the upload file option by default -->
+            <div id="uploadfile1" class="content-section show">
+                <form id="uploadProteinForm" method="post" action="{% url 'process_protein' %}" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ protein_form }}
+                    <button type="button" onclick="submitProteinForm()">Submit protein</button>
+                </form>
+            <div id="processingProtein" style="display: none;">Processing protein...</div>
+            <div id="proteinProcessedMessage"></div>
 
-          <br>
-      </div>
-      <div class="jobsbox">
-          <h2>Chains</h2>
-      </div>
-      <div class="jobsbox">
-          <h2>Ligand</h2>
-          {{ docking_form.lform }}
-      </div>
-  </div>
-  <button type="submit">Run job!</button>
-  </form>
-  <script src="{% static 'jobs/dropdown.js' %}"></script>
+            <script>
+                function submitProteinForm() {
+                    document.getElementById('proteinProcessedMessage').style.display = 'block';
+
+                    var form = document.getElementById('uploadProteinForm');
+                    var formData = new FormData(form);
+
+                    fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'X-Requested-With': 'XMLHttpRequest',
+                        },
+                    })
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('processingProtein').style.display = 'none';
+                        var parsedData = JSON.parse(data);
+                        document.getElementById('proteinProcessedMessage').innerHTML = parsedData.status;
+                    })
+                    .catch(error => {
+                        console.error('Error:', error)
+                    });
+                }
+            </script>
+            </div>
+
+            <div id="fetchpdb" class="content-section">
+                <h2>Fetch from PDB</h2>
+                <p>This is the content for option 2.</p>
+            </div>
+
+            <br>
+        </div>
+        <div class="jobsbox">
+            <h2>Chains</h2>
+            <label for="contentSelector3">Select from:</label>
+            <select id="contentSelector3" class="content-selector">
+                <option value="tdselection">3D selection</option>
+                <option value="chainnames">Chain names</option>
+            </select>
+
+            <div id="tdselection" class="content-section show">
+                <style>
+                #app2 {
+                    position: absolute;
+                    width: 20%;
+                    height: 200px;
+                }
+                </style>
+            <!-- 
+                molstar.js and .css are obtained from
+                - the folder build/viewer after cloning and building the molstar package 
+                - from the build/viewer folder in the Mol* NPM package
+            -->
+            <link rel="stylesheet" type="text/css" href="{% static 'molstar/molstar.css' %}" />
+            <script type="text/javascript" src="{% static 'molstar/molstar.js' %}"></script>
+            <div id="app2"></div>
+            <script type="text/javascript" src="{% static 'jobs/chainsviewer.js' %}"
+                defer
+                    data-receptor="{{ protein_file }}";>
+            </script>
+            </div>
+
+            <div id="chainnames" class="content-section">
+                <h2>Chain names</h2>
+            </div>
+
+            <br>
+
+        </div>
+        <div class="jobsbox">
+            <h2>Ligand</h2>
+            <label for="contentSelector2">Select from:</label>
+            <select id="contentSelector2" class="content-selector">
+                <option value="uploadfile2">Upload file</option>
+                <option value="fetchpubchem">Fetch from PubChem</option>
+            </select>
+
+            <div id="uploadfile2" class="content-section show">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ ligand_form }}
+                    <button type="submit">Submit ligand</button>
+                </form>
+            </div>
+
+            <div id="fetchpubchem" class="content-section">
+                <h2>Fetch from PubChem</h2>
+                <p>This is the content for option 2.</p>
+            </div>
+
+            <br>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <center>
+    <button type="submit">Run job!</button>
+    </center>
+    <script src="{% static 'jobs/dropdown.js' %}"></script>
 </body>
 {% endblock %}
+
 </html>
-
-

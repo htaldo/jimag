@@ -4,71 +4,102 @@ from django.http import HttpResponseRedirect, JsonResponse
 from .models import Job, Docking, Profile
 from rq.job import Job as rqJob
 from django_rq import get_queue
-from .tasks import run_docking_script
+from .tasks import run_docking_script, analyze_protein
 from django.urls import reverse
 import os
 import subprocess
 
-from .forms import ProteinForm, LigandForm, DockingForm
+from .forms import ProteinForm, LigandForm
 
 # Create your views here.
+def process_protein(request): #currently the processing is being handled by the store functions
+    if request.method == "POST":
+        protein_form = ProteinForm(request.POST, request.FILES)
+        if protein_form.is_valid():
+            #checks and extra functionality
+            cheq = analyze_protein.delay(request.FILES['protein_file'])
+            print("REPORT: ", cheq)
+
+            if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+                print("REPORT: Got AJAX")
+                return JsonResponse({'status': 'success'})
+            else:
+                print("REPORT: Not AJAX")
+                return render(request, 'jobs.html')
+            #return render(request, 'jobs.html', {'protein_form': protein_form, 'message': message})
+    else:
+        protein_form = ProteinForm()
+    return render(request, 'jobs.html')
+
+
 def jobs(request):
-    if request.method == 'POST':
-        docking_form = DockingForm(request.POST, request.FILES)
-        if docking_form.is_valid():
-            # Create and link a new Job instance
-            job = Job.objects.create(
-                job_type='docking',
-                user=request.user,
-            )
-            job.job_name=f"job_{job.id}"
-            job.save()
+    if request.method == 'POST': #prepare the model instances and run job
+    #    job, docking = init_docking(request)
+    #    store_protein(request, docking, job)
+    #    store_ligand(request, docking, job)
 
-            # Create and link a new Docking instance
-            docking = Docking.objects.create(
-                user=request.user,
-                job=job,
-                protein=None, #initialize protein
-                ligand=None #initialize ligand
-            )
-
-            if 'protein_file' in request.FILES:
-                pform = ProteinForm(request.POST, request.FILES)
-                if pform.is_valid():
-                    protein = pform.save(commit=False) 
-                    protein.user = request.user
-                    protein.job = job
-                    protein.docking = docking
-                    print("BEFORE", protein.protein_file.name)
-                    file_ext = os.path.splitext(protein.protein_file.name)[1]
-                    protein.protein_file.name = f'receptor{file_ext}'
-                    print("AFTER", protein.protein_file.name)
-                    protein.save()
-                    #docking.protein = protein
-
-            if 'ligand_file' in request.FILES:
-                lform = LigandForm(request.POST, request.FILES)
-                if lform.is_valid():
-                    ligand = lform.save(commit=False)
-                    ligand.user = request.user
-                    ligand.job = job 
-                    ligand.docking = docking
-                    print("BEFORE", ligand.ligand_file.name)
-                    file_ext = os.path.splitext(ligand.ligand_file.name)[1]
-                    ligand.ligand_file.name = f'ligand{file_ext}'
-                    print("AFTER", ligand.ligand_file.name)
-                    ligand.save()
-                    #docking.ligand = ligand
-            request.session['job_metadata'] = [request.user.id, job.id, docking.id]
-            return redirect('run_docking')
+    #    request.session['job_metadata'] = [request.user.id, job.id, docking.id]
+    #    return redirect('run_docking')                  #RUN!
+        process_protein(request)
     else:
         if request.user.is_authenticated:
-            docking_form = DockingForm()
+            protein_form = ProteinForm()
+            ligand_form = LigandForm()
             return render(request, 'jobs.html', {
-                'docking_form': docking_form
+                'protein_form': protein_form,
+                'ligand_form': ligand_form
             })
         else:
             return render(request, 'notloggedin.html')
+
+def init_docking(request):
+    # Create and link a new Job instance
+    job = Job.objects.create(
+        job_type='docking',
+        user=request.user,
+    )
+    job.job_name=f"job_{job.id}"
+    job.save()
+    # Create and link a new Docking instance
+    docking = Docking.objects.create(
+        user=request.user,
+        job=job,
+    )
+    return job, docking
+
+def store_protein(request, docking, job):
+    if 'protein_file' in request.FILES: #will this still be necessary?
+        protein_form = ProteinForm(request.POST, request.FILES)
+        if protein_form.is_valid():
+            protein = protein_form.save(commit=False) 
+            protein.user = request.user
+            protein.job = job
+            protein.docking = docking
+            file_ext = os.path.splitext(protein.protein_file.name)[1]
+            protein.protein_file.name = f'receptor{file_ext}'
+            protein.save()
+
+def store_ligand(request, docking, job):
+    if 'ligand_file' in request.FILES:
+        ligand_form = LigandForm(request.POST, request.FILES)
+        if ligand_form.is_valid():
+            ligand = ligand_form.save(commit=False)
+            ligand.user = request.user
+            ligand.job = job 
+            ligand.docking = docking
+            file_ext = os.path.splitext(ligand.ligand_file.name)[1]
+            ligand.ligand_file.name = f'ligand{file_ext}'
+            ligand.save()
+    
+def process_ligand(request):
+    if request.method == 'POST':
+        ligand_form = LigandForm(request.POST, request.FILES)
+        if ligand_form.is_valid():
+            message = "Ligand uploaded successfully"
+            return(request, 'jobs.html', {'ligand_form': ligand_form, 'message': message})
+    else:
+        ligand_form = LigandForm()
+    return render(request, 'jobs.html', {'ligand_form': ligand_form})
 
 def rundocking(request):
     #user, job and docking here are just their IDs

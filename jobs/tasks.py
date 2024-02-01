@@ -57,3 +57,7 @@ def run_docking_script(user_inst, job_inst, docking_inst):
     job.save_meta()
 
     return "Script completed successfully"
+
+@job
+def analyze_protein(protein_file):
+    return "A,B"

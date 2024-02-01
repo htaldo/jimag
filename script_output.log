@@ -7112,3 +7112,1597 @@ INFO:rq.worker:Cleaning registries for queue: default
 INFO:rq.worker:Cleaning registries for queue: default
 INFO:rq.worker:Cleaning registries for queue: default
 INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Worker rq:worker:852482f177384fa48e3d1c4e5d655c38 started with PID 11054, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:852482f177384fa48e3d1c4e5d655c38
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/forms.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 66, in jobs
+    docking_form = DockingForm()
+                   ^^^^^^^^^^^
+NameError: name 'DockingForm' is not defined
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+ERROR:rq.worker:Could not connect to Redis instance: Connection closed by server. Retrying in 1 seconds...
+INFO:rq.worker:Worker 852482f177384fa48e3d1c4e5d655c38 [PID 11054]: warm shut down requested
+INFO:rq.worker:Worker rq:worker:5435f0bc07a04398a7cdc8cbe7c394b5 started with PID 9495, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:5435f0bc07a04398a7cdc8cbe7c394b5
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 66, in jobs
+    docking_form = DockingForm()
+                   ^^^^^^^^^^^
+NameError: name 'DockingForm' is not defined
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/models.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Worker 5435f0bc07a04398a7cdc8cbe7c394b5 [PID 9495]: warm shut down requested
+INFO:rq.worker:Unsubscribing from channel rq:pubsub:5435f0bc07a04398a7cdc8cbe7c394b5
+INFO:rq.worker:Worker rq:worker:5191944e4f294f048a432d7259ce523b started with PID 13767, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:5191944e4f294f048a432d7259ce523b
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Worker 5191944e4f294f048a432d7259ce523b [PID 13767]: warm shut down requested
+INFO:rq.worker:Unsubscribing from channel rq:pubsub:5191944e4f294f048a432d7259ce523b
+INFO:rq.worker:Worker rq:worker:aa027d76cc7348088fbfafeaecf6e230 started with PID 2084, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:aa027d76cc7348088fbfafeaecf6e230
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+ERROR:rq.worker:Could not connect to Redis instance: Connection closed by server. Retrying in 1 seconds...
+INFO:rq.worker:Worker aa027d76cc7348088fbfafeaecf6e230 [PID 2084]: warm shut down requested
+INFO:rq.worker:Worker rq:worker:c34ea5bc1c1840a3871293de3ac28af9 started with PID 4960, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:c34ea5bc1c1840a3871293de3ac28af9
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.run_docking_script(1, 105, 105)[39;49;00m (67148e7e-98aa-4c79-b9c9-74f5b36b7e2e)
+INFO:jobs.tasks:run_docking_script task started
+INFO:jobs.tasks:[1m[36m>>[39m optimizing geometry for ligand...[0m
+WARNING:django.request:Not Found: /favicon.ico
+INFO:jobs.tasks:[1m[36m>>[39m preparing ligand...[0m
+INFO:jobs.tasks:The file /home/aldo/pro/A/media/user_1/job_105/docking_105/output/ligand.mol2 is empty
+INFO:jobs.tasks:[1m[36m>>[39m cleaning receptor...[0m
+WARNING:django.request:Not Found: /favicon.ico
+INFO:jobs.tasks:Compiling /home/aldo/pro/falcon/script3/receptor.py...
+INFO:jobs.tasks:Compiling /home/aldo/pro/falcon/script3/receptor.py succeeded
+INFO:jobs.tasks:Executing /home/aldo/pro/falcon/script3/receptor.py...
+INFO:jobs.tasks:Opening receptor.pdb...
+INFO:jobs.tasks:#0, chain A: salicylate biosynthesis protein pchb
+INFO:jobs.tasks:
+INFO:jobs.tasks:#0, chain B: salicylate biosynthesis protein pchb
+INFO:jobs.tasks:
+INFO:jobs.tasks:Wrote /home/aldo/pro/A/media/user_1/job_105/docking_105/output/receptor.pdb
+INFO:jobs.tasks:Executed /home/aldo/pro/falcon/script3/receptor.py
+INFO:jobs.tasks:[1m[36m>>[39m preparing receptor...[0m
+INFO:jobs.tasks:WARNING! receptorH has 24  atoms with alternate locations named ['A', 'B']!
+INFO:jobs.tasks:
+INFO:jobs.tasks:WARNING! using alternate location A
+INFO:jobs.tasks:adding gasteiger charges to peptide
+INFO:jobs.tasks:[1m[36m>>[39m looking for pockets...[0m
+INFO:jobs.tasks:----------------------------------------------------------------------------------------------
+INFO:jobs.tasks:P2Rank 2.4
+INFO:jobs.tasks:----------------------------------------------------------------------------------------------
+INFO:jobs.tasks:
+INFO:jobs.tasks:predicting pockets for proteins from dataset [receptor.pdbqt]
+INFO:jobs.tasks:processing [receptor.pdbqt] (1/1)
+INFO:jobs.tasks:predicting pockets finished in 0 hours 0 minutes 13.903 seconds
+INFO:jobs.tasks:results saved to directory [/home/aldo/pro/A/media/user_1/job_105/docking_105/output]
+INFO:jobs.tasks:
+INFO:jobs.tasks:----------------------------------------------------------------------------------------------
+INFO:jobs.tasks:finished successfully in 0 hours 0 minutes 16.206 seconds
+INFO:jobs.tasks:----------------------------------------------------------------------------------------------
+INFO:jobs.tasks:[1m[36m>>[39m getting gridbox (coarse)...[0m
+INFO:jobs.tasks:center_x = 7.493
+INFO:jobs.tasks:size_x = 11.4
+INFO:jobs.tasks:center_y = -10.942
+INFO:jobs.tasks:size_y = 11.9
+INFO:jobs.tasks:center_z = -25.439
+INFO:jobs.tasks:size_z = 13.5
+INFO:jobs.tasks:[1m[36m>>[39m docking (coarse)...[0m
+INFO:jobs.tasks:Script completed successfully
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (67148e7e-98aa-4c79-b9c9-74f5b36b7e2e)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /results/105
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/dashboard/views.py", line 40, in results
+    'job_info' : job_info(current_job),
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/dashboard/views.py", line 65, in job_info
+    info['ligand'] = Ligand.objects.get(job=job_id).ligand_name
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+jobs.models.Ligand.DoesNotExist: Ligand matching query does not exist.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.run_docking_script(1, 106, 106)[39;49;00m (51326024-acf9-47fc-a803-5547d8d3e4ba)
+INFO:jobs.tasks:run_docking_script task started
+INFO:jobs.tasks:[1m[36m>>[39m optimizing geometry for ligand...[0m
+INFO:jobs.tasks:[1m[36m>>[39m preparing ligand...[0m
+INFO:jobs.tasks:[1m[36m>>[39m cleaning receptor...[0m
+INFO:jobs.tasks:Compiling /home/aldo/pro/falcon/script3/receptor.py...
+INFO:jobs.tasks:Compiling /home/aldo/pro/falcon/script3/receptor.py succeeded
+INFO:jobs.tasks:Executing /home/aldo/pro/falcon/script3/receptor.py...
+INFO:jobs.tasks:
+INFO:jobs.tasks:[1m[36m>>[39m preparing receptor...[0m
+INFO:jobs.tasks:[1m[36m>>[39m looking for pockets...[0m
+INFO:jobs.tasks:----------------------------------------------------------------------------------------------
+INFO:jobs.tasks:P2Rank 2.4
+INFO:jobs.tasks:----------------------------------------------------------------------------------------------
+INFO:jobs.tasks:
+INFO:jobs.tasks:predicting pockets for proteins from dataset [receptor.pdbqt]
+INFO:jobs.tasks:processing [receptor.pdbqt] (1/1)
+INFO:jobs.tasks:predicting pockets finished in 0 hours 0 minutes 5.289 seconds
+INFO:jobs.tasks:results saved to directory [/home/aldo/pro/A/media/user_1/job_106/docking_106/output]
+INFO:jobs.tasks:ERROR on processing 1 file(s):
+INFO:jobs.tasks:[receptor.pdbqt]
+INFO:jobs.tasks:
+INFO:jobs.tasks:----------------------------------------------------------------------------------------------
+INFO:jobs.tasks:finished with ERROR in 0 hours 0 minutes 6.332 seconds
+INFO:jobs.tasks:----------------------------------------------------------------------------------------------
+INFO:jobs.tasks:[1m[36m>>[39m getting gridbox (coarse)...[0m
+INFO:jobs.tasks:[1m[36m>>[39m docking (coarse)...[0m
+ERROR:jobs.tasks:Script failed with return code 2
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (51326024-acf9-47fc-a803-5547d8d3e4ba)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /run-docking/undefined
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.run_docking_script(1, 107, 107)[39;49;00m (cf7814bf-32e3-4040-a600-3fb6ab094995)
+INFO:jobs.tasks:run_docking_script task started
+INFO:jobs.tasks:[1m[36m>>[39m optimizing geometry for ligand...[0m
+INFO:jobs.tasks:[1m[36m>>[39m preparing ligand...[0m
+INFO:jobs.tasks:The file /home/aldo/pro/A/media/user_1/job_107/docking_107/output/ligand.mol2 is empty
+INFO:jobs.tasks:[1m[36m>>[39m cleaning receptor...[0m
+INFO:jobs.tasks:Compiling /home/aldo/pro/falcon/script3/receptor.py...
+INFO:jobs.tasks:Compiling /home/aldo/pro/falcon/script3/receptor.py succeeded
+INFO:jobs.tasks:Executing /home/aldo/pro/falcon/script3/receptor.py...
+INFO:jobs.tasks:Opening receptor.pdb...
+INFO:jobs.tasks:#0, chain A: salicylate biosynthesis protein pchb
+INFO:jobs.tasks:
+INFO:jobs.tasks:#0, chain B: salicylate biosynthesis protein pchb
+INFO:jobs.tasks:
+INFO:jobs.tasks:Wrote /home/aldo/pro/A/media/user_1/job_107/docking_107/output/receptor.pdb
+INFO:jobs.tasks:Executed /home/aldo/pro/falcon/script3/receptor.py
+INFO:jobs.tasks:[1m[36m>>[39m preparing receptor...[0m
+INFO:jobs.tasks:WARNING! receptorH has 24  atoms with alternate locations named ['A', 'B']!
+INFO:jobs.tasks:
+INFO:jobs.tasks:WARNING! using alternate location A
+INFO:jobs.tasks:adding gasteiger charges to peptide
+INFO:jobs.tasks:[1m[36m>>[39m looking for pockets...[0m
+INFO:jobs.tasks:----------------------------------------------------------------------------------------------
+INFO:jobs.tasks:P2Rank 2.4
+INFO:jobs.tasks:----------------------------------------------------------------------------------------------
+INFO:jobs.tasks:
+INFO:jobs.tasks:predicting pockets for proteins from dataset [receptor.pdbqt]
+INFO:jobs.tasks:processing [receptor.pdbqt] (1/1)
+INFO:jobs.tasks:predicting pockets finished in 0 hours 0 minutes 7.553 seconds
+INFO:jobs.tasks:results saved to directory [/home/aldo/pro/A/media/user_1/job_107/docking_107/output]
+INFO:jobs.tasks:
+INFO:jobs.tasks:----------------------------------------------------------------------------------------------
+INFO:jobs.tasks:finished successfully in 0 hours 0 minutes 8.528 seconds
+INFO:jobs.tasks:----------------------------------------------------------------------------------------------
+INFO:jobs.tasks:[1m[36m>>[39m getting gridbox (coarse)...[0m
+INFO:jobs.tasks:center_x = 7.493
+INFO:jobs.tasks:size_x = 11.4
+INFO:jobs.tasks:center_y = -10.942
+INFO:jobs.tasks:size_y = 11.9
+INFO:jobs.tasks:center_z = -25.439
+INFO:jobs.tasks:size_z = 13.5
+INFO:jobs.tasks:[1m[36m>>[39m docking (coarse)...[0m
+INFO:jobs.tasks:Script completed successfully
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (cf7814bf-32e3-4040-a600-3fb6ab094995)
+INFO:rq.worker:Result is kept for 500 seconds
+ERROR:django.request:Internal Server Error: /results/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/dashboard/views.py", line 40, in results
+    'job_info' : job_info(current_job),
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/dashboard/views.py", line 65, in job_info
+    info['ligand'] = Ligand.objects.get(job=job_id).ligand_name
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+jobs.models.Ligand.DoesNotExist: Ligand matching query does not exist.
+ERROR:django.request:Internal Server Error: /results/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/dashboard/views.py", line 40, in results
+    'job_info' : job_info(current_job),
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/dashboard/views.py", line 65, in job_info
+    info['ligand'] = Ligand.objects.get(job=job_id).ligand_name
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+jobs.models.Ligand.DoesNotExist: Ligand matching query does not exist.
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.run_docking_script(1, 108, 108)[39;49;00m (da6b07f4-c7ae-44ec-bbc1-7f46f9e5ba5f)
+INFO:jobs.tasks:run_docking_script task started
+INFO:jobs.tasks:[1m[36m>>[39m optimizing geometry for ligand...[0m
+INFO:jobs.tasks:[1m[36m>>[39m preparing ligand...[0m
+INFO:jobs.tasks:[1m[36m>>[39m cleaning receptor...[0m
+INFO:jobs.tasks:Compiling /home/aldo/pro/falcon/script3/receptor.py...
+INFO:jobs.tasks:Compiling /home/aldo/pro/falcon/script3/receptor.py succeeded
+INFO:jobs.tasks:Executing /home/aldo/pro/falcon/script3/receptor.py...
+INFO:jobs.tasks:
+INFO:jobs.tasks:[1m[36m>>[39m preparing receptor...[0m
+INFO:jobs.tasks:[1m[36m>>[39m looking for pockets...[0m
+INFO:jobs.tasks:----------------------------------------------------------------------------------------------
+INFO:jobs.tasks:P2Rank 2.4
+INFO:jobs.tasks:----------------------------------------------------------------------------------------------
+INFO:jobs.tasks:
+INFO:jobs.tasks:predicting pockets for proteins from dataset [receptor.pdbqt]
+INFO:jobs.tasks:processing [receptor.pdbqt] (1/1)
+INFO:jobs.tasks:predicting pockets finished in 0 hours 0 minutes 5.628 seconds
+INFO:jobs.tasks:results saved to directory [/home/aldo/pro/A/media/user_1/job_108/docking_108/output]
+INFO:jobs.tasks:ERROR on processing 1 file(s):
+INFO:jobs.tasks:[receptor.pdbqt]
+INFO:jobs.tasks:
+INFO:jobs.tasks:----------------------------------------------------------------------------------------------
+INFO:jobs.tasks:finished with ERROR in 0 hours 0 minutes 6.619 seconds
+INFO:jobs.tasks:----------------------------------------------------------------------------------------------
+INFO:jobs.tasks:[1m[36m>>[39m getting gridbox (coarse)...[0m
+INFO:jobs.tasks:[1m[36m>>[39m docking (coarse)...[0m
+ERROR:jobs.tasks:Script failed with return code 2
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (da6b07f4-c7ae-44ec-bbc1-7f46f9e5ba5f)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /run-docking/undefined
+ERROR:django.request:Internal Server Error: /results/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/dashboard/views.py", line 40, in results
+    'job_info' : job_info(current_job),
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/dashboard/views.py", line 65, in job_info
+    info['ligand'] = Ligand.objects.get(job=job_id).ligand_name
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+jobs.models.Ligand.DoesNotExist: Ligand matching query does not exist.
+WARNING:django.request:Not Found: /home/dashboard/job_103
+WARNING:django.request:Not Found: /home/results/job_103
+WARNING:django.request:Not Found: /home/results/103
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Worker c34ea5bc1c1840a3871293de3ac28af9 [PID 4960]: warm shut down requested
+INFO:rq.worker:Unsubscribing from channel rq:pubsub:c34ea5bc1c1840a3871293de3ac28af9
+INFO:rq.worker:Worker rq:worker:ca8ff0d6781c4e8f843937c0316f6897 started with PID 22314, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:ca8ff0d6781c4e8f843937c0316f6897
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/tasks.py changed, reloading.
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:rq.worker:Cleaning registries for queue: default
+ERROR:rq.worker:Could not connect to Redis instance: Connection closed by server. Retrying in 1 seconds...
+INFO:rq.worker:Worker ca8ff0d6781c4e8f843937c0316f6897 [PID 22314]: warm shut down requested
+INFO:rq.worker:Worker rq:worker:c1776e6eb55e45fdb0fc8fae5c17e121 started with PID 21463, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:c1776e6eb55e45fdb0fc8fae5c17e121
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+ERROR:django.request:Internal Server Error: /results/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/dashboard/views.py", line 40, in results
+    'job_info' : job_info(current_job),
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/dashboard/views.py", line 65, in job_info
+    info['ligand'] = Ligand.objects.get(job=job_id).ligand_name
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+jobs.models.Ligand.DoesNotExist: Ligand matching query does not exist.
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /results103
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+ERROR:django.request:Internal Server Error: /results/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/dashboard/views.py", line 40, in results
+    'job_info' : job_info(current_job),
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/dashboard/views.py", line 65, in job_info
+    info['ligand'] = Ligand.objects.get(job=job_id).ligand_name
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+jobs.models.Ligand.DoesNotExist: Ligand matching query does not exist.
+INFO:rq.worker:Cleaning registries for queue: default
+ERROR:rq.worker:Could not connect to Redis instance: Connection closed by server. Retrying in 1 seconds...
+INFO:rq.worker:Worker c1776e6eb55e45fdb0fc8fae5c17e121 [PID 21463]: warm shut down requested
+INFO:rq.worker:Worker rq:worker:bdee70deee5b40f1b89e5ebfd0edabdf started with PID 14825, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:bdee70deee5b40f1b89e5ebfd0edabdf
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/tasks.py changed, reloading.
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 28, in jobs
+    return render(request, 'jobs.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'process_protein' not found. 'process_protein' is not a valid view function or pattern name.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 46, in jobs
+    return render(request, 'jobs.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'process_protein' not found. 'process_protein' is not a valid view function or pattern name.
+ERROR:django.request:Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 46, in jobs
+    return render(request, 'jobs.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'process_protein' not found. 'process_protein' is not a valid view function or pattern name.
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 46, in jobs
+    return render(request, 'jobs.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'process_protein' not found. 'process_protein' is not a valid view function or pattern name.
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 46, in jobs
+    return render(request, 'jobs.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'process_protein' not found. 'process_protein' is not a valid view function or pattern name.
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 46, in jobs
+    return render(request, 'jobs.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'process_protein' not found. 'process_protein' is not a valid view function or pattern name.
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 46, in jobs
+    return render(request, 'jobs.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'process_protein' not found. 'process_protein' is not a valid view function or pattern name.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 47, in jobs
+    return render(request, 'jobs.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'process_protein' not found. 'process_protein' is not a valid view function or pattern name.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 48, in jobs
+    return render(request, 'jobs.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'process_protein' not found. 'process_protein' is not a valid view function or pattern name.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jimag/urls.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jimag/urls.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Worker rq:worker:9129aeddd57748bd9eb4b81f002247a5 started with PID 10233, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:9129aeddd57748bd9eb4b81f002247a5
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /process_protein/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 20, in process_protein
+    cheq = analyze_protein.delay(protein_file)
+                                 ^^^^^^^^^^^^
+NameError: name 'protein_file' is not defined
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /process_protein/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 20, in process_protein
+    cheq = analyze_protein.delay(request.FILES.protein_file)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MultiValueDict' object has no attribute 'protein_file'
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (e2a0059c-530a-4e73-b6d4-3f7fb5a08141)
+ERROR:django.request:Internal Server Error: /process_protein/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 23, in process_protein
+    if request.is_ajax():
+       ^^^^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'is_ajax'
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (e2a0059c-530a-4e73-b6d4-3f7fb5a08141)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Worker 9129aeddd57748bd9eb4b81f002247a5 [PID 10233]: warm shut down requested
+INFO:rq.worker:Unsubscribing from channel rq:pubsub:9129aeddd57748bd9eb4b81f002247a5
+INFO:rq.worker:Worker rq:worker:99aea766c4274fdf804cfba37248a028 started with PID 4152, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:99aea766c4274fdf804cfba37248a028
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (41c6e213-d9fd-4b41-af06-322cbfc6227a)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (41c6e213-d9fd-4b41-af06-322cbfc6227a)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (8c5806c9-fc7b-4aac-8ea2-fb8a5c7f1873)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (8c5806c9-fc7b-4aac-8ea2-fb8a5c7f1873)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (967283d8-72a8-403a-a4b4-ea8c796459e9)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (967283d8-72a8-403a-a4b4-ea8c796459e9)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (3a13af6d-cfc9-4dc4-ab19-fb61748063de)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (3a13af6d-cfc9-4dc4-ab19-fb61748063de)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (fea9c6be-8561-4c77-bd9b-3be317e437b4)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (fea9c6be-8561-4c77-bd9b-3be317e437b4)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (ce58ea26-2568-4501-9170-7beda992039f)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (ce58ea26-2568-4501-9170-7beda992039f)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (8ae199ae-ca9c-44ee-b8c4-8edbddde4198)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (8ae199ae-ca9c-44ee-b8c4-8edbddde4198)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (fa839d7a-054f-4585-a88b-9b9b5b66ba20)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (fa839d7a-054f-4585-a88b-9b9b5b66ba20)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (160cfa5b-4576-42fa-b303-40aa9c81605d)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (160cfa5b-4576-42fa-b303-40aa9c81605d)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (0d261c63-8a90-454a-b36e-c269014cd6dd)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (0d261c63-8a90-454a-b36e-c269014cd6dd)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (fda72971-151f-4f63-b8d3-9416bd4e074f)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (fda72971-151f-4f63-b8d3-9416bd4e074f)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (f03df938-9a05-4be9-a657-dd5c6a9168d1)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (f03df938-9a05-4be9-a657-dd5c6a9168d1)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (e39649b0-9127-48e1-ace7-0a1b612a91cc)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (e39649b0-9127-48e1-ace7-0a1b612a91cc)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (7cec842e-3c89-410b-ac2a-fa3d30a27465)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (7cec842e-3c89-410b-ac2a-fa3d30a27465)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (1f56426b-2318-4686-bcd4-837b7c52d54e)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (1f56426b-2318-4686-bcd4-837b7c52d54e)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /jobs/undefined
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (957406dd-c15e-493e-b2d4-61efe489b53a)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (957406dd-c15e-493e-b2d4-61efe489b53a)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /jobs/undefined
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /jobs/undefined
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /jobs/undefined
+INFO:rq.worker:Cleaning registries for queue: default
+ERROR:rq.worker:Could not connect to Redis instance: Connection closed by server. Retrying in 1 seconds...
+ERROR:rq.worker:Could not connect to Redis instance: Error 111 connecting to localhost:6379. Connection refused. Retrying in 2 seconds...
+INFO:rq.worker:Worker 99aea766c4274fdf804cfba37248a028 [PID 4152]: warm shut down requested
+INFO:rq.worker:Worker rq:worker:8ef03fc2dbe54d1fa0c3232675f5eb1d started with PID 24142, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:8ef03fc2dbe54d1fa0c3232675f5eb1d
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /jobs/undefined
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (18b15c65-b132-48a2-94d4-61baef53bfa0)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (18b15c65-b132-48a2-94d4-61baef53bfa0)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /jobs/undefined
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (d8a13666-1f05-43f2-aa9f-506ffcdc3313)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (d8a13666-1f05-43f2-aa9f-506ffcdc3313)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Worker 8ef03fc2dbe54d1fa0c3232675f5eb1d [PID 24142]: warm shut down requested
+INFO:rq.worker:Unsubscribing from channel rq:pubsub:8ef03fc2dbe54d1fa0c3232675f5eb1d
+INFO:rq.worker:Worker rq:worker:54132f682952472fbf3adb43c767d58b started with PID 4201, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:54132f682952472fbf3adb43c767d58b
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /jobs/undefined
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (46e1e9bb-c32c-40c4-807a-fa505d2d525f)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (46e1e9bb-c32c-40c4-807a-fa505d2d525f)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /jobs/undefined
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (2ccae5d6-6512-4452-974f-137c1f976eb5)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (2ccae5d6-6512-4452-974f-137c1f976eb5)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /jobs/undefined
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (db9aca53-b47f-4256-bd3c-6ac1001f2b22)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (db9aca53-b47f-4256-bd3c-6ac1001f2b22)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+ERROR:rq.worker:Could not connect to Redis instance: Connection closed by server. Retrying in 1 seconds...
+INFO:rq.worker:Worker 54132f682952472fbf3adb43c767d58b [PID 4201]: warm shut down requested
+INFO:rq.worker:Worker rq:worker:6bb4d992a2ce400cac940b1bcdee2107 started with PID 19389, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:6bb4d992a2ce400cac940b1bcdee2107
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /jobs/undefined
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /jobs/undefined
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+ERROR:rq.worker:Could not connect to Redis instance: Connection closed by server. Retrying in 1 seconds...
+INFO:rq.worker:Worker 6bb4d992a2ce400cac940b1bcdee2107 [PID 19389]: warm shut down requested
+INFO:rq.worker:Worker rq:worker:a99332f0a90e4abba58bb760f7f8fdbe started with PID 26483, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:a99332f0a90e4abba58bb760f7f8fdbe
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /jobs/undefined
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (d986eb75-f2bd-4bda-b923-3c3d2e65b414)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (d986eb75-f2bd-4bda-b923-3c3d2e65b414)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (44498e45-5e1e-4979-b523-e1a54a06d1dc)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (44498e45-5e1e-4979-b523-e1a54a06d1dc)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /jobs/undefined
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (10cbb58c-1212-48de-b92c-67383069ff99)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (10cbb58c-1212-48de-b92c-67383069ff99)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (92f5a0d4-4aca-406b-8231-f201ab35b686)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (92f5a0d4-4aca-406b-8231-f201ab35b686)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (c3d31784-bc7f-4195-aa5b-c9756041250c)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (c3d31784-bc7f-4195-aa5b-c9756041250c)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (f30fd204-750b-40c9-97b4-6057539cf033)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (f30fd204-750b-40c9-97b4-6057539cf033)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /jobs/undefined
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (a4d03e73-de31-414c-9c52-d1486dc47a5b)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (a4d03e73-de31-414c-9c52-d1486dc47a5b)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (fd29d8b8-89c0-4dea-aec3-8f4508d1f6da)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (fd29d8b8-89c0-4dea-aec3-8f4508d1f6da)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (5fee73c2-c346-4cd1-883a-9b29db464aff)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (5fee73c2-c346-4cd1-883a-9b29db464aff)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (98dfe56f-1dab-4cce-8582-2a014695c283)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (98dfe56f-1dab-4cce-8582-2a014695c283)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /jobs/undefined
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (12a07e16-7a80-4562-9740-ed0f0c483f74)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (12a07e16-7a80-4562-9740-ed0f0c483f74)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /jobs/undefined
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (b13967c4-f6ad-472e-b21c-7bd27db5fc03)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (b13967c4-f6ad-472e-b21c-7bd27db5fc03)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+ERROR:django.request:Internal Server Error: /results/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/dashboard/views.py", line 40, in results
+    'job_info' : job_info(current_job),
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/dashboard/views.py", line 65, in job_info
+    info['ligand'] = Ligand.objects.get(job=job_id).ligand_name
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+jobs.models.Ligand.DoesNotExist: Ligand matching query does not exist.
+ERROR:django.request:Internal Server Error: /results/80
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/dashboard/views.py", line 26, in results
+    if Job.objects.get(pk=current_job).user != request.user:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+jobs.models.Job.DoesNotExist: Job matching query does not exist.
+ERROR:django.request:Internal Server Error: /results/53
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/dashboard/views.py", line 26, in results
+    if Job.objects.get(pk=current_job).user != request.user:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+jobs.models.Job.DoesNotExist: Job matching query does not exist.
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /jobs/undefined
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /jobs/undefined
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /jobs/undefined
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /jobs/undefined
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /jobs/undefined
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /jobs/undefined
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+ERROR:rq.worker:Could not connect to Redis instance: Connection closed by server. Retrying in 1 seconds...
+INFO:rq.worker:Worker a99332f0a90e4abba58bb760f7f8fdbe [PID 26483]: warm shut down requested
+INFO:rq.worker:Worker rq:worker:3ff66be2ed4e40069cf715adeef31b6c started with PID 2480, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:3ff66be2ed4e40069cf715adeef31b6c
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /jobs/undefined
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:rq.worker:Could not connect to Redis instance: Connection closed by server. Retrying in 1 seconds...
+INFO:rq.worker:Worker 3ff66be2ed4e40069cf715adeef31b6c [PID 2480]: warm shut down requested

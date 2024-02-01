@@ -38,9 +38,6 @@ class Ligand(models.Model):
 class Docking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     job = models.ForeignKey('Job', on_delete=models.CASCADE)
-    #having null=True allows us to initialize ls and ps before associating to a docking
-    #protein = models.ForeignKey('Protein', on_delete=models.CASCADE, null=True)
-    #ligand = models.ForeignKey('Ligand', on_delete=models.CASCADE, null=True)
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
