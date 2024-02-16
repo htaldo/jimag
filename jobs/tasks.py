@@ -5,10 +5,12 @@ import logging
 
 logging.basicConfig(filename='script_output.log', level=logging.INFO)
 
+
 @job
-#TODO: maybe we can change _inst to _id, but making clear that the id refers to the model isntancss
+# TODO: maybe we can change _inst to _id,
+# but making clear that the id refers to the model isntancss
 def run_docking_script(user_inst, job_inst, docking_inst):
-    job = get_current_job() #is this line necessary?
+    job = get_current_job()  # is this line necessary?
 
     logger = logging.getLogger(__name__)
     logger.info("run_docking_script task started")
@@ -30,12 +32,12 @@ def run_docking_script(user_inst, job_inst, docking_inst):
         for line in process.stdout:
             line = line.strip()
             output_lines.append(line)
-            job.meta['progress'] = '\n'.join(output_lines) 
+            job.meta['progress'] = '\n'.join(output_lines)
             job.save_meta()
 
             logger.info(line)
 
-        #job.meta['progress'] = '\n'.join(output_lines)
+        # job.meta['progress'] = '\n'.join(output_lines)
         job.meta['progress'] = 'test string'
 
         return_code = process.wait()
@@ -58,6 +60,12 @@ def run_docking_script(user_inst, job_inst, docking_inst):
 
     return "Script completed successfully"
 
+
 @job
 def analyze_protein(protein_file):
+    return "A,B"
+
+
+@job
+def analyze_ligand(ligand_file):
     return "A,B"

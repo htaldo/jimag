@@ -1,10 +1,10 @@
 const path = require('path')
 
 module.exports = {
-	entry: './static/dashb/dockviewer_app.js',
+	entry: './static/jobs/chains.ts',
 	output: {
-		filename: 'viewer_bundle.js',
-		path: path.resolve(__dirname, 'static', 'dashb')
+		filename: 'chains_bundle.js',
+		path: path.resolve(__dirname, 'static', 'jobs')
 	},
 	module: {
 		rules: [
@@ -20,7 +20,14 @@ module.exports = {
 					'css-loader',
 					'sass-loader'
 				]
-			}
+			},
+			{
+				test: /\.ts$/,
+				use: 'ts-loader',
+			},
 		]
 	},
+	resolve: {
+		extensions: ['.ts', '.js'],
+	}
 };

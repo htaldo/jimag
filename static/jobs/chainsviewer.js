@@ -1,30 +1,46 @@
-//import { Viewer } from 'molstar/lib/apps/docking-viewer';
-//import { ColorNames } from 'molstar/lib/mol-util/color/names';
-//import { PluginCommands } from 'molstar/lib/mol-plugin/commands';
+let viewer;
+let receptor;
 
-const djangovars = document.currentScript.dataset;
-const conformers = djangovars.conformers;
-const receptor = djangovars.receptor;
-console.log(conformers, receptor);
-molstar.Viewer.create('app2', {
-    layoutIsExpanded: false,
-    layoutShowControls: false,
-    layoutShowRemoteState: false,
-    layoutShowSequence: true,
-    layoutShowLog: false,
-    layoutShowLeftPanel: false,
+function loadReceptor(receptor) {
+    //code that will be loaded with jobs.html
+    if (!viewer) {
+	molstar.Viewer.create('app2', {
+	    layoutIsExpanded: true,
+	    layoutShowControls: true,
+	    layoutShowRemoteState: false,
+	    layoutShowSequence: false,
+	    layoutShowLog: true,
+	    layoutShowLeftPanel: true,
 
-    viewportShowExpand: false,
-    viewportShowSelectionMode: true,
-    viewportShowAnimation: false,
+	    viewportShowExpand: true,
+	    viewportShowSelectionMode: false,
+	    viewportShowAnimation: false,
 
-    pdbProvider: 'rcsb',
-    emdbProvider: 'rcsb',
-}).then(viewer => {
-	/*viewer.loadPdb('7bv2');*/
-    viewer.loadStructureFromUrl(receptor, format='pdbqt')
-    viewer.loadStructureFromUrl(conformers, format='pdbqt')
-});
-//const renderer = plugin.canvas3d!.props.renderer;
-//PluginCommands.Canvas3D.SetSettings(plugin, { settings: { renderer: { ...renderer, backgroundColor: ColorNames.red /* or: 0xff0000 as Color */ } } });
+	    pdbProvider: 'rcsb',
+	    emdbProvider: 'rcsb',
+	}).then(newViewer => {
+	    viewer = newViewer;
+	    viewer.plugin.selectionMode=true //al hacer esto true se agrega el div con los botones automáticamente
+	    viewer.plugin.managers.interactivity.setProps({granularity: 'chain'})	    
+	    
+	    
+	    //var control = document.getElementsByClassName('msp-selection-viewport-controls')[0];
+            //control.remove();
 
+	    //var controls = document.getElementsByClassName('msp-selection-viewport-controls');
+	    //console.log("controls:");
+	    //controls[0].style.visibility = 'hidden';
+	});
+    } else {
+	//code that will be executed every time a new protein is chosen
+	viewer.plugin.clear();
+	viewer.loadStructureFromData(receptor, format='pdbqt');
+        console.log(receptor);
+    }
+}
+
+loadReceptor(receptor);
+//console.log(controls);
+//for (var i = 0; i < controls.length; i++) {
+//  controls[i].style.visibility = 'hidden';
+//}

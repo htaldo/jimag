@@ -8706,3 +8706,2092 @@ WARNING:django.request:Not Found: /jobs/undefined
 WARNING:django.request:Not Found: /favicon.ico
 ERROR:rq.worker:Could not connect to Redis instance: Connection closed by server. Retrying in 1 seconds...
 INFO:rq.worker:Worker 3ff66be2ed4e40069cf715adeef31b6c [PID 2480]: warm shut down requested
+INFO:rq.worker:Worker rq:worker:4b5cd70e14de4a9190cd32b729f27ec8 started with PID 6765, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:4b5cd70e14de4a9190cd32b729f27ec8
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Worker rq:worker:54fd4c80341342a796b80292ef215845 started with PID 6496, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:54fd4c80341342a796b80292ef215845
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Worker 54fd4c80341342a796b80292ef215845 [PID 6496]: warm shut down requested
+INFO:rq.worker:Unsubscribing from channel rq:pubsub:54fd4c80341342a796b80292ef215845
+INFO:rq.worker:Worker rq:worker:a77412be8479412295fd489463fc6462 started with PID 6520, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:a77412be8479412295fd489463fc6462
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Worker a77412be8479412295fd489463fc6462 [PID 6520]: warm shut down requested
+INFO:rq.worker:Unsubscribing from channel rq:pubsub:a77412be8479412295fd489463fc6462
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (fa90a099-4e5f-4495-9bb9-50606844e323)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (fa90a099-4e5f-4495-9bb9-50606844e323)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+ERROR:django.request:Internal Server Error: /process_protein/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 24, in process_protein
+    return JsonResponse({'status': 'success', 'protein_clean': protein_file})
+                                                              ^^^^^^^^^^^^
+NameError: name 'protein_file' is not defined
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (86beeaae-0127-4915-b123-becc218c6eff)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (86beeaae-0127-4915-b123-becc218c6eff)
+INFO:rq.worker:Result is kept for 500 seconds
+ERROR:django.request:Internal Server Error: /process_protein/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 24, in process_protein
+    return JsonResponse({'status': 'success', 'protein_clean': protein_file})
+                                                              ^^^^^^^^^^^^
+NameError: name 'protein_file' is not defined
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (94c0a953-0498-4896-93bf-0a88d2afbbeb)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (94c0a953-0498-4896-93bf-0a88d2afbbeb)
+INFO:rq.worker:Result is kept for 500 seconds
+ERROR:django.request:Internal Server Error: /process_protein/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 24, in process_protein
+    return JsonResponse({'status': 'success', 'protein_clean': protein_file})
+                                                              ^^^^^^^^^^^^
+NameError: name 'protein_file' is not defined
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (fa9b1723-c215-4e38-9fe6-e3424bcdec14)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (fa9b1723-c215-4e38-9fe6-e3424bcdec14)
+INFO:rq.worker:Result is kept for 500 seconds
+ERROR:django.request:Internal Server Error: /process_protein/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 24, in process_protein
+    return JsonResponse({'status': 'success', 'protein_clean': protein_file})
+                                                              ^^^^^^^^^^^^
+NameError: name 'protein_file' is not defined
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (3fce1c36-8669-4898-af2b-f2848352bbe5)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (3fce1c36-8669-4898-af2b-f2848352bbe5)
+INFO:rq.worker:Result is kept for 500 seconds
+ERROR:django.request:Internal Server Error: /process_protein/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 24, in process_protein
+    return JsonResponse({'status': 'success', 'protein_clean': protein_file})
+                                                              ^^^^^^^^^^^^
+NameError: name 'protein_file' is not defined
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (2e64c243-3c5a-4f79-9161-04b1589aa7d6)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (2e64c243-3c5a-4f79-9161-04b1589aa7d6)
+INFO:rq.worker:Result is kept for 500 seconds
+ERROR:django.request:Internal Server Error: /process_protein/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 24, in process_protein
+    return JsonResponse({'status': 'success', 'protein_clean': protein_file})
+                                                              ^^^^^^^^^^^^
+NameError: name 'protein_file' is not defined
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Worker 4b5cd70e14de4a9190cd32b729f27ec8 [PID 6765]: warm shut down requested
+INFO:rq.worker:Unsubscribing from channel rq:pubsub:4b5cd70e14de4a9190cd32b729f27ec8
+INFO:rq.worker:Worker rq:worker:6e1eb28d3c7048dda67fba11f8f1f802 started with PID 1929, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:6e1eb28d3c7048dda67fba11f8f1f802
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (38ff0ecd-9719-489a-99fa-c8c929563f5c)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (38ff0ecd-9719-489a-99fa-c8c929563f5c)
+INFO:rq.worker:Result is kept for 500 seconds
+ERROR:django.request:Internal Server Error: /process_protein/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 24, in process_protein
+    return JsonResponse({'status': 'success', 'protein_clean': protein_file})
+                                                              ^^^^^^^^^^^^
+NameError: name 'protein_file' is not defined
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (656f5910-265d-4f77-88a6-fda39ccebbd2)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (656f5910-265d-4f77-88a6-fda39ccebbd2)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (eed1ac16-7d57-4799-965b-a401ebf546b4)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (eed1ac16-7d57-4799-965b-a401ebf546b4)
+INFO:rq.worker:Result is kept for 500 seconds
+ERROR:django.request:Internal Server Error: /process_protein/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 25, in process_protein
+    return JsonResponse({'status': 'success', 'protein_clean': protein_file})
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/http/response.py", line 731, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/serializers/json.py", line 106, in default
+    return super().default(o)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type InMemoryUploadedFile is not JSON serializable
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (c11a3462-7ed2-4499-9b0a-41166ac75ee3)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (c11a3462-7ed2-4499-9b0a-41166ac75ee3)
+INFO:rq.worker:Result is kept for 500 seconds
+ERROR:django.request:Internal Server Error: /process_protein/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 25, in process_protein
+    return JsonResponse({'status': 'success', 'protein_clean': protein_file.read()})
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/http/response.py", line 731, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/serializers/json.py", line 106, in default
+    return super().default(o)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bytes is not JSON serializable
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (d0c7d6cf-8ab3-4d10-acb6-5ecf5ed93559)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (d0c7d6cf-8ab3-4d10-acb6-5ecf5ed93559)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (5b690a7f-433a-4e02-8dac-76009055ee44)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (5b690a7f-433a-4e02-8dac-76009055ee44)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (4d1df3db-416e-44f4-91c7-6157bfcf1bdf)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (4d1df3db-416e-44f4-91c7-6157bfcf1bdf)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (b196c1c5-f6cf-4e9a-8bb1-af153815af51)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (b196c1c5-f6cf-4e9a-8bb1-af153815af51)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Worker 6e1eb28d3c7048dda67fba11f8f1f802 [PID 1929]: warm shut down requested
+INFO:rq.worker:Unsubscribing from channel rq:pubsub:6e1eb28d3c7048dda67fba11f8f1f802
+INFO:rq.worker:Worker rq:worker:832fc2c4ec224a74b495b59ceb88b3fa started with PID 2236, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:832fc2c4ec224a74b495b59ceb88b3fa
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (cae0654a-eb91-4134-82ad-5e1b178e4e85)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (cae0654a-eb91-4134-82ad-5e1b178e4e85)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (35c8408f-4cbf-4512-8a72-1c06a7aec587)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (35c8408f-4cbf-4512-8a72-1c06a7aec587)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (a7210587-da80-4118-8459-0f5fc26c1065)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (a7210587-da80-4118-8459-0f5fc26c1065)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (7dc5c04b-4005-423f-b5ac-f59353b0c1f9)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (7dc5c04b-4005-423f-b5ac-f59353b0c1f9)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (279d8b75-404b-4bc6-a716-744edd2a045e)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (279d8b75-404b-4bc6-a716-744edd2a045e)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (d894089c-7273-4da3-ae4b-a57f425a48d5)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (d894089c-7273-4da3-ae4b-a57f425a48d5)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (a81c2b52-258d-40bf-bc5d-a7c6ad1df3c5)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (a81c2b52-258d-40bf-bc5d-a7c6ad1df3c5)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (ff41c94e-30c6-497d-ab79-613a488c34e0)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (ff41c94e-30c6-497d-ab79-613a488c34e0)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (19916738-2d33-4dd2-9df6-7cc087abd730)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (19916738-2d33-4dd2-9df6-7cc087abd730)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (f0abb2ff-5be9-4eef-ade2-1c059c4ad0e3)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (f0abb2ff-5be9-4eef-ade2-1c059c4ad0e3)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (3be8ddf7-719f-4f74-95ff-82875a7831f4)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (3be8ddf7-719f-4f74-95ff-82875a7831f4)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (28506c1b-524b-4c6d-bfaf-3befd5a42698)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (28506c1b-524b-4c6d-bfaf-3befd5a42698)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: pyruvate lyase.pdb (chemical/x-pdb)>)[39;49;00m (a654d571-1949-46b7-89d0-3a8e243316a1)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (a654d571-1949-46b7-89d0-3a8e243316a1)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (d3410583-69af-4d0a-af40-3166688f4bd4)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (d3410583-69af-4d0a-af40-3166688f4bd4)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (5f03b983-3bae-44dd-868d-8e84b0c7c361)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (5f03b983-3bae-44dd-868d-8e84b0c7c361)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (2333c378-73b9-4a1a-a8a0-c65d67887f29)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (2333c378-73b9-4a1a-a8a0-c65d67887f29)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (a99acc55-a0bd-4590-846b-a85de958e3fe)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (a99acc55-a0bd-4590-846b-a85de958e3fe)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (4c2a041a-b03c-4bd3-acf1-973aaf4515ea)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (4c2a041a-b03c-4bd3-acf1-973aaf4515ea)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (70a81da0-d42e-45c9-bc73-498d98c0f3a9)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (70a81da0-d42e-45c9-bc73-498d98c0f3a9)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (1983fec9-75ec-4887-aad6-0659e886e847)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (1983fec9-75ec-4887-aad6-0659e886e847)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (cb7e3cb6-d239-4a2e-a1dc-e4358d4f40d7)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (cb7e3cb6-d239-4a2e-a1dc-e4358d4f40d7)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (f0c6be50-7df4-4a85-adcd-40fa6ba5c05b)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (f0c6be50-7df4-4a85-adcd-40fa6ba5c05b)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (d91c4d5a-6715-4d42-ba61-9d3d0c6fc447)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (d91c4d5a-6715-4d42-ba61-9d3d0c6fc447)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (4150d24b-f38f-431c-b094-2422c6712b89)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (4150d24b-f38f-431c-b094-2422c6712b89)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (5a79ba71-7641-46c5-a80d-4a3f85f9aefc)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (5a79ba71-7641-46c5-a80d-4a3f85f9aefc)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (b46b5b2b-dbd7-47a9-ade7-fda99258e462)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (b46b5b2b-dbd7-47a9-ade7-fda99258e462)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Worker 832fc2c4ec224a74b495b59ceb88b3fa [PID 2236]: warm shut down requested
+INFO:rq.worker:Unsubscribing from channel rq:pubsub:832fc2c4ec224a74b495b59ceb88b3fa
+INFO:rq.worker:Worker rq:worker:a44abfe556bf4cc4913e3ecc3c231afc started with PID 2313, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:a44abfe556bf4cc4913e3ecc3c231afc
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (e8e3ca43-377b-4bdc-93eb-e3a888f2d67e)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (e8e3ca43-377b-4bdc-93eb-e3a888f2d67e)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (80c15201-0a72-4040-9d66-722f5f8ff85d)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (80c15201-0a72-4040-9d66-722f5f8ff85d)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (fb456c8f-bc65-48b7-b24e-99c9039a194b)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (fb456c8f-bc65-48b7-b24e-99c9039a194b)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (10646375-c897-444a-92b9-c66c357fee38)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (10646375-c897-444a-92b9-c66c357fee38)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (a29354ee-dcbe-4050-8b0e-6565157d5ba6)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (a29354ee-dcbe-4050-8b0e-6565157d5ba6)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (822e74db-7651-40dc-bb41-e80c72820677)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (822e74db-7651-40dc-bb41-e80c72820677)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: 4odk.pdb (chemical/x-pdb)>)[39;49;00m (6cdba544-0294-49ae-9513-dcd7c1741081)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (6cdba544-0294-49ae-9513-dcd7c1741081)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: 4odk.pdb (chemical/x-pdb)>)[39;49;00m (0f20e50a-cda9-4189-88e5-9f58fdcea003)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (0f20e50a-cda9-4189-88e5-9f58fdcea003)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: ligand.pdb (chemical/x-pdb)>)[39;49;00m (07e16381-3874-4196-8a28-c9676e34235e)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (07e16381-3874-4196-8a28-c9676e34235e)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (16598b6a-f9e1-4109-a1df-c270eea4561c)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (16598b6a-f9e1-4109-a1df-c270eea4561c)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (791a0011-9c6c-4a01-b6c7-d19aafad328a)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (791a0011-9c6c-4a01-b6c7-d19aafad328a)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (4c8757cc-eb34-4e0c-a5da-c50612ff661c)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (4c8757cc-eb34-4e0c-a5da-c50612ff661c)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (18b23858-d3e8-4dae-a474-044be8c68f09)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (18b23858-d3e8-4dae-a474-044be8c68f09)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: 4utv.pdb (chemical/x-pdb)>)[39;49;00m (72ff92cd-99aa-4575-89dc-c0d2bee77d43)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (72ff92cd-99aa-4575-89dc-c0d2bee77d43)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (660e45d7-4bec-42ed-8f69-299f917a49b6)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (660e45d7-4bec-42ed-8f69-299f917a49b6)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (da245c52-6fe9-46cb-916d-610a15cc2a98)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (da245c52-6fe9-46cb-916d-610a15cc2a98)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (976bd17d-d77b-4fa9-bd2e-3a9430fa2ee0)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (976bd17d-d77b-4fa9-bd2e-3a9430fa2ee0)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (2fb57024-5f02-4e17-8a0a-115c9016d7eb)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (2fb57024-5f02-4e17-8a0a-115c9016d7eb)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (6dd46498-120a-4337-9f1b-0213847982eb)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (6dd46498-120a-4337-9f1b-0213847982eb)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (d26a2fd5-741b-4431-b58a-cd8520e76363)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (d26a2fd5-741b-4431-b58a-cd8520e76363)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (79bf3208-776f-4f9f-8d54-712f583f8381)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (79bf3208-776f-4f9f-8d54-712f583f8381)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Worker a44abfe556bf4cc4913e3ecc3c231afc [PID 2313]: warm shut down requested
+INFO:rq.worker:Unsubscribing from channel rq:pubsub:a44abfe556bf4cc4913e3ecc3c231afc
+INFO:rq.worker:Worker rq:worker:38164f9fe2144931a7f2d0750da69def started with PID 2097, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:38164f9fe2144931a7f2d0750da69def
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (0e96e04f-8719-49b2-89ac-835cc6ae21cf)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (0e96e04f-8719-49b2-89ac-835cc6ae21cf)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: ligand.sdf (application/vnd.kinar)>)[39;49;00m (e771b81e-b3fb-4277-a296-66f92773690e)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (e771b81e-b3fb-4277-a296-66f92773690e)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: ligand.sdf (application/vnd.kinar)>)[39;49;00m (86137a4d-b727-4b4e-88ce-f59929dc0e08)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (86137a4d-b727-4b4e-88ce-f59929dc0e08)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (3345887f-c23b-49bc-899e-b4e7c4207c75)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (3345887f-c23b-49bc-899e-b4e7c4207c75)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: ligand.pdb (chemical/x-pdb)>)[39;49;00m (24728ffb-5ab8-4e12-8482-a709737d0a1a)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (24728ffb-5ab8-4e12-8482-a709737d0a1a)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: ligand.pdb (chemical/x-pdb)>)[39;49;00m (65911c82-8fd1-41e5-9718-3c7a47de2a9d)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (65911c82-8fd1-41e5-9718-3c7a47de2a9d)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: ligand.pdb (chemical/x-pdb)>)[39;49;00m (01e4a750-13b1-4f7c-8c53-a8bf4e20a1b3)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (01e4a750-13b1-4f7c-8c53-a8bf4e20a1b3)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (8a204f2b-8f5f-4c95-bb05-3364a8263b0c)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (8a204f2b-8f5f-4c95-bb05-3364a8263b0c)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Worker 38164f9fe2144931a7f2d0750da69def [PID 2097]: warm shut down requested
+INFO:rq.worker:Unsubscribing from channel rq:pubsub:38164f9fe2144931a7f2d0750da69def
+INFO:rq.worker:Worker rq:worker:6b3faef4bc464cf5904c68db35c248ff started with PID 5723, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:6b3faef4bc464cf5904c68db35c248ff
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (d47ac244-9998-41b5-bd68-1a6f2170675b)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (d47ac244-9998-41b5-bd68-1a6f2170675b)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (d711a748-f3a6-425d-ab47-408c55771546)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (d711a748-f3a6-425d-ab47-408c55771546)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: 4utv.pdb (chemical/x-pdb)>)[39;49;00m (2d0ea79f-ea3c-4281-91b4-73b1519208e8)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (2d0ea79f-ea3c-4281-91b4-73b1519208e8)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (890e00ef-d5ed-43fa-a7c6-7bb5fe48e22c)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (890e00ef-d5ed-43fa-a7c6-7bb5fe48e22c)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (e0432d11-0025-4150-9475-717acac0e60c)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (e0432d11-0025-4150-9475-717acac0e60c)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (65ed2054-dbe5-462b-a003-3c84912c7c7c)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (65ed2054-dbe5-462b-a003-3c84912c7c7c)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (8401ca6c-56ef-4b0c-844c-52fbaf4751e5)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (8401ca6c-56ef-4b0c-844c-52fbaf4751e5)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Worker 6b3faef4bc464cf5904c68db35c248ff [PID 5723]: warm shut down requested
+INFO:rq.worker:Unsubscribing from channel rq:pubsub:6b3faef4bc464cf5904c68db35c248ff
+INFO:rq.worker:Worker rq:worker:d8e8b226325c4d5e80954d4a8d413c1f started with PID 5054, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:d8e8b226325c4d5e80954d4a8d413c1f
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (8f09e539-6dac-4bd6-b478-16542459ca77)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (8f09e539-6dac-4bd6-b478-16542459ca77)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (eeca332d-09db-4766-b910-c841c0e68120)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (eeca332d-09db-4766-b910-c841c0e68120)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (6d6d3416-c65b-40ca-a2a4-a909eefe8fa6)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (6d6d3416-c65b-40ca-a2a4-a909eefe8fa6)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (b031aff2-05ce-4210-b73a-edb90b0db7a2)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (b031aff2-05ce-4210-b73a-edb90b0db7a2)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (2625299b-624b-489b-98b9-1592df914aa8)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (2625299b-624b-489b-98b9-1592df914aa8)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (c737a1e9-b089-4a79-a744-b9331cdf8266)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (c737a1e9-b089-4a79-a744-b9331cdf8266)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:rq.worker:Could not connect to Redis instance: Connection closed by server. Retrying in 1 seconds...
+INFO:rq.worker:Worker d8e8b226325c4d5e80954d4a8d413c1f [PID 5054]: warm shut down requested
+INFO:rq.worker:Worker rq:worker:91665d7aa3b447daa2920ed58fa55952 started with PID 9990, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:91665d7aa3b447daa2920ed58fa55952
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (ea1700e5-d8cf-4754-84b4-4671a79b0628)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (ea1700e5-d8cf-4754-84b4-4671a79b0628)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Worker rq:worker:b363f19497d74fa5880ee939678a2869 started with PID 4181, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:b363f19497d74fa5880ee939678a2869
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (4738f703-d399-4318-bffc-41852e15944a)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (4738f703-d399-4318-bffc-41852e15944a)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: NADPbackup.sdf (application/vnd.kinar)>)[39;49;00m (3a219827-671c-407d-997e-fe4830706fd5)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (3a219827-671c-407d-997e-fe4830706fd5)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (ce1569bc-2149-41b0-8b09-da62d42bf097)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (ce1569bc-2149-41b0-8b09-da62d42bf097)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (ca647602-bfb7-4753-ae45-566a50dbe373)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (ca647602-bfb7-4753-ae45-566a50dbe373)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (b6e3bfcd-8090-453c-b756-fd745431380e)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (b6e3bfcd-8090-453c-b756-fd745431380e)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (7c2c6be5-b112-4f80-9b92-61a031675de9)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (7c2c6be5-b112-4f80-9b92-61a031675de9)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (be8cd7b3-dd0f-4313-8808-6d64413f1244)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (be8cd7b3-dd0f-4313-8808-6d64413f1244)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (00d13f67-8d51-4a3f-a6d2-98c7c78f1d98)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (00d13f67-8d51-4a3f-a6d2-98c7c78f1d98)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (7b848919-85c9-4fae-8ba8-34c6bc0fb4cb)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (7b848919-85c9-4fae-8ba8-34c6bc0fb4cb)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (0b79dfdc-5ac2-4185-a1d1-786804b76819)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (0b79dfdc-5ac2-4185-a1d1-786804b76819)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Worker b363f19497d74fa5880ee939678a2869 [PID 4181]: warm shut down requested
+INFO:rq.worker:Unsubscribing from channel rq:pubsub:b363f19497d74fa5880ee939678a2869
+INFO:rq.worker:Worker rq:worker:273a4c329eb54ccc8eff75384e70f5da started with PID 7918, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:273a4c329eb54ccc8eff75384e70f5da
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (ff2f5741-aed0-4551-88eb-fdcaf9c9d8a5)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (ff2f5741-aed0-4551-88eb-fdcaf9c9d8a5)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (aa9a99c0-71d2-4758-b844-71f905565a01)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (aa9a99c0-71d2-4758-b844-71f905565a01)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (57a38fb0-a0b2-4613-a078-c49455a6c5aa)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (57a38fb0-a0b2-4613-a078-c49455a6c5aa)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Worker 273a4c329eb54ccc8eff75384e70f5da [PID 7918]: warm shut down requested
+INFO:rq.worker:Unsubscribing from channel rq:pubsub:273a4c329eb54ccc8eff75384e70f5da
+INFO:rq.worker:Worker rq:worker:6764ea11e9e7448f845a6a697dd8aa00 started with PID 24442, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:6764ea11e9e7448f845a6a697dd8aa00
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+ERROR:rq.worker:Could not connect to Redis instance: Connection closed by server. Retrying in 1 seconds...
+INFO:rq.worker:Worker 6764ea11e9e7448f845a6a697dd8aa00 [PID 24442]: warm shut down requested
+INFO:rq.worker:Worker rq:worker:2b02a7199f1e467eb09df7b6ac3147ba started with PID 4616, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:2b02a7199f1e467eb09df7b6ac3147ba
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (a642e56f-c17c-44da-8a08-07c9cb90e4cb)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (a642e56f-c17c-44da-8a08-07c9cb90e4cb)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Worker 2b02a7199f1e467eb09df7b6ac3147ba [PID 4616]: warm shut down requested
+INFO:rq.worker:Unsubscribing from channel rq:pubsub:2b02a7199f1e467eb09df7b6ac3147ba
+INFO:rq.worker:Worker rq:worker:3b4cd6c879c4457c9cff74d175f18538 started with PID 5396, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:3b4cd6c879c4457c9cff74d175f18538
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (1753190c-62f8-4a23-a87f-dc7db4761c98)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (1753190c-62f8-4a23-a87f-dc7db4761c98)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Worker 3b4cd6c879c4457c9cff74d175f18538 [PID 5396]: warm shut down requested
+INFO:rq.worker:Unsubscribing from channel rq:pubsub:3b4cd6c879c4457c9cff74d175f18538
+INFO:rq.worker:Worker rq:worker:c59611cc81b24c188ae999fc63d4662a started with PID 15121, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:c59611cc81b24c188ae999fc63d4662a
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (78929f10-0e5b-4c30-996b-b580e56e345f)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (78929f10-0e5b-4c30-996b-b580e56e345f)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (61f86479-8b6b-4218-b8e5-33aefbd7fec5)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (61f86479-8b6b-4218-b8e5-33aefbd7fec5)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (f4885037-2560-4275-a583-1f3cfddd6611)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (f4885037-2560-4275-a583-1f3cfddd6611)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (c99c2b00-eb2f-475b-8183-f35e08670551)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (c99c2b00-eb2f-475b-8183-f35e08670551)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: config (application/octet-stream)>)[39;49;00m (ae12caca-1e4e-4ac7-b540-225d32921971)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (ae12caca-1e4e-4ac7-b540-225d32921971)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (1ab17009-1f4b-4751-8bec-c8ab4f881ed9)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (1ab17009-1f4b-4751-8bec-c8ab4f881ed9)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (f3b26680-504c-4da8-986a-d171c0b1ea7c)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (f3b26680-504c-4da8-986a-d171c0b1ea7c)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (7d9d2b58-e9b9-4212-a2fe-94ecbed9cccb)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (7d9d2b58-e9b9-4212-a2fe-94ecbed9cccb)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (4e8bc867-729c-4b49-bbe8-585c6299c9be)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (4e8bc867-729c-4b49-bbe8-585c6299c9be)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Worker c59611cc81b24c188ae999fc63d4662a [PID 15121]: warm shut down requested
+INFO:rq.worker:Unsubscribing from channel rq:pubsub:c59611cc81b24c188ae999fc63d4662a
+INFO:rq.worker:Worker rq:worker:ba976609ba6a4db79bc569f6ae52f25c started with PID 22962, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:ba976609ba6a4db79bc569f6ae52f25c
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (91099871-58d5-49b4-b046-46966bd098f2)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (91099871-58d5-49b4-b046-46966bd098f2)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (7f7b0c54-f344-4eb1-b12e-38287c3b5513)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (7f7b0c54-f344-4eb1-b12e-38287c3b5513)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+ERROR:rq.worker:Could not connect to Redis instance: Connection closed by server. Retrying in 1 seconds...
+INFO:rq.worker:Worker ba976609ba6a4db79bc569f6ae52f25c [PID 22962]: warm shut down requested
+INFO:rq.worker:Worker rq:worker:38218a3521a8445c827c49fc7fc3840f started with PID 8712, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:38218a3521a8445c827c49fc7fc3840f
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+ERROR:rq.worker:Could not connect to Redis instance: Connection closed by server. Retrying in 1 seconds...
+INFO:rq.worker:Worker 38218a3521a8445c827c49fc7fc3840f [PID 8712]: warm shut down requested
+INFO:rq.worker:Worker rq:worker:8318abf33eab43faad3eaf742532b72d started with PID 7673, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:8318abf33eab43faad3eaf742532b72d
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jimag/urls.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jimag/urls.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jimag/urls.py changed, reloading.
+ERROR:django.request:Internal Server Error: /dummy/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 505, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 154, in dummy
+    return render(request, 'dummy.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/backends/django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 11: 'static'. Did you forget to register or load this tag?
+WARNING:django.request:Not Found: /dummy/css/style.css
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Worker 8318abf33eab43faad3eaf742532b72d [PID 7673]: warm shut down requested
+INFO:rq.worker:Unsubscribing from channel rq:pubsub:8318abf33eab43faad3eaf742532b72d
+INFO:rq.worker:Worker rq:worker:44dd6f37407a4d5aa5b3e1f7f9151a09 started with PID 2424, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:44dd6f37407a4d5aa5b3e1f7f9151a09
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /dummy/...
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /dummy/...
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:rq.worker:Could not connect to Redis instance: Connection closed by server. Retrying in 1 seconds...
+INFO:rq.worker:Worker 44dd6f37407a4d5aa5b3e1f7f9151a09 [PID 2424]: warm shut down requested
+INFO:rq.worker:Worker rq:worker:757c95154fba4f87aa41787bb85967c3 started with PID 1958, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:757c95154fba4f87aa41787bb85967c3
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /dummy/...
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (5a637193-0630-43ab-baab-3b5115411b60)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (5a637193-0630-43ab-baab-3b5115411b60)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (c629e418-4cfc-4665-b3dd-017e337fd34d)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (c629e418-4cfc-4665-b3dd-017e337fd34d)
+INFO:rq.worker:Result is kept for 500 seconds
+ERROR:rq.worker:Could not connect to Redis instance: Connection closed by server. Retrying in 1 seconds...
+INFO:rq.worker:Worker 757c95154fba4f87aa41787bb85967c3 [PID 1958]: warm shut down requested
+INFO:rq.worker:Worker rq:worker:0341de7a86f7424b8829628d5fab4019 started with PID 2415, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:0341de7a86f7424b8829628d5fab4019
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+ERROR:rq.worker:Could not connect to Redis instance: Connection closed by server. Retrying in 1 seconds...
+INFO:rq.worker:Worker 0341de7a86f7424b8829628d5fab4019 [PID 2415]: warm shut down requested
+INFO:rq.worker:Worker rq:worker:9eb83514003e40bbaac1d086bf561efb started with PID 27217, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:9eb83514003e40bbaac1d086bf561efb
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (35133462-967d-44d7-9180-3260e90e7a31)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (35133462-967d-44d7-9180-3260e90e7a31)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (8be24055-c1cf-40e4-bc27-0cf614962737)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (8be24055-c1cf-40e4-bc27-0cf614962737)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (420d02ef-78bb-461b-b527-ad8ec43871b3)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (420d02ef-78bb-461b-b527-ad8ec43871b3)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (e4f93a58-29f2-4326-b56d-e5aa1bf3ed1b)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (e4f93a58-29f2-4326-b56d-e5aa1bf3ed1b)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (8f4f59d0-dca0-4123-b107-881d52d805ca)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (8f4f59d0-dca0-4123-b107-881d52d805ca)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (4fdc5e17-9019-491d-b689-3d00be202a15)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (4fdc5e17-9019-491d-b689-3d00be202a15)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (eba56f34-a3bb-48ba-9fae-9e3bf2112da2)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (eba56f34-a3bb-48ba-9fae-9e3bf2112da2)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (8d7ade48-8d13-423c-8588-e6688ad43a9e)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (8d7ade48-8d13-423c-8588-e6688ad43a9e)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (75474405-9d27-4816-8a26-bfb929b7e692)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (75474405-9d27-4816-8a26-bfb929b7e692)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (ae5edfb5-e903-4aa0-960e-90133a261225)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (ae5edfb5-e903-4aa0-960e-90133a261225)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (32892391-5c91-4187-a82a-2b015b50e2e4)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (32892391-5c91-4187-a82a-2b015b50e2e4)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (12887b08-ff21-443a-bd1e-ac2d159a1a3f)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (12887b08-ff21-443a-bd1e-ac2d159a1a3f)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (72c8dc63-eeec-4c21-b444-9123f3ea564c)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (72c8dc63-eeec-4c21-b444-9123f3ea564c)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (0891ee21-ef55-4b9f-95dc-4b04dd1aa97a)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (0891ee21-ef55-4b9f-95dc-4b04dd1aa97a)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (57e16bf9-68ef-44b5-80dc-3b08ef5e2bf8)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (57e16bf9-68ef-44b5-80dc-3b08ef5e2bf8)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: 4odk.pdb (chemical/x-pdb)>)[39;49;00m (b035b83e-1bb4-412b-a72b-94bfd905af90)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (b035b83e-1bb4-412b-a72b-94bfd905af90)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (9dd0ccdb-d57f-4930-985c-4d3fc0a68318)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (9dd0ccdb-d57f-4930-985c-4d3fc0a68318)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (15a000f1-381f-4ed5-8eb4-9dfabc0b9220)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (15a000f1-381f-4ed5-8eb4-9dfabc0b9220)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (cd34da82-6b08-4f26-8ec2-bca79d91c4dc)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (cd34da82-6b08-4f26-8ec2-bca79d91c4dc)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (a6fcdb2c-2ab8-41fd-980b-6298217b445a)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (a6fcdb2c-2ab8-41fd-980b-6298217b445a)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (98de954b-c3d6-4095-b8f7-4a055516bd29)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (98de954b-c3d6-4095-b8f7-4a055516bd29)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (61b92b7b-6273-4d47-a041-05f76e194435)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (61b92b7b-6273-4d47-a041-05f76e194435)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Worker rq:worker:da69f38269504cab8fc49976530d72e1 started with PID 1675, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:da69f38269504cab8fc49976530d72e1
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (c034d5d6-d620-43f6-b83c-1b6aaec91ec9)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (c034d5d6-d620-43f6-b83c-1b6aaec91ec9)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (0829435a-4f23-4bf5-8301-30f515017373)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (0829435a-4f23-4bf5-8301-30f515017373)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (51093932-2cf5-4e24-9362-1f418a28890b)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (51093932-2cf5-4e24-9362-1f418a28890b)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: ligand.sdf (application/vnd.kinar)>)[39;49;00m (4f34908f-69ce-4e75-9b82-c2245df5d788)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (4f34908f-69ce-4e75-9b82-c2245df5d788)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (55e23d27-aa14-45c9-846d-b7635ae5a7cb)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (55e23d27-aa14-45c9-846d-b7635ae5a7cb)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (edc9b927-9819-426c-a233-81f70c60fb08)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (edc9b927-9819-426c-a233-81f70c60fb08)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (597de526-13f2-4b10-9b8a-8071149e7132)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (597de526-13f2-4b10-9b8a-8071149e7132)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (29f39b20-d5e9-4174-83cf-85c0c004738c)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (29f39b20-d5e9-4174-83cf-85c0c004738c)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (8870e684-5ce6-49aa-8c59-80852e979cc4)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (8870e684-5ce6-49aa-8c59-80852e979cc4)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (11cc9be1-2e0f-470a-af5f-a1cbcecb9bff)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (11cc9be1-2e0f-470a-af5f-a1cbcecb9bff)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (d7d975ef-f164-44ca-bfbf-8a86b58bdcd6)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (d7d975ef-f164-44ca-bfbf-8a86b58bdcd6)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (39ef7cbb-d96a-4ca5-a7dc-940f37f58840)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (39ef7cbb-d96a-4ca5-a7dc-940f37f58840)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: 4utv.pdb (chemical/x-pdb)>)[39;49;00m (c272e010-cbfa-4384-8bd5-939fe201435a)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (c272e010-cbfa-4384-8bd5-939fe201435a)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: ligand.sdf (application/vnd.kinar)>)[39;49;00m (5c465f0d-51e0-4f13-92c7-8143bf178082)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (5c465f0d-51e0-4f13-92c7-8143bf178082)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (5f5bdd96-41d0-477b-934f-792d637767f8)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (5f5bdd96-41d0-477b-934f-792d637767f8)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (0f30c415-b256-494b-a462-c5a816ecef94)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (0f30c415-b256-494b-a462-c5a816ecef94)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (ea2e8a4c-1ad6-4c5f-a150-99609332a6f9)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (ea2e8a4c-1ad6-4c5f-a150-99609332a6f9)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (59acf19b-a3b8-4dce-b23c-9630437d071c)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (59acf19b-a3b8-4dce-b23c-9630437d071c)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (486dbe84-8260-4965-bb49-3ae93cd3b722)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (486dbe84-8260-4965-bb49-3ae93cd3b722)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (d429584b-c33b-4055-ab06-f88fc67ef1d1)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (d429584b-c33b-4055-ab06-f88fc67ef1d1)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (118e6c1b-0b40-48bb-bc5e-88531de93e20)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (118e6c1b-0b40-48bb-bc5e-88531de93e20)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (478c2932-63b4-4afb-9de7-20cccd493939)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (478c2932-63b4-4afb-9de7-20cccd493939)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (c8283fca-b68f-489a-89ee-ddb803390997)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (c8283fca-b68f-489a-89ee-ddb803390997)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (b5d8270f-9ed9-496f-b9b0-ce584eee6064)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (b5d8270f-9ed9-496f-b9b0-ce584eee6064)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (39d4afd5-0a12-4337-bd16-dd9d2a0323f2)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (39d4afd5-0a12-4337-bd16-dd9d2a0323f2)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (5862eb30-2ebc-4186-a8c0-66559695f198)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (5862eb30-2ebc-4186-a8c0-66559695f198)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (6b0a5eb8-616c-46f0-b5fd-ff1ec741baa7)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (6b0a5eb8-616c-46f0-b5fd-ff1ec741baa7)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (4bacd1a0-225d-41f1-9e8b-23cebf10b7b0)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (4bacd1a0-225d-41f1-9e8b-23cebf10b7b0)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Worker da69f38269504cab8fc49976530d72e1 [PID 1675]: warm shut down requested
+INFO:rq.worker:Unsubscribing from channel rq:pubsub:da69f38269504cab8fc49976530d72e1
+INFO:rq.worker:Worker rq:worker:5ce8945222734727b3938f0b192d652e started with PID 14442, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:5ce8945222734727b3938f0b192d652e
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Worker 5ce8945222734727b3938f0b192d652e [PID 14442]: warm shut down requested
+INFO:rq.worker:Unsubscribing from channel rq:pubsub:5ce8945222734727b3938f0b192d652e
+INFO:rq.worker:Worker rq:worker:d799482f51bb4e37aaf689e594bd3b3a started with PID 7304, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:d799482f51bb4e37aaf689e594bd3b3a
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: receptor.pdb (chemical/x-pdb)>)[39;49;00m (7540d3f3-f9d9-4462-b2d8-c9fef8248441)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (7540d3f3-f9d9-4462-b2d8-c9fef8248441)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (a125155a-70d7-417b-886e-23467d4c2906)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (a125155a-70d7-417b-886e-23467d4c2906)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+ERROR:django.request:Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view jobs.views.jobs didn't return an HttpResponse object. It returned None instead.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view jobs.views.jobs didn't return an HttpResponse object. It returned None instead.
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:rq.worker:Worker d799482f51bb4e37aaf689e594bd3b3a [PID 7304]: warm shut down requested
+INFO:rq.worker:Unsubscribing from channel rq:pubsub:d799482f51bb4e37aaf689e594bd3b3a
+INFO:rq.worker:Worker rq:worker:1717ad656f29438a87f267e2d7be09f9 started with PID 2065, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:1717ad656f29438a87f267e2d7be09f9
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (2a78bf8d-0ecc-4409-9e3a-9cb5fc2dd701)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (2a78bf8d-0ecc-4409-9e3a-9cb5fc2dd701)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (a0515e12-5440-4086-9747-11f96ab906e5)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (a0515e12-5440-4086-9747-11f96ab906e5)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (65768196-4004-40b2-bf5f-d12376f2913c)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (65768196-4004-40b2-bf5f-d12376f2913c)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (ec7d02a4-854d-4af4-b3ad-e044be3b1d7e)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (ec7d02a4-854d-4af4-b3ad-e044be3b1d7e)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:rq.worker:Worker 1717ad656f29438a87f267e2d7be09f9 [PID 2065]: warm shut down requested
+INFO:rq.worker:Unsubscribing from channel rq:pubsub:1717ad656f29438a87f267e2d7be09f9
+INFO:rq.worker:Worker rq:worker:e2dfa35204964da983a8bd7594b3acd4 started with PID 19946, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:e2dfa35204964da983a8bd7594b3acd4
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (01d4bfe4-2dae-4f49-8225-6eef0ac26502)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (01d4bfe4-2dae-4f49-8225-6eef0ac26502)
+INFO:rq.worker:Result is kept for 500 seconds
+ERROR:django.request:Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view jobs.views.jobs didn't return an HttpResponse object. It returned None instead.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/utils/datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'protein_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 50, in jobs
+    store_protein(request, docking, job)
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 87, in store_protein
+    protein_file = request.FILES['protein_file']
+                   ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/utils/datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'protein_file'
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (f3e55a62-6d7b-41c0-b79d-4d8c22e24122)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (f3e55a62-6d7b-41c0-b79d-4d8c22e24122)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (f94fbeb9-c8c9-44d3-88e3-281f618ce532)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (f94fbeb9-c8c9-44d3-88e3-281f618ce532)
+INFO:rq.worker:Result is kept for 500 seconds
+ERROR:django.request:Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/utils/datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'protein_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 50, in jobs
+    store_protein(request, docking, job)
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 87, in store_protein
+    protein_file = request.FILES['protein_file']
+                   ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/utils/datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'protein_file'
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+ERROR:django.request:Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 61, in jobs
+    return render(request, 'jobs.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'process_ligand' not found. 'process_ligand' is not a valid view function or pattern name.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 88, in jobs
+    return render(request, 'jobs.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'process_ligand' not found. 'process_ligand' is not a valid view function or pattern name.
+WARNING:django.request:Not Found: /favicon.ico
+ERROR:django.request:Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 88, in jobs
+    return render(request, 'jobs.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'process_ligand' not found. 'process_ligand' is not a valid view function or pattern name.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jimag/urls.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/tasks.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/tasks.py changed, reloading.
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (e52ab54c-369e-40ec-bc10-99bb3104f1de)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (e52ab54c-369e-40ec-bc10-99bb3104f1de)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_ligand(<InMemoryUploadedFile: cefotaxime.sdf (application/vnd.kinar)>)[39;49;00m (273eb515-0906-404a-9342-d0ee282ae72a)
+ERROR:rq.worker:[Job 273eb515-0906-404a-9342-d0ee282ae72a]: exception raised while executing (jobs.tasks.analyze_ligand)
+Traceback (most recent call last):
+  File "/home/aldo/.local/pipx/venvs/django-rq/lib/python3.11/site-packages/rq/utils.py", line 118, in import_attribute
+    attribute_owner = getattr(module, attribute_owner_name)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'jobs.tasks' has no attribute ''
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aldo/.local/pipx/venvs/django-rq/lib/python3.11/site-packages/rq/worker.py", line 1428, in perform_job
+    rv = job.perform()
+         ^^^^^^^^^^^^^
+  File "/home/aldo/.local/pipx/venvs/django-rq/lib/python3.11/site-packages/rq/job.py", line 1278, in perform
+    self._result = self._execute()
+                   ^^^^^^^^^^^^^^^
+  File "/home/aldo/.local/pipx/venvs/django-rq/lib/python3.11/site-packages/rq/job.py", line 1315, in _execute
+    result = self.func(*self.args, **self.kwargs)
+             ^^^^^^^^^
+  File "/home/aldo/.local/pipx/venvs/django-rq/lib/python3.11/site-packages/rq/job.py", line 425, in func
+    return import_attribute(self.func_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aldo/.local/pipx/venvs/django-rq/lib/python3.11/site-packages/rq/utils.py", line 120, in import_attribute
+    raise ValueError('Invalid attribute name: %s' % attribute_name)
+ValueError: Invalid attribute name: analyze_ligand
+
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/forms.py changed, reloading.
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (0aee81f9-4f97-40c4-8c97-0b84f4d3b734)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (0aee81f9-4f97-40c4-8c97-0b84f4d3b734)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (efa2ea96-71d8-404c-b10b-453acd92ac50)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (efa2ea96-71d8-404c-b10b-453acd92ac50)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (927b2b40-b6b6-48a1-bd69-67efc68b622b)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (927b2b40-b6b6-48a1-bd69-67efc68b622b)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_ligand(<InMemoryUploadedFile: cefotaxime.sdf (application/vnd.kinar)>)[39;49;00m (070f91ec-23c1-48e6-bf37-5a79260e9983)
+ERROR:rq.worker:[Job 070f91ec-23c1-48e6-bf37-5a79260e9983]: exception raised while executing (jobs.tasks.analyze_ligand)
+Traceback (most recent call last):
+  File "/home/aldo/.local/pipx/venvs/django-rq/lib/python3.11/site-packages/rq/utils.py", line 118, in import_attribute
+    attribute_owner = getattr(module, attribute_owner_name)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'jobs.tasks' has no attribute ''
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/aldo/.local/pipx/venvs/django-rq/lib/python3.11/site-packages/rq/worker.py", line 1428, in perform_job
+    rv = job.perform()
+         ^^^^^^^^^^^^^
+  File "/home/aldo/.local/pipx/venvs/django-rq/lib/python3.11/site-packages/rq/job.py", line 1278, in perform
+    self._result = self._execute()
+                   ^^^^^^^^^^^^^^^
+  File "/home/aldo/.local/pipx/venvs/django-rq/lib/python3.11/site-packages/rq/job.py", line 1315, in _execute
+    result = self.func(*self.args, **self.kwargs)
+             ^^^^^^^^^
+  File "/home/aldo/.local/pipx/venvs/django-rq/lib/python3.11/site-packages/rq/job.py", line 425, in func
+    return import_attribute(self.func_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/aldo/.local/pipx/venvs/django-rq/lib/python3.11/site-packages/rq/utils.py", line 120, in import_attribute
+    raise ValueError('Invalid attribute name: %s' % attribute_name)
+ValueError: Invalid attribute name: analyze_ligand
+
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+ERROR:rq.worker:Could not connect to Redis instance: Connection closed by server. Retrying in 1 seconds...
+INFO:rq.worker:Worker e2dfa35204964da983a8bd7594b3acd4 [PID 19946]: warm shut down requested
+INFO:rq.worker:Worker rq:worker:a6b0a299e5014806a5a250585587c03b started with PID 3588, version 1.15.1
+INFO:rq.worker:Subscribing to channel rq:pubsub:a6b0a299e5014806a5a250585587c03b
+INFO:rq.worker:*** Listening on [32mdefault[39;49;00m...
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (16e42ead-5bbf-4e86-969f-c1195c5888aa)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (16e42ead-5bbf-4e86-969f-c1195c5888aa)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_ligand(<InMemoryUploadedFile: cefotaxime.sdf (application/vnd.kinar)>)[39;49;00m (7f1ab54f-5157-4196-a342-c0a1dd555480)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (7f1ab54f-5157-4196-a342-c0a1dd555480)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_ligand(<InMemoryUploadedFile: cefotaxime.sdf (application/vnd.kinar)>)[39;49;00m (4821baf6-822b-44af-9496-a24378296f50)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (4821baf6-822b-44af-9496-a24378296f50)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (90cda4b7-850e-4a5c-97c5-9dee96824949)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (90cda4b7-850e-4a5c-97c5-9dee96824949)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_ligand(<InMemoryUploadedFile: cefotaxime.sdf (application/vnd.kinar)>)[39;49;00m (03441829-2212-4b4b-9183-778d0fb42359)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (03441829-2212-4b4b-9183-778d0fb42359)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (c2be54f7-0504-483d-a2d4-82362c2b67a3)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (c2be54f7-0504-483d-a2d4-82362c2b67a3)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_ligand(<InMemoryUploadedFile: cefotaxime.sdf (application/vnd.kinar)>)[39;49;00m (cf6a3bd6-50b8-40dc-a699-e3e15ee52abf)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (cf6a3bd6-50b8-40dc-a699-e3e15ee52abf)
+INFO:rq.worker:Result is kept for 500 seconds
+WARNING:django.security.csrf:Forbidden (CSRF token missing.): /jobs/
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (ccb097fc-72f4-48d8-8e31-5a645412ba57)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (ccb097fc-72f4-48d8-8e31-5a645412ba57)
+INFO:rq.worker:Result is kept for 500 seconds
+ERROR:django.request:Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/utils/datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'protein_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 83, in jobs
+    store_protein(request, docking, job)
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 122, in store_protein
+    protein_file = request.FILES['protein_file']
+                   ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/utils/datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'protein_file'
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (dcd62d54-1fd0-4e98-b02d-ff218ed9a025)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (dcd62d54-1fd0-4e98-b02d-ff218ed9a025)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_ligand(<InMemoryUploadedFile: cefotaxime.sdf (application/vnd.kinar)>)[39;49;00m (4a70de94-1e45-422c-90b8-f422db6dfb4a)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (4a70de94-1e45-422c-90b8-f422db6dfb4a)
+INFO:rq.worker:Result is kept for 500 seconds
+ERROR:django.request:Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/utils/datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'protein_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 83, in jobs
+    store_protein(request, docking, job)
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 122, in store_protein
+    protein_file = request.FILES['protein_file']
+                   ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/utils/datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'protein_file'
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/utils/datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'protein_file'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 84, in jobs
+    store_protein(request, docking, job)
+  File "/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py", line 123, in store_protein
+    protein_file = request.FILES['protein_file']
+                   ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/utils/datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'protein_file'
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (0db9a09a-a014-4356-a35d-b39402633792)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (0db9a09a-a014-4356-a35d-b39402633792)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (1ebb8a8f-7b92-4389-86b7-b984ef3db732)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (1ebb8a8f-7b92-4389-86b7-b984ef3db732)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_ligand(<InMemoryUploadedFile: cefotaxime.sdf (application/vnd.kinar)>)[39;49;00m (b92ab143-0339-45cf-a3f6-c0dfb414e4e1)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (b92ab143-0339-45cf-a3f6-c0dfb414e4e1)
+INFO:rq.worker:Result is kept for 500 seconds
+ERROR:django.request:Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view jobs.views.jobs didn't return an HttpResponse object. It returned None instead.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+INFO:django.utils.autoreload:/run/media/aldo/e70edb4f-6e8d-44ee-8db4-91ea47156a2b/home/aldo/pro/A/jobs/views.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (86dab90b-c719-4715-976d-18878268871e)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (86dab90b-c719-4715-976d-18878268871e)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_ligand(<InMemoryUploadedFile: cefotaxime.sdf (application/vnd.kinar)>)[39;49;00m (c9b7a57f-5d68-4a1f-9619-a8bbe9c1d286)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (c9b7a57f-5d68-4a1f-9619-a8bbe9c1d286)
+INFO:rq.worker:Result is kept for 500 seconds
+ERROR:django.request:Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "/usr/lib/python3.11/site-packages/django/core/handlers/base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view jobs.views.jobs didn't return an HttpResponse object. It returned None instead.
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:Cleaning registries for queue: default
+WARNING:django.request:Not Found: /favicon.ico
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_protein(<InMemoryUploadedFile: beta-lactamase.pdb (chemical/x-pdb)>)[39;49;00m (c817218d-8dee-4d96-abef-3edb02f7377e)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (c817218d-8dee-4d96-abef-3edb02f7377e)
+INFO:rq.worker:Result is kept for 500 seconds
+INFO:rq.worker:Cleaning registries for queue: default
+INFO:rq.worker:[32mdefault[39;49;00m: [34mjobs.tasks.analyze_ligand(<InMemoryUploadedFile: cefotaxime.sdf (application/vnd.kinar)>)[39;49;00m (bd498e56-51b0-45c9-9123-0fa5ddf5f545)
+INFO:rq.worker:[32mdefault[39;49;00m: [34mJob OK[39;49;00m (bd498e56-51b0-45c9-9123-0fa5ddf5f545)
+INFO:rq.worker:Result is kept for 500 seconds
