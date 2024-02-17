@@ -72,9 +72,6 @@ def process_ligand(request):
 
 def jobs(request):
     if request.method == 'POST':  # prepare the model instances and run job
-        print("REQUEST")
-        print(request.FILES)
-        """
         post_type = request.POST.get('type')
         if post_type == 'process_protein':
             process_protein(request)
@@ -82,6 +79,10 @@ def jobs(request):
             print('process_ligand')
         # elif post_type == 'run_job':
         else:
+            docking_form = DockingForm(request.POST, request.FILES)
+            docking_form
+            print("FORM: ", docking_form)
+
             job, docking = init_docking(request)
             store_protein(request, docking, job)
             store_ligand(request, docking, job)
@@ -89,7 +90,7 @@ def jobs(request):
             request.session['job_metadata'] = [request.user.id,
                                                job.id, docking.id]
             return redirect('run_docking')                  # RUN!
-        """
+        
     else:
         # render the jobs application
         if request.user.is_authenticated:
@@ -123,6 +124,15 @@ def init_docking(request):
 
 def store_protein(request, docking, job):
     # if 'protein_file' in request.FILES:  # will this still be necessary?
+    print("request files:")
+    print(request.FILES)
+
+    for file_field_name, file_obj in request.FILES.items():
+        file_name = file_obj.name
+        file_size = file_obj.size
+        print("file name: ", file_name)
+        print("file size: ", file_size)
+
     protein_file = request.FILES['protein_file']
     protein_form = ProteinForm(request.POST, request.FILES)
     if protein_form.is_valid():

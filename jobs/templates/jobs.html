@@ -50,6 +50,8 @@
                         var pFormData = new FormData(pForm);
                         pFormData.append('type', 'process_protein');
 
+                        console.log(pFormData);
+
                         fetch(pForm.action, {
                             method: 'POST',
                             body: pFormData,
@@ -141,6 +143,10 @@
                         var lFormData = new FormData(lForm);
                         lFormData.append('type', 'process_ligand');
 
+                        console.log(lFormData);
+                        getval = lFormData.get('ligand_file');
+                        console.log(getval);
+
                         fetch(lForm.action, {
                             method: 'POST',
                             body: lFormData,
@@ -175,7 +181,55 @@
     <br>
     <br>
     <center>
-    <button type="submit">Run job!</button>
+    <form id="runJob" method="post" action="{% url 'jobs' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <button type="button" onclick="submitDockingForm()">Run job!</button>
+    </form>
+    <script>
+        function submitDockingForm() {
+            var pForm = document.getElementById('uploadProteinForm');
+            var pFormData = new FormData(pForm);
+
+            var lForm = document.getElementById('uploadLigandForm');
+            var lFormData = new FormData(lForm);
+
+            console.log("Hello2");
+            var dockingForm = document.getElementById('runJob');
+            var dockingFormData = new FormData(dockingForm);
+            dockingFormData.append('type', 'run_job');
+
+            for (const [key, value] of pFormData.entries()) {
+                dockingFormData.append(key, value);
+            }
+
+            for (const [key, value] of lFormData.entries()) {
+                dockingFormData.append(key, value);
+            }
+        
+            console.log(pFormData);
+            console.log(lFormData);
+            console.log(dockingFormData);
+
+            fetch(dockingForm.action, {
+                method: 'POST',
+                body: dockingFormData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                },
+            })
+                .then(response => {
+                    if (response.redirected) {
+                        window.location.href = response.url;
+                    }
+                    else {
+                        window.location.reload();
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error)
+                });
+        }
+    </script>
     </center>
     <script src="{% static 'jobs/dropdown.js' %}"></script>
 

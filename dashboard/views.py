@@ -7,6 +7,7 @@ from django.conf import settings
 import shutil
 import zipfile
 
+
 # Create your views here.
 def results(request, current_job=None):
     user = request.user
@@ -14,13 +15,13 @@ def results(request, current_job=None):
     if not current_job:
         latest_job = user.profile.latest_job
         if not latest_job: #if latest_job is null
-        #todo: consider the case where the user has no jobs
-            #TODO: This is redundant with delete_job()
+        # todo: consider the case where the user has no jobs
+            # TODO: This is redundant with delete_job()
             user_job_ids = Job.objects.filter(user=user).values_list('id', flat=True)
             print(f"USER JOB IDS:{user_job_ids}")
-            first_job = min(user_job_ids)   
+            first_job = min(user_job_ids)
             current_job = first_job
-        else: 
+        else:
             current_job = latest_job
     print(f"CURRENT JOB:{current_job}")
     if Job.objects.get(pk=current_job).user != request.user:
@@ -37,11 +38,12 @@ def results(request, current_job=None):
         vina_results = file.read()
 
     return render(request, 'dashboard.html', {
-        'job_info' : job_info(current_job),
-        'current_job_files' : current_job_files,
+        'job_info': job_info(current_job),
+        'current_job_files': current_job_files,
         'vina_results': vina_results,
         'jobs': [job for job in Job.objects.filter(user=user)],
     })
+
 
 def download_output(request):
     user = request.user
@@ -51,10 +53,11 @@ def download_output(request):
 
     print(settings.MEDIA_ROOT)
     shutil.make_archive(f"{wd}output", 'zip', f"{wd}output/", verbose=True)
-    #create response to send the ZIP file for download
+    # create response to send the ZIP file for download
     response = FileResponse(open(f"{wd}output.zip", 'rb'), content_type='application/zip')
     response['Content-Disposition'] = f'attachment; filename="output.zip"'
     return response
+
 
 def job_info(job_id):
     job_instance = Job.objects.get(pk=job_id)
@@ -65,11 +68,12 @@ def job_info(job_id):
     info['ligand'] = Ligand.objects.get(job=job_id).ligand_name
     return info
 
+
 def delete_job(request, job_id):
     user = request.user
     job_instance = Job.objects.get(pk=job_id)
     job_dir = f"{settings.MEDIA_ROOT}/user_{user.id}/job_{job_id}"
-    #TODO: remove redundant code
+    # TODO: remove redundant code
     if (request.method == 'POST') and (user.profile.latest_job == job_id):
         try:
             shutil.rmtree(job_dir)
@@ -79,7 +83,7 @@ def delete_job(request, job_id):
         job_instance.delete()
         user.profile.latest_job = None
         user.profile.save()
-        #user.profile.latest_job.delete()
+        # user.profile.latest_job.delete()
         user_job_ids = Job.objects.filter(user=user).values_list('id', flat=True)
         first_job = min(user_job_ids)
         return redirect('results', current_job=first_job)
