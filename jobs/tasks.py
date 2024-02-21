@@ -9,22 +9,26 @@ logging.basicConfig(filename='script_output.log', level=logging.INFO)
 @job
 # TODO: maybe we can change _inst to _id,
 # but making clear that the id refers to the model isntancss
-def run_docking_script(user_inst, job_inst, docking_inst):
+def run_docking_script(user_inst, job_inst, docking_inst, settings):
     job = get_current_job()  # is this line necessary?
 
     logger = logging.getLogger(__name__)
-    logger.info("run_docking_script task started")
+    logger.info("INFO: run_docking_script task started")
+    logger.info("INFO: ", settings['chains'])
 
     try:
-        script_path = '/home/aldo/pro/falcon/script3/blind.sh'
+        script_path = '/home/aldo/pro/falcon/script4/blind.sh'
         input_dir = f"/home/aldo/pro/A/media/user_{user_inst}/job_{job_inst}/docking_{docking_inst}/input"
         output_dir = f"/home/aldo/pro/A/media/user_{user_inst}/job_{job_inst}/docking_{docking_inst}/output"
-        script_command = [script_path, input_dir, output_dir]
+        script_command = [script_path, "--input", input_dir, "--output", output_dir,
+                          "--vinalvl", settings['exhaustiveness'], "--num_modes", settings['num_modes']]
+        if settings['chains']:
+            script_command.extend(["--chains", settings['chains']])
         process = subprocess.Popen(
             script_command,
-            stdout = subprocess.PIPE,
-            stderr = subprocess.PIPE,
-            universal_newlines = True
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            universal_newlines=True
         )
 
         output_lines = []

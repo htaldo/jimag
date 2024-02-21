@@ -37,6 +37,8 @@
                 <form id="uploadProteinForm" method="post" action="{% url 'process_protein' %}" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ docking_form.pform }}
+                    <br>
+                    <br>
                     <button type="button" onclick="submitProteinForm()">Submit protein</button>
                 </form>
                 <div id="processingProtein" style="display: none;">Processing protein...</div>
@@ -130,6 +132,8 @@
                 <form id="uploadLigandForm" method="post" action="{% url 'process_ligand' %}" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ docking_form.lform }}
+                    <br>
+                    <br>
                     <button type="button" onclick="submitLigandForm()">Submit ligand</button>
                 </form>
                 <div id="processingLigand" style="display: none;">Processing ligand...</div>
@@ -181,6 +185,17 @@
     <br>
     <br>
     <center>
+    <h2>Settings</h2>
+
+    <form id="settingsForm">
+        <!-- https://www.w3schools.com/html/html_form_input_types.asp -->
+        <label for="exhaustiveness">Exhaustiveness (between 1 and 64):</label>
+        <input type="number" id="exhaustiveness" name="exhaustiveness" value="8" min="1" max="64">
+        <br>
+        <label for="modes">Number of modes (conformers) (between 1 and 20):</label>
+        <input type="number" id="modes" name="modes" value="9" min="1" max="20">
+    </form>
+
     <form id="runJob" method="post" action="{% url 'jobs' %}" enctype="multipart/form-data">
         {% csrf_token %}
         <button type="button" onclick="submitDockingForm()">Run job!</button>
@@ -193,7 +208,9 @@
             var lForm = document.getElementById('uploadLigandForm');
             var lFormData = new FormData(lForm);
 
-            console.log("Hello2");
+            var settingsForm = document.getElementById('settingsForm');
+            var settingsFormData = new FormData(settingsForm);
+
             var dockingForm = document.getElementById('runJob');
             var dockingFormData = new FormData(dockingForm);
             dockingFormData.append('type', 'run_job');
@@ -206,8 +223,17 @@
                 dockingFormData.append(key, value);
             }
         
+            for (const [key, value] of settingsFormData.entries()) {
+                dockingFormData.append(key, value);
+            }
+
+            var chainSpan = document.getElementById('chainstring');
+            var chainString = chainSpan.textContent;
+            dockingFormData.append('chainString', chainString);
+
             console.log(pFormData);
             console.log(lFormData);
+            console.log(settingsFormData);
             console.log(dockingFormData);
 
             fetch(dockingForm.action, {

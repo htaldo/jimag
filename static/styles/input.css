@@ -21,6 +21,18 @@ button {
 }
 
 button:hover {
-	background-color: #00aaaa
+	background-color: #00aaaa;
 }
 
+select {
+	padding: 2px;
+	width: 300px;
+	border-radius: 0;
+	border: 3px solid black;
+	margin: 20px auto;
+	background-color: #ffffff;
+}
+
+select option {
+	font-style: italic;
+}

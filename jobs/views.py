@@ -72,6 +72,9 @@ def process_ligand(request):
 
 def jobs(request):
     if request.method == 'POST':  # prepare the model instances and run job
+        settings = {'exhaustiveness': request.POST.get('exhaustiveness'),
+                    'num_modes': request.POST.get('modes'),
+                    'chains': request.POST.get('chainString')}
         post_type = request.POST.get('type')
         if post_type == 'process_protein':
             process_protein(request)
@@ -80,17 +83,16 @@ def jobs(request):
         # elif post_type == 'run_job':
         else:
             docking_form = DockingForm(request.POST, request.FILES)
-            docking_form
-            print("FORM: ", docking_form)
+            print("POST: ", request.POST)
+            print(settings['chains'])
 
             job, docking = init_docking(request)
             store_protein(request, docking, job)
             store_ligand(request, docking, job)
-
             request.session['job_metadata'] = [request.user.id,
-                                               job.id, docking.id]
+                                               job.id, docking.id,
+                                               settings]
             return redirect('run_docking')                  # RUN!
-        
     else:
         # render the jobs application
         if request.user.is_authenticated:
@@ -161,9 +163,9 @@ def store_ligand(request, docking, job):
 
 def rundocking(request):
     # user, job and docking here are just their IDs
-    user, job, docking = request.session.get('job_metadata', [])
+    user, job, docking, settings = request.session.get('job_metadata', [])
     # unique_job_id = f"rqjob_{job}"
-    result = run_docking_script.delay(user, job, docking)
+    result = run_docking_script.delay(user, job, docking, settings)
     job_id = result.id
     return render(request, 'running.html', {'job_id': job_id})
 
@@ -177,7 +179,7 @@ def check_progress(request):
     progress = job.meta.get('progress', 'Running')
 
     if progress == "Script completed successfully":
-        user_inst, job_inst, docking_inst = request.session.get('job_metadata')
+        user_inst, job_inst, docking_inst, settings = request.session.get('job_metadata')
 
         if hasattr(request.user, 'profile'):
             request.user.profile.latest_job = job_inst

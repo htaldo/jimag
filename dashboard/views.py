@@ -30,10 +30,10 @@ def results(request, current_job=None):
     wd = f"user_{user.id}/job_{current_job}/docking_{docking}/"
 
     current_job_files = {
-        'conformers': f"/media/{wd}output/coarse.pdbqt",
+        'conformers': f"/media/{wd}output/modes.pdbqt",
         'receptor': f"/media/{wd}output/receptor.pdbqt",
     }
-    vina_file = f"{settings.MEDIA_ROOT}/{wd}output/coarse_scores.txt"
+    vina_file = f"{settings.MEDIA_ROOT}/{wd}output/scores.txt"
     with open(vina_file, 'r') as file:
         vina_results = file.read()
 
