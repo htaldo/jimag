@@ -65,6 +65,7 @@
             </script>
         </div>
         <div class="tab-content" id="tab3">
+        <!--
             <style>
                 #app2 {
                     position: absolute;
@@ -72,11 +73,6 @@
                     height: 600px;
                 }
             </style>
-            <!-- 
-                molstar.js and .css are obtained from
-                - the folder build/viewer after cloning and building the molstar package 
-                - from the build/viewer folder in the Mol* NPM package
-            -->
             <link rel="stylesheet" type="text/css" href="{% static 'molstar/molstar.css' %}" />
             <script type="text/javascript" src="{% static 'molstar/molstar.js' %}"></script>
             <div id="app2"></div>
@@ -85,6 +81,23 @@
                     data-conformers="{{ current_job_files.conformers }}";
                     data-receptor="{{ current_job_files.receptor }}";>
             </script>
+        -->
+            <style>
+                #pockets {
+                    position: relative;
+                    width: 67%;
+                    height: 600px;
+                }
+            </style>
+            <link rel="stylesheet" type="text/css" href="{% static 'molstar/molstar.css' %}" />
+            <script type="text/javascript" src="{% static 'molstar/molstar.js' %}"></script>
+            <div id="pockets"></div>
+            <script type="text/javascript" src="{% static 'dashb/dock3_bundle.js' %}"
+                defer
+                    data-conformers="{{ current_job_files.conformers }}";
+                    data-receptor="{{ current_job_files.receptor }}";>
+            </script>
+
         </div>
         <div class="tab-content" id="tab4">
             <h2>Details</h2>
