@@ -3,7 +3,7 @@ from django.http import JsonResponse
 from .models import Job, Docking, Profile
 from rq.job import Job as rqJob
 from django_rq import get_queue
-from .tasks import run_docking_script, analyze_protein, analyze_ligand
+from .tasks import run_docking_script, analyze_protein, analyze_ligand, process_pockets
 from django.urls import reverse
 import os
 
@@ -70,6 +70,33 @@ def process_ligand(request):
         return render(request, 'jobs.html')
 
 
+def load_pockets(request):
+    chains = request.POST.get('chainString')
+    protein_file = request.FILES['protein_file']
+    pockets_job = process_pockets.delay(protein_file, chains)
+    if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+        return JsonResponse({'job_id': pockets_job.id})
+
+
+def retrieve_pockets(request, job_id):
+    queue = get_queue('default')
+    #job_id = request.GET.get("job_id")
+    job = rqJob.fetch(job_id, connection=queue.connection)
+
+    if job:
+        if job.is_finished:
+            print("JOB RESULT: ", job.result)
+            with open(job.result, "r") as file:
+                pockets_file_content = file.read()
+                print("FILE CONTENT ")
+                print(pockets_file_content)
+            return JsonResponse({'pockets_file': pockets_file_content})
+        else:
+            return JsonResponse({'status': 'pending'})
+    else: 
+        return JsonResponse({'error': 'Invalid job ID'})
+
+
 def jobs(request):
     if request.method == 'POST':  # prepare the model instances and run job
         settings = {'exhaustiveness': request.POST.get('exhaustiveness'),
@@ -80,6 +107,9 @@ def jobs(request):
             process_protein(request)
         elif post_type == 'process_ligand':
             print('process_ligand')
+        elif post_type == 'load_pockets':
+            print('process_ligand')
+
         # elif post_type == 'run_job':
         else:
             docking_form = DockingForm(request.POST, request.FILES)
@@ -158,7 +188,6 @@ def store_ligand(request, docking, job):
             file_ext = os.path.splitext(ligand.ligand_file.name)[1]
             ligand.ligand_file.name = f'ligand{file_ext}'
             ligand.save()
-
 
 
 def rundocking(request):

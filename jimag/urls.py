@@ -20,7 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from core.views import home, about
 from jobs.views import jobs, rundocking, check_progress, \
-    process_protein, process_ligand, dummy
+    process_protein, process_ligand, load_pockets, retrieve_pockets, dummy
 from users.views import register, log_in, log_out
 from dashboard.views import results, delete_job, download_output
 from uploader.views import UploadView
@@ -33,6 +33,8 @@ urlpatterns = [
     path('register/', register, name='register'),
     path('jobs/', jobs, name='jobs'),
     path('process_protein/', process_protein, name='process_protein'),
+    path('load_pockets/', load_pockets, name='load_pockets'),
+    path('retrieve_pockets/<str:job_id>/', retrieve_pockets, name='retrieve_pockets'),
     path('process_ligand/', process_ligand, name='process_ligand'),
     path('logout/', log_out, name='logout'),
     path('login/', log_in, name='login'),

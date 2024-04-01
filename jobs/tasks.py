@@ -2,6 +2,7 @@ from rq import get_current_job
 from django_rq import job
 import subprocess
 import logging
+import tempfile
 
 logging.basicConfig(filename='script_output.log', level=logging.INFO)
 
@@ -14,7 +15,7 @@ def run_docking_script(user_inst, job_inst, docking_inst, settings):
 
     logger = logging.getLogger(__name__)
     logger.info("INFO: run_docking_script task started")
-    logger.info("INFO: ", settings['chains'])
+    #logger.info("INFO: ", settings['chains'])
 
     try:
         script_path = '/home/aldo/pro/falcon/script4/blind.sh'
@@ -24,15 +25,15 @@ def run_docking_script(user_inst, job_inst, docking_inst, settings):
                           "--vinalvl", settings['exhaustiveness'], "--num_modes", settings['num_modes']]
         if settings['chains']:
             script_command.extend(["--chains", settings['chains']])
+
+        # running and logging
         process = subprocess.Popen(
             script_command,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             universal_newlines=True
         )
-
         output_lines = []
-
         for line in process.stdout:
             line = line.strip()
             output_lines.append(line)
@@ -51,8 +52,8 @@ def run_docking_script(user_inst, job_inst, docking_inst, settings):
             job.meta['progress'] = "Script completed successfully"
             job.set_status('completed')
         else:
-            logger.error(f"Script failed with return code {return_code}")
-            job.meta['progress'] = f"Script failed with return code {return_code}"
+            logger.error(f"Script failed with code {return_code}")
+            job.meta['progress'] = f"Script failed with code {return_code}"
             job.set_status('failed')
 
     except Exception as e:
@@ -73,3 +74,38 @@ def analyze_protein(protein_file):
 @job
 def analyze_ligand(ligand_file):
     return "A,B"
+
+
+@job
+def process_pockets(protein_file, chains):
+    logger = logging.getLogger(__name__)
+    logger.info("INFO: process_pockets task started")
+
+    try:
+        # prepare protein file as tempfile for shell handling
+        with tempfile.NamedTemporaryFile(suffix=".pdb", delete=False) as inputpdb:
+            inputpdb.write(protein_file.read())
+            inputpdb.flush()
+        # clean chains
+        script_path = '/home/aldo/pro/falcon/script4/receptor_pre.py'
+        chimera_dir = '/home/aldo/.local/src/chimera/bin'
+        chainspdb = tempfile.NamedTemporaryFile(suffix=".pdb", delete=False)
+        clean_chains_cmd = f'export IF={inputpdb.name} OF={chainspdb.name} CHAINS={chains}; cd {chimera_dir}; ./chimera --nogui {script_path}'
+        subprocess.run(clean_chains_cmd, shell=True)
+        chainspdb.flush()
+        # get pockets with p2rank
+        prankcmd = '/home/aldo/.local/src/p2rank_2.4/prank'
+        prankconf = '/home/aldo/pro/falcon/script4/configs/blind.groovy'
+        # pockets = tempfile.NamedTemporaryFile(suffix=".csv", delete=False)
+        # pockets_cmd = f'{prankcmd} predict -c {prankconf} -f {chainspdb.name} -o {pockets.name}'
+        pockets_cmd = f'{prankcmd} predict -c {prankconf} -f {chainspdb.name} -o /tmp/'
+        subprocess.run(pockets_cmd, shell=True)
+        # pockets.flush()
+        pockets = f'{chainspdb.name}_predictions.csv'
+
+        inputpdb.close()
+        chainspdb.close()
+        # return pockets.name
+        return pockets
+    except Exception as e:
+        return f"{str(e)}"
