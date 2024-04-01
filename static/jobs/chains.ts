@@ -44,7 +44,8 @@ const MySpec: PluginUISpec = {
         [PluginConfig.Viewport.ShowTrajectoryControls, false]
     ],
     layout: {
-	initial: {
+	initial: { //more in viewer/app.ts
+	    isExpanded: false,
 	    regionState: {
 		top: "hidden",
 		left: "hidden",
@@ -227,13 +228,15 @@ let loadReceptor;
 	    let query = createSequenceIdExpression(chain, subSeq);
 	    components[key] = await plugin.builders.structure.tryCreateComponentFromExpression(currentStructure, query, 'pocket${pocket.rank}');
 	    console.log("CURRENT STRUCTURE", currentStructure); //DEBUG
-	    console.log("COMPONENTS", components); //DEBUG
+	    let compcopy = {... components}; //DEBUG
+	    console.log("COMPONENTS", compcopy); //DEBUG
+	    console.log(`COMPONENTS[${key}]:`, compcopy[key]); //DEBUG
 	    copy = { ... loadedReprs[pocket.rank]}; //DEBUG
 	    console.log(`loadedReprs[${pocket.rank}] BEFORE: `, copy); //DEBUG
 
 	    const builder = plugin.builders.structure.representation;
 	    const update = plugin.build();
-	    const selector = await builder.addRepresentation(components[key], {
+	    let selector = await builder.addRepresentation(components[key], {
 		type: 'molecular-surface',
 		typeParams: { alpha: 0.5 },
 		color: 'uniform',
