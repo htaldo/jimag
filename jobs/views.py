@@ -80,7 +80,7 @@ def load_pockets(request):
 
 def retrieve_pockets(request, job_id):
     queue = get_queue('default')
-    #job_id = request.GET.get("job_id")
+    # job_id = request.GET.get("job_id")
     job = rqJob.fetch(job_id, connection=queue.connection)
 
     if job:
@@ -107,8 +107,8 @@ def jobs(request):
             process_protein(request)
         elif post_type == 'process_ligand':
             print('process_ligand')
-        elif post_type == 'load_pockets':
-            print('process_ligand')
+        # elif post_type == 'load_pockets':
+        #    print('process_ligand')
 
         # elif post_type == 'run_job':
         else:
@@ -159,11 +159,13 @@ def store_protein(request, docking, job):
     print("request files:")
     print(request.FILES)
 
+    """
     for file_field_name, file_obj in request.FILES.items():
         file_name = file_obj.name
         file_size = file_obj.size
         print("file name: ", file_name)
         print("file size: ", file_size)
+    """
 
     protein_file = request.FILES['protein_file']
     protein_form = ProteinForm(request.POST, request.FILES)

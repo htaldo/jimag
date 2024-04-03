@@ -88,9 +88,9 @@ def process_pockets(protein_file, chains):
             inputpdb.flush()
         # clean chains
         script_path = '/home/aldo/pro/falcon/script4/receptor_pre.py'
-        chimera_dir = '/home/aldo/.local/src/chimera/bin'
+        chimera_cmd = '/home/aldo/.local/src/chimera/bin/chimera'
         chainspdb = tempfile.NamedTemporaryFile(suffix=".pdb", delete=False)
-        clean_chains_cmd = f'export IF={inputpdb.name} OF={chainspdb.name} CHAINS={chains}; cd {chimera_dir}; ./chimera --nogui {script_path}'
+        clean_chains_cmd = f'export IF={inputpdb.name} OF={chainspdb.name} CHAINS={chains}; {chimera_cmd} --nogui {script_path}'
         subprocess.run(clean_chains_cmd, shell=True)
         chainspdb.flush()
         # get pockets with p2rank

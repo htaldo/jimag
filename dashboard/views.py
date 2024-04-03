@@ -25,7 +25,7 @@ def results(request, current_job=None):
             current_job = latest_job
     print(f"CURRENT JOB:{current_job}")
     if Job.objects.get(pk=current_job).user != request.user:
-        return HttpResponseForbidden("You don't have permission to access this job.")
+        return HttpResponseForbidden("You don't have access to this job.")
     docking = Docking.objects.get(job=current_job).id
     wd = f"user_{user.id}/job_{current_job}/docking_{docking}/"
 

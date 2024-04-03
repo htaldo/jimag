@@ -2,8 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
-from django.http import HttpResponse
 from django.db import IntegrityError
+
 
 # Create your views here.
 def register(request):
@@ -14,24 +14,26 @@ def register(request):
     else:
         if request.POST['password1'] == request.POST['password2']:
             try:
-                user = User.objects.create_user(username=request.POST['username'], password = request.POST['password1'])
-                #send the user to the database
+                user = User.objects.create_user(username=request.POST['username'], password=request.POST['password1'])
+                # send the user to the database
                 user.save()
                 login(request, user)
                 return redirect('jobs')
             except IntegrityError:
                 return render(request, 'register.html', {
                     'form': UserCreationForm,
-                    'error': 'Username already exists!' 
-                }) 
+                    'error': 'Username already exists!'
+                })
         return render(request, 'register.html', {
             'form': UserCreationForm,
             'error': 'Passwords do not match!'
         })
 
+
 def log_out(request):
     logout(request)
     return redirect('home')
+
 
 def log_in(request):
     if request.method == 'GET':
