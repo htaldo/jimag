@@ -143,10 +143,10 @@ let loadReceptor;
 	sequenceIds: number[],
     ): Expression {
 	const query: any = {
-	"residue-test": MS.core.set.has([
-	    MS.set(...sequenceIds),
-	    MS.ammp("auth_seq_id"),
-	]),
+	    "residue-test": MS.core.set.has([
+		MS.set(...sequenceIds),
+		MS.ammp("auth_seq_id"),
+	    ]),
 	    "group-by": MS.struct.atomProperty.macromolecular.residueKey(), //what does this do?
 	};
 	query["chain-test"] = MS.core.rel.eq([
@@ -165,8 +165,9 @@ let loadReceptor;
 	}
     }
 
-    let loadedReprs = [];
-    let components: {[key:string]: StateObjectSelector<SO.Molecule.Structure>}= {};
+    let loadedReprs = {};
+    let components = {};
+    let queries: {[key:string]: any}= {};
 
     const pocketReprOn = (pocket: Pocket) => {
 	console.log(pocket.rank);
@@ -217,36 +218,33 @@ let loadReceptor;
     //return an array of representations, each corresponding to a subSeq of the pocket	
     async function createPocketRepr (pocket: Pocket) {
 	//this is called assuming the Repr doesn't exist, so no need to check for existence
-	loadedReprs[pocket.rank] = [];
-	let copy = { ... loadedReprs[pocket.rank]}; //DEBUG
+	//let copy = { ... loadedReprs[pocket.rank]}; //DEBUG
 	//https://stackoverflow.com/questions/37576685/using-async-await-with-a-foreach-loop
 	for (const item of pocket.seq) {
 	    let chain = item.chain;
 	    let subSeq = item.subSeq;
 	    let key = `${pocket.rank}${chain}`; //components key
 	    console.log("CURRENT CHAIN, SUBSEQ: ", chain, subSeq); //DEBUG
-	    let query = createSequenceIdExpression(chain, subSeq);
-	    components[key] = await plugin.builders.structure.tryCreateComponentFromExpression(currentStructure, query, 'pocket${pocket.rank}');
+	    queries[key] = createSequenceIdExpression(chain, subSeq);
+	    components[key] = await plugin.builders.structure.tryCreateComponentFromExpression(currentStructure, queries[key], 'pocket${pocket.rank}${chain}');
 	    console.log("CURRENT STRUCTURE", currentStructure); //DEBUG
 	    let compcopy = {... components}; //DEBUG
 	    console.log("COMPONENTS", compcopy); //DEBUG
 	    console.log(`COMPONENTS[${key}]:`, compcopy[key]); //DEBUG
-	    copy = { ... loadedReprs[pocket.rank]}; //DEBUG
-	    console.log(`loadedReprs[${pocket.rank}] BEFORE: `, copy); //DEBUG
+	    let lrcopy = {... loadedReprs}; //DEBUG
+	    console.log(`loadedReprs[${key}] BEFORE: `, lrcopy[key]); //DEBUG
 
-	    const builder = plugin.builders.structure.representation;
-	    const update = plugin.build();
-	    let selector = await builder.addRepresentation(components[key], {
+	    let selector = await plugin.builders.structure.representation.addRepresentation(components[key], {
 		type: 'molecular-surface',
 		typeParams: { alpha: 0.5 },
 		color: 'uniform',
 		colorParams: { value: Color(0x86F1E9) }
 	    });
-	    await update.commit();
 
-	    loadedReprs[pocket.rank].push(selector);
-	    copy = { ... loadedReprs[pocket.rank]}; //DEBUG
-	    console.log(`loadedReprs[${pocket.rank}] AFTER: `, copy); //DEBUG
+	    console.log(selector)
+	    loadedReprs[key] = selector;
+	    lrcopy = {... loadedReprs}; //DEBUG
+	    console.log(`loadedReprs[${key}] AFTER: `, lrcopy[key]); //DEBUG
 	}
 	//the following results in cyclic object value:
 	//console.log("pocket description (createPocketRepr): ", JSON.stringify(loadedReprs[pocket.rank], null, 2));
