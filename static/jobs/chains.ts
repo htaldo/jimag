@@ -33,19 +33,19 @@ const MySpec: PluginUISpec = {
     ...DefaultPluginUISpec(),
     config: [
         [PluginConfig.VolumeStreaming.Enabled, false],
-        [PluginConfig.Viewport.ShowControls, true],
+        [PluginConfig.Viewport.ShowControls, false],
         [PluginConfig.Viewport.ShowSelectionMode, false],
         [PluginConfig.Viewport.ShowExpand, true],
         [PluginConfig.Viewport.ShowSettings, false],
-        [PluginConfig.Viewport.ShowTrajectoryControls, true]
+        [PluginConfig.Viewport.ShowTrajectoryControls, false]
     ],
     layout: {
 	initial: { //more in viewer/app.ts
 	    isExpanded: false,
 	    regionState: {
 		top: "hidden",
-		left: "full",
-		right: "full",
+		left: "hidden",
+		right: "hidden",
 		bottom: "hidden",
 	    },
 	},
@@ -154,29 +154,6 @@ window.togglePocketRepr = async (pocket:Pocket, isChecked: boolean) => {
 	}
     } else {
 	createPocketRepr(pocket);
-    }
-}
-
-//let queries: {[key:string]: any}= {};
-
-const pocketReprOn = (pocket: Pocket) => {
-    console.log("reprOn");
-    if (loadedReprs[pocket.rank]) {
-	for (const item of pocket.seq) {
-	    let key = `${pocket.rank}${item.chain}`;
-	    setSubtreeVisibility(plugin.state.data, components[key].ref, true);
-	}
-    } else {
-	console.log("hit else block");
-	createPocketRepr(pocket);
-    }
-}
-
-const pocketReprOff = (pocket: Pocket) => {
-    console.log("reprOff");
-    for (const item of pocket.seq) {
-	let key = `${pocket.rank}${item.chain}`;
-	setSubtreeVisibility(plugin.state.data, components[key].ref, false); // true means hide, ¯\_(ツ)_/¯
     }
 }
 
