@@ -17,13 +17,8 @@ import {
     Structure,
     StructureProperties,
 } from "molstar/lib/mol-model/structure";
-import { Representation } from 'molstar/lib/mol-repr/representation';
 import { PluginUIContext } from 'molstar/lib/mol-plugin-ui/context';
 import { Color } from 'molstar/lib/mol-util/color';
-import { StateObjectSelector } from 'molstar/lib/mol-state/object';
-//import { ShapeRepresentation3D } from 'molstar/lib/mol-plugin-state/transforms/representation';
-//import { StructureQueryHelper } from 'molstar/lib/mol-plugin-state/helpers/structure-query';
-import { createStructureRepresentationParams } from 'molstar/lib/mol-plugin-state/helpers/structure-representation-params';
 
 type Pocket = {
     rank: number;
@@ -148,52 +143,41 @@ function createSequenceIdExpression(
     return MS.struct.generator.atomGroups(query);
 }
 
+let loadedReprs = [];
+let components = {};
+
 window.togglePocketRepr = async (pocket:Pocket, isChecked: boolean) => {
-    if (isChecked) {
-	pocketReprOn(pocket);
+    if (loadedReprs[pocket.rank]) {
+	for (const item of pocket.seq) {
+	    let key = `${pocket.rank}${item.chain}`;
+	    setSubtreeVisibility(plugin.state.data, components[key].ref, !isChecked); // true means hide, ¯\_(ツ)_/¯
+	}
     } else {
-	pocketReprOff(pocket);
+	createPocketRepr(pocket);
     }
 }
 
-let loadedReprs = [];
-let components = {};
 //let queries: {[key:string]: any}= {};
-let structures: {[key:string]: any}= {};
 
 const pocketReprOn = (pocket: Pocket) => {
+    console.log("reprOn");
     if (loadedReprs[pocket.rank]) {
-	const updates = plugin.build();
-	for (const repr of loadedReprs[pocket.rank]) {
-	    updates.to(repr)
-		.update(createStructureRepresentationParams(plugin, undefined, {
-		    type: 'molecular-surface',
-		    typeParams: { alpha: 0.5 },
-		    color: 'uniform',
-		    colorParams: { value: Color(0x86F1E9) }
-	    }));
+	for (const item of pocket.seq) {
+	    let key = `${pocket.rank}${item.chain}`;
+	    setSubtreeVisibility(plugin.state.data, components[key].ref, true);
 	}
-	updates.commit();
-
     } else {
-	//loadedReprs[pocket.rank] = createPocketRepr(pocket);
+	console.log("hit else block");
 	createPocketRepr(pocket);
-	console.log(loadedReprs[pocket.rank]);
     }
 }
 
 const pocketReprOff = (pocket: Pocket) => {
-    const updates = plugin.build();
-    for (const repr of loadedReprs[pocket.rank]) {
-	updates.to(repr)
-	    .update(createStructureRepresentationParams(plugin, undefined, {
-		type: 'molecular-surface',
-		typeParams: { alpha: 0 },
-		color: 'uniform',
-		colorParams: { value: Color(0x86F1E9) }
-	}));
+    console.log("reprOff");
+    for (const item of pocket.seq) {
+	let key = `${pocket.rank}${item.chain}`;
+	setSubtreeVisibility(plugin.state.data, components[key].ref, false); // true means hide, ¯\_(ツ)_/¯
     }
-    updates.commit();
 }
 
 //return an array of representations, each corresponding to a subSeq of the pocket	
@@ -218,6 +202,7 @@ async function createPocketRepr (pocket: Pocket) {
     }
 }
 
+//BEGIN debug functions
 async function pause(ms) {
     return new Promise(resolve => {
     setTimeout(resolve, ms);
@@ -236,6 +221,7 @@ async function pauseTilEnter(comment: string) {
 	window.addEventListener('keydown', handleKeyPress);
     });
 }
+//END debug functions
 
 ReactDOM.render(
     React.createElement(MyComponent),
