@@ -109,10 +109,18 @@ const MyComponent: React.FC = () => {
 }
 
 let currentStructure: StateObjectRef<SO.Molecule.Structure>;
+let loadedReprs = [];
+let components = {};
 
 //https://stackoverflow.com/questions/50176213/accessing-exported-functions-from-html-file
 window.loadReceptor = async (receptor) => {
+    //clean pocket variables
+    loadedReprs = [];
+    components = {};
+    //refresh pocket table and chainString
+    const tableBody = document.querySelector('#pocketsTable tbody');
     const stringDiv = document.getElementById('chainstring');
+    tableBody.innerHTML = '';
     stringDiv.innerHTML = '';
     plugin.clear();
     //console.log(receptor);
@@ -143,8 +151,6 @@ function createSequenceIdExpression(
     return MS.struct.generator.atomGroups(query);
 }
 
-let loadedReprs = [];
-let components = {};
 
 window.togglePocketRepr = async (pocket:Pocket, isChecked: boolean) => {
     if (loadedReprs[pocket.rank]) {
@@ -166,7 +172,12 @@ async function createPocketRepr (pocket: Pocket) {
 	let subSeq = item.subSeq;
 	let key = `${pocket.rank}${chain}`; //components key, like 1A, 1B
 	let query = createSequenceIdExpression(chain, subSeq);
-	components[key] = await plugin.builders.structure.tryCreateComponentFromExpression(currentStructure, query, `pocket${key}`);
+	console.log(`DEBUG: query `, JSON.stringify(query));
+	let err;
+	components[key] = await plugin.builders.structure.tryCreateComponentFromExpression(currentStructure, query, `pocket${key}`).catch((err) => {
+	    console.log("E: ", err);	
+	});
+	console.log(`DEBUG: components[${key}]: `, components[key]);
 
 	let selector = await plugin.builders.structure.representation.addRepresentation(components[key], {
 	    type: 'molecular-surface',
