@@ -6,6 +6,7 @@ from django_rq import get_queue
 from .tasks import run_docking_script, analyze_protein, analyze_ligand, process_pockets
 from django.urls import reverse
 import os
+import json
 
 from .forms import ProteinForm, LigandForm, DockingForm
 
@@ -101,7 +102,8 @@ def jobs(request):
     if request.method == 'POST':  # prepare the model instances and run job
         settings = {'exhaustiveness': request.POST.get('exhaustiveness'),
                     'num_modes': request.POST.get('modes'),
-                    'chains': request.POST.get('chainString')}
+                    'chains': request.POST.get('chainString'),
+                    'pockets': json.loads(request.POST.get('pockets'))}
         post_type = request.POST.get('type')
         if post_type == 'process_protein':
             process_protein(request)
@@ -113,8 +115,11 @@ def jobs(request):
         # elif post_type == 'run_job':
         else:
             docking_form = DockingForm(request.POST, request.FILES)
+            print("BEGIN DEBUG")
             print("POST: ", request.POST)
-            print(settings['chains'])
+            print("CHAINS: ", settings['chains'])
+            print("POCKETS: ", settings['pockets'])
+            print("END DEBUG")
 
             job, docking = init_docking(request)
             store_protein(request, docking, job)
@@ -206,7 +211,8 @@ def check_progress(request):
     job_id = request.GET.get("job_id")
     job = rqJob.fetch(job_id, connection=queue.connection)
 
-    print("JOB META", job.meta)
+    # job.meta gets the status update from rundocking (including, if applicable, the bash script logs)
+    # print("JOB META", job.meta)
     progress = job.meta.get('progress', 'Running')
 
     if progress == "Script completed successfully":
@@ -228,7 +234,8 @@ def check_progress(request):
 
     output = job.meta.get('output', [])
     # current_output = '\n'.join(output)
-    print(progress)
+    # TODO: see if we can log the progress incrementally (not sending the same past stuff over and over)
+    # print("PROGRESS LOG: ", progress)
     return JsonResponse({'progress': progress, 'output': output})
 
 
