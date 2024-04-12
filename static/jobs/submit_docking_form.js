@@ -38,7 +38,7 @@ function submitDockingForm() {
         var maxpockets = document.getElementById('maxpockets').value; 
         
         const maxPocketObject = {
-            option: 'maxPockets',
+            option: '--max_pockets',
             value: maxpockets
         };
 
@@ -56,12 +56,19 @@ function submitDockingForm() {
 
         const pocketString = selectedRanks.join(',');
         const pocketObject = {
-            option: 'pocketString',
+            option: '--pockets',
             value:  pocketString 
         };
 
         const pocketJSON = JSON.stringify(pocketObject);
         dockingFormData.append('pockets', pocketJSON);
+    }
+
+    //add cleanProteinFilename and pocketsFilename if pocket preprocessing was made --from pockets_funcs.js 
+    if (preprocDone == true) {
+        dockingFormData.append('pocketsFilename', pocketsFilename);
+        dockingFormData.append('cleanProteinFilename', cleanProteinFilename);
+        dockingFormData.append('preprocDone', 1);
     }
 
     //send request with filled form

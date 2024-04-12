@@ -1,3 +1,9 @@
+//init filenames so they are accessible to global scope
+//TODO: how can we reset these if we change to a docking with no preprocessing?
+var cleanProteinFilename;
+var pocketsFilename;
+var preprocDone;
+
 //request to compute pockets via p2rank
 function loadPockets() {
     var pForm = document.getElementById('uploadProteinForm');
@@ -36,11 +42,18 @@ function retrievePockets(jobId) {
             setTimeout(() => {
                 retrievePockets(jobId);
             }, 5000);
-        } else if (data.pockets_file) {
+        } else if (data.pockets_file_content) {
             //var pocketsdiv = document.getElementById('pocketsinfo');
-            const parsedPocketsCSV = parsePocketsCSV(data.pockets_file);
+            //collect pocketsFile and cleanProteinFile returned by request_pockets view
+            pocketsFile = data.pockets_file_content;
+            cleanProteinFilename = data.clean_protein_filename;
+            pocketsFilename = data.pockets_filename;
+            preprocDone = true;
+            console.log("CLEAN PROTEIN FILENAME: ", cleanProteinFilename);
+            console.log("POCKETS FILENAME: ", pocketsFilename);
+
+            const parsedPocketsCSV = parsePocketsCSV(pocketsFile);
             displayPocketsTable(parsedPocketsCSV);
-            //console.log(data.pockets_file);
         } else {
             console.log("retrievePockets: Something went wrong")
         }
@@ -120,5 +133,3 @@ function togglePocket(checkbox) {
     console.log(`Checkbox value: ${value}, Checked: ${isChecked}, Pocket: ${pocketString}`);
     window.togglePocketRepr(pocket, isChecked);
 }
-
-

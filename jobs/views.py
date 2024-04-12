@@ -86,12 +86,15 @@ def retrieve_pockets(request, job_id):
 
     if job:
         if job.is_finished:
-            print("JOB RESULT: ", job.result)
-            with open(job.result, "r") as file:
+            pockets_filename, clean_protein_filename = job.result
+            # print("JOB RESULT: ", job.result)
+            with open(pockets_filename, "r") as file:
                 pockets_file_content = file.read()
-                print("FILE CONTENT ")
-                print(pockets_file_content)
-            return JsonResponse({'pockets_file': pockets_file_content})
+                # print("FILE CONTENT ")
+                # print(pockets_file_content)
+            return JsonResponse({'pockets_file_content': pockets_file_content,
+                                 'pockets_filename': pockets_filename,
+                                 'clean_protein_filename': clean_protein_filename})
         else:
             return JsonResponse({'status': 'pending'})
     else: 
@@ -103,7 +106,11 @@ def jobs(request):
         settings = {'exhaustiveness': request.POST.get('exhaustiveness'),
                     'num_modes': request.POST.get('modes'),
                     'chains': request.POST.get('chainString'),
-                    'pockets': json.loads(request.POST.get('pockets'))}
+                    'pockets': json.loads(request.POST.get('pockets')),
+                    'preproc_done': request.POST.get('preprocDone')}
+        if settings['preproc_done']:
+            settings.update({'pockets_filename': request.POST.get('pocketsFilename'),
+                    'clean_protein_filename': request.POST.get('cleanProteinFilename')})
         post_type = request.POST.get('type')
         if post_type == 'process_protein':
             process_protein(request)
@@ -115,11 +122,7 @@ def jobs(request):
         # elif post_type == 'run_job':
         else:
             docking_form = DockingForm(request.POST, request.FILES)
-            print("BEGIN DEBUG")
             print("POST: ", request.POST)
-            print("CHAINS: ", settings['chains'])
-            print("POCKETS: ", settings['pockets'])
-            print("END DEBUG")
 
             job, docking = init_docking(request)
             store_protein(request, docking, job)
@@ -235,7 +238,7 @@ def check_progress(request):
     output = job.meta.get('output', [])
     # current_output = '\n'.join(output)
     # TODO: see if we can log the progress incrementally (not sending the same past stuff over and over)
-    # print("PROGRESS LOG: ", progress)
+    print("PROGRESS LOG: ", progress)
     return JsonResponse({'progress': progress, 'output': output})
 
 
