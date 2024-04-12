@@ -107,7 +107,7 @@
             <p>Ligand name: {{ job_info.ligand }}</p>
         </div>
         <div class="tab-content" id="tab5">
-            <a href="{% url 'download_output' %}" class="btn btn-primary">Download output</a>
+            <a href="{% url 'download_output' current_job %}" class="btn btn-primary">Download output</a>
         </div>
     </div>
     <script src="{% static 'dashb/dashboard.js' %}"></script>

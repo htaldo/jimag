@@ -43,7 +43,7 @@ urlpatterns = [
     path('results/', results, name='results'),
     path('results/<int:current_job>', results, name='results'),
     path('delete-job/<int:job_id>', delete_job, name='delete_job'),
-    path('download_directory/', download_output, name='download_output'),
+    path('download_output/<int:current_job>', download_output, name='download_output'),  # download_directory refers to the function of downloading the current job directory
     path('dummy/', dummy, name='dummy'),
     # TODO: delete this
     path('', UploadView.as_view(), name='fileupload'),

@@ -6,14 +6,16 @@ from django.http import HttpResponse
 from django.conf import settings
 import shutil
 import zipfile
+import json
 
 
 # Create your views here.
-def results(request, current_job=None):
+def results(request, current_job=None, current_pocket=1):
+    #current_job starts with a non-null value if the user directly visits the job id via url
     user = request.user
-    #wd = f"{settings.MEDIA_ROOT}/user_{user.id}/job_{current_job}/docking_{docking}/output/"
     if not current_job:
         latest_job = user.profile.latest_job
+        print(f"LATEST JOB:{latest_job}")
         if not latest_job: #if latest_job is null
         # todo: consider the case where the user has no jobs
             # TODO: This is redundant with delete_job()
@@ -28,26 +30,28 @@ def results(request, current_job=None):
         return HttpResponseForbidden("You don't have access to this job.")
     docking = Docking.objects.get(job=current_job).id
     wd = f"user_{user.id}/job_{current_job}/docking_{docking}/"
+    od = f"{wd}output/"
+    cpd = f"{wd}output/pocket_{current_pocket}/" # current pocket directory
 
     current_job_files = {
-        'conformers': f"/media/{wd}output/modes.pdbqt",
-        'receptor': f"/media/{wd}output/receptor.pdbqt",
+        'conformers': f"/media/{cpd}modes.pdbqt",
+        'receptor': f"/media/{od}receptor.pdbqt",
     }
-    vina_file = f"{settings.MEDIA_ROOT}/{wd}output/scores.txt"
+    vina_file = f"{settings.MEDIA_ROOT}/{cpd}scores.txt"
     with open(vina_file, 'r') as file:
         vina_results = file.read()
 
     return render(request, 'dashboard.html', {
         'job_info': job_info(current_job),
+        'current_job': current_job,
         'current_job_files': current_job_files,
         'vina_results': vina_results,
         'jobs': [job for job in Job.objects.filter(user=user)],
     })
 
 
-def download_output(request):
+def download_output(request, current_job):
     user = request.user
-    current_job = user.profile.current_job
     docking = Docking.objects.get(job=current_job).id
     wd = f"{settings.MEDIA_ROOT}/user_{user.id}/job_{current_job}/docking_{docking}/"
 
