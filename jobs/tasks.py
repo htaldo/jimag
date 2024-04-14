@@ -1,5 +1,6 @@
 from rq import get_current_job
 from django_rq import job
+from .models import Docking
 import subprocess
 import logging
 import tempfile
@@ -12,26 +13,23 @@ logging.basicConfig(filename='script_output.log', level=logging.INFO)
 @job
 # TODO: maybe we can change _inst to _id,
 # but making clear that the id refers to the model isntancss
-def run_docking_script(user_inst, job_inst, docking_inst, settings):
+def run_docking_script(user_id, job_id, docking_id, settings):
     job = get_current_job()  # is this line necessary?
 
+    
     logger = logging.getLogger(__name__)
     logger.info("INFO: run_docking_script task started")
-    #logger.info("INFO: ", settings['chains'])
 
     try:
         script_path = '/home/aldo/pro/falcon/script4/multi.sh'
-        input_dir = f"/home/aldo/pro/A/media/user_{user_inst}/job_{job_inst}/docking_{docking_inst}/input"
-        output_dir = f"/home/aldo/pro/A/media/user_{user_inst}/job_{job_inst}/docking_{docking_inst}/output"
+        input_dir = f"/home/aldo/pro/A/media/user_{user_id}/job_{job_id}/docking_{docking_id}/input"
+        output_dir = f"/home/aldo/pro/A/media/user_{user_id}/job_{job_id}/docking_{docking_id}/output"
 
         # Pass preprocessing files to the script
         if settings['preproc_done']:
             os.makedirs(output_dir, exist_ok=True)
             shutil.copy(settings['pockets_filename'], f"{output_dir}/receptor.pdb_predictions.csv")
             shutil.copy(settings['clean_protein_filename'], f"{output_dir}/receptor.pdb")
-            # apparently we don't need to remove the files, why?
-            # os.remove(settings['pockets_filename'])
-            # os.remove(settings['clean_protein_filename'])
 
         script_command = [script_path, "--input", input_dir, "--output", output_dir,
                           "--vinalvl", settings['exhaustiveness'], "--num_modes", settings['num_modes']]
@@ -58,8 +56,13 @@ def run_docking_script(user_inst, job_inst, docking_inst, settings):
 
             logger.info(line)
 
-        # job.meta['progress'] = '\n'.join(output_lines)
-        job.meta['progress'] = 'test string'
+        # post-processing - add pockets to the docking instance
+        pockets_file = open(f"{output_dir}/pockets", 'r')
+        pocket_str = pockets_file.readline()  # pockets are saved in a single line in this file
+        pockets_file.close()
+        docking_inst = Docking.objects.get(pk=docking_id)
+        docking_inst.pockets = pocket_str
+        docking_inst.save()
 
         return_code = process.wait()
 

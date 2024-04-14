@@ -147,21 +147,10 @@ def init_docking(request):
     )
     job.job_name = f"job_{job.id}"
     job.save()
-    # Create and link a new Docking instance
-    pockets_obj = json.loads(request.POST.get('pockets'))
-    if pockets_obj['option'] == '--max_pockets':
-        # TODO: set the path as a const and use it here
-        n = pockets_obj['value']
-        cmd = ['/home/aldo/pro/falcon/script4/max2pockets', str(n)]
-        res = subprocess.run(cmd, stdout=subprocess.PIPE)
-        # pocket string for internal use (setting docking.pockets)
-        pocket_str = res.stdout.decode('utf-8')
-    else:  # assume option == "--pockets"
-        pocket_str = pockets_obj['value']
+    
     docking = Docking.objects.create(
         user=request.user,
         job=job,
-        pockets=pocket_str,
     )
     return job, docking
 
