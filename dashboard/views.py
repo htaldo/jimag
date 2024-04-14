@@ -10,7 +10,7 @@ import json
 
 
 # Create your views here.
-def results(request, current_job=None, current_pocket=1):
+def results(request, current_job=None, current_pocket=None):
     #current_job starts with a non-null value if the user directly visits the job id via url
     user = request.user
     if not current_job:
@@ -26,9 +26,11 @@ def results(request, current_job=None, current_pocket=1):
         else:
             current_job = latest_job
     print(f"CURRENT JOB:{current_job}")
+    docking = Docking.objects.get(job=current_job).id
+    if not current_pocket:
+        current_pocket = [int(pocket) for pocket in Docking.objects.get(pk=docking).pockets.split(',')][0]
     if Job.objects.get(pk=current_job).user != request.user:
         return HttpResponseForbidden("You don't have access to this job.")
-    docking = Docking.objects.get(job=current_job).id
     wd = f"user_{user.id}/job_{current_job}/docking_{docking}/"
     od = f"{wd}output/"
     cpd = f"{wd}output/pocket_{current_pocket}/" # current pocket directory
@@ -46,7 +48,8 @@ def results(request, current_job=None, current_pocket=1):
         'current_job': current_job,
         'current_job_files': current_job_files,
         'vina_results': vina_results,
-        'jobs': [job for job in Job.objects.filter(user=user)],
+        #'jobs': [job for job in Job.objects.filter(user=user)],
+        'jobs': list(Job.objects.filter(user=user).order_by('-id')),
         'pockets': [int(pocket) for pocket in Docking.objects.get(pk=docking).pockets.split(',')]  # current job pockets
     })
 

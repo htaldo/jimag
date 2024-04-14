@@ -35,9 +35,12 @@
             <div id="uploadfile2" class="content-section show">
                 <form id="uploadLigandForm" method="post" action="{% url 'process_ligand' %}" enctype="multipart/form-data">
                     {% csrf_token %}
-                    {{ docking_form.lform }}
+                    <label for="id_lform-ligand_name">Ligand name:</label>
+                    {{ docking_form.lform.ligand_name }}
                     <br>
-                    <br>
+                    <label for="id_lform-ligand_file">Ligand file:</label>
+                    {{ docking_form.lform.ligand_file }}
+                    <br><br>
                     <button type="button" onclick="submitLigandForm()">Submit ligand</button>
                 </form>
                 <div id="processingLigand" style="display: none;">Processing ligand...</div>
@@ -64,9 +67,12 @@
             <div id="uploadfile1" class="content-section show">
                 <form id="uploadProteinForm" method="post" action="{% url 'process_protein' %}" enctype="multipart/form-data">
                     {% csrf_token %}
-                    {{ docking_form.pform }}
+                    <label for="id_lform-ligand_name">Protein name:</label>
+                    {{ docking_form.pform.protein_name }}
                     <br>
-                    <br>
+                    <label for="id_lform-ligand_file">Ligand file:</label>
+                    {{ docking_form.pform.protein_file }}
+                    <br><br>
                     <button type="button" onclick="submitProteinForm()">Submit protein</button>
                 </form>
                 <div id="processingProtein" style="display: none;">Processing protein...</div>
@@ -129,6 +135,7 @@
             <div id="toppockets" class="content-section show">
                     <!-- https://www.w3schools.com/html/html_form_input_types.asp -->
                 <label for="maxpockets">Maximum number of pockets (if available):</label>
+                <br>
                 <input type="number" id="maxpockets" name="maxpockets" value="1" min="1" max="16">
             </div>
             <div id="choosepockets" class="content-section" style="height: 350px; overflow-y: auto;">

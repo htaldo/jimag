@@ -25,12 +25,10 @@ def process_protein(request):
             analyze_protein.delay(protein_file)
 
             if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
-                print("REPORT: Got AJAX")
                 return JsonResponse(
                     {'status': 'success',
                      'protein_file': protein_file.read().decode()})
             else:
-                print("REPORT: Not AJAX")
                 return render(request, 'jobs.html')  # process the job
             # return render(request, 'jobs.html',
             # {'protein_form': protein_form, 'message': message})
@@ -58,12 +56,10 @@ def process_ligand(request):
             analyze_ligand.delay(ligand_file)
 
             if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
-                print("REPORT: Got AJAX")
                 return JsonResponse(
                     {'status': 'success',
                      'ligand_file': ligand_file.read().decode()})
             else:
-                print("REPORT: Not AJAX")
                 return render(request, 'jobs.html')  # process the job
             # return render(request, 'jobs.html',
             # {'protein_form': protein_form, 'message': message})
@@ -88,11 +84,8 @@ def retrieve_pockets(request, job_id):
     if job:
         if job.is_finished:
             pockets_filename, clean_protein_filename = job.result
-            # print("JOB RESULT: ", job.result)
             with open(pockets_filename, "r") as file:
                 pockets_file_content = file.read()
-                # print("FILE CONTENT ")
-                # print(pockets_file_content)
             return JsonResponse({'pockets_file_content': pockets_file_content,
                                  'pockets_filename': pockets_filename,
                                  'clean_protein_filename': clean_protein_filename})
@@ -104,25 +97,24 @@ def retrieve_pockets(request, job_id):
 
 def jobs(request):
     if request.method == 'POST':  # prepare the model instances and run job
-        settings = {'exhaustiveness': request.POST.get('exhaustiveness'),
-                    'num_modes': request.POST.get('modes'),
-                    'chains': request.POST.get('chainString'),
-                    'pockets': json.loads(request.POST.get('pockets')),
-                    'preproc_done': request.POST.get('preprocDone')}
-        if settings['preproc_done']:
-            settings.update({'pockets_filename': request.POST.get('pocketsFilename'),
-                    'clean_protein_filename': request.POST.get('cleanProteinFilename')})
-                    
         post_type = request.POST.get('type')
         if post_type == 'process_protein':
             process_protein(request)
         elif post_type == 'process_ligand':
             print('process_ligand')
         # elif post_type == 'load_pockets':
-        #    print('process_ligand')
+        #    print('load_pockets')
 
         # elif post_type == 'run_job':
-        else:
+        else:  # run docking
+            settings = {'exhaustiveness': request.POST.get('exhaustiveness'),
+                        'num_modes': request.POST.get('modes'),
+                        'chains': request.POST.get('chainString'),
+                        'pockets': json.loads(request.POST.get('pockets')),
+                        'preproc_done': request.POST.get('preprocDone')}
+            if settings['preproc_done']:
+                settings.update({'pockets_filename': request.POST.get('pocketsFilename'),
+                                 'clean_protein_filename': request.POST.get('cleanProteinFilename')})
             docking_form = DockingForm(request.POST, request.FILES)
             print("POST: ", request.POST)
 
@@ -135,17 +127,12 @@ def jobs(request):
             request.session['job_metadata'] = [request.user.id,
                                                job.id, docking.id,
                                                settings]
-            print("ABOUT TO CALL RUNDOCKING")
             return redirect(reverse('run_docking'))                  # RUN!
     else:
         # render the jobs application
         if request.user.is_authenticated:
             docking_form = DockingForm()
-            # protein_form = ProteinForm()
-            # ligand_form = LigandForm()
             return render(request, 'jobs.html', {
-                # 'protein_form': protein_form,
-                # 'ligand_form': ligand_form
                 'docking_form': docking_form
             })
         else:
@@ -162,12 +149,13 @@ def init_docking(request):
     job.save()
     # Create and link a new Docking instance
     pockets_obj = json.loads(request.POST.get('pockets'))
-    if pockets_obj['option'] == '--max-pockets':
+    if pockets_obj['option'] == '--max_pockets':
         # TODO: set the path as a const and use it here
         n = pockets_obj['value']
-        command = ['/home/aldo/pro/falcon/script4/max2pockets', str(n)]
+        cmd = ['/home/aldo/pro/falcon/script4/max2pockets', str(n)]
+        res = subprocess.run(cmd, stdout=subprocess.PIPE)
         # pocket string for internal use (setting docking.pockets)
-        pocket_str = subprocess.run(command, stdout=subprocess.PIPE, text=True)
+        pocket_str = res.stdout.decode('utf-8')
     else:  # assume option == "--pockets"
         pocket_str = pockets_obj['value']
     docking = Docking.objects.create(
@@ -180,17 +168,6 @@ def init_docking(request):
 
 def store_protein(request, docking, job):
     # if 'protein_file' in request.FILES:  # will this still be necessary?
-    print("request files:")
-    print(request.FILES)
-
-    """
-    for file_field_name, file_obj in request.FILES.items():
-        file_name = file_obj.name
-        file_size = file_obj.size
-        print("file name: ", file_name)
-        print("file size: ", file_size)
-    """
-
     protein_file = request.FILES['protein_file']
     protein_form = ProteinForm(request.POST, request.FILES)
     if protein_form.is_valid():
@@ -218,23 +195,13 @@ def store_ligand(request, docking, job):
 
 def rundocking(request):
     if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
-        print("HIT ELSE BLOCK IN RUNDOCKING")
         return HttpResponse(status=204)
     else:
-        print("ENTERED RUNDOCKING VIEW")
-        ref = request.META.get('HTTP_REFERER')
-        print(f"GET request originated from: {ref}")
-        print("GET REQUEST: ", request.body.decode('utf-8'))
-        for header, value in request.headers.items():
-            print(f"{header}: {value}")
-        if hasattr(request, 'meta_data') and request.meta_data.get('processed'):
-            print("Request came from the POST part of the jobs view")
         # user, job and docking here are just their IDs
         user, job, docking, settings = request.session.get('job_metadata', [])
         # unique_job_id = f"rqjob_{job}"
         result = run_docking_script.delay(user, job, docking, settings)
         job_id = result.id
-        print("DELAY FOR TASK ", job_id)
         return render(request, 'running.html', {'job_id': job_id})
 
 
@@ -243,8 +210,7 @@ def check_progress(request):
     job_id = request.GET.get("job_id")
     job = rqJob.fetch(job_id, connection=queue.connection)
 
-    # job.meta gets the status update from rundocking (including, if applicable, the bash script logs)
-    # print("JOB META", job.meta)
+    # job.meta gets the status update from rundocking (including script logs)
     progress = job.meta.get('progress', 'Running')
 
     if progress == "Script completed successfully":

@@ -1,6 +1,12 @@
 <!DOCTYPE html>
-Progress div
-<div id="progress-div">Running...</div>
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'styles/running.css' %}">
+  <title>Running job {{ job_id }}</title>
+</head>
+<center>
+<div id="progress-div" class="monospace-box">Your job will start briefly...</div>
+</center>
 
 <script>
   var job_id = "{{ job_id }}";
