@@ -19,7 +19,7 @@
         <ul>
             {% for job in jobs %}
                 <li>
-                    <a href="{% url 'results' job.id %}">Job {{ job.id }}</a> 
+                    <a href="{% url 'results' job.id 1 %}">Job {{ job.id }}</a> 
                     <form action="{% url 'delete_job' job.id %}" method="POST">
                         {% csrf_token %}
                         <button>
@@ -27,6 +27,13 @@
                         </button>
                     </form>
                 </li>
+                {% if job.id == current_job %}
+                    {% for pocket in pockets %}
+                        <li>
+                            <a href="{% url 'results' job.id pocket %}">-   Pocket {{ pocket }}</a> 
+                        </li>   
+                    {% endfor %}
+                {% endif %}
             {% endfor %}
         </ul>
     </aside>

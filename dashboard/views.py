@@ -47,6 +47,7 @@ def results(request, current_job=None, current_pocket=1):
         'current_job_files': current_job_files,
         'vina_results': vina_results,
         'jobs': [job for job in Job.objects.filter(user=user)],
+        'pockets': [int(pocket) for pocket in Docking.objects.get(pk=docking).pockets.split(',')]  # current job pockets
     })
 
 

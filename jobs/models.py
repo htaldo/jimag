@@ -38,6 +38,7 @@ class Ligand(models.Model):
 class Docking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     job = models.ForeignKey('Job', on_delete=models.CASCADE)
+    pockets = models.CharField(max_length=100)
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)

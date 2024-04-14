@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from .models import Job, Docking, Profile
 from rq.job import Job as rqJob
 from django_rq import get_queue
@@ -7,6 +7,7 @@ from .tasks import run_docking_script, analyze_protein, analyze_ligand, process_
 from django.urls import reverse
 import os
 import json
+import subprocess
 
 from .forms import ProteinForm, LigandForm, DockingForm
 
@@ -111,6 +112,7 @@ def jobs(request):
         if settings['preproc_done']:
             settings.update({'pockets_filename': request.POST.get('pocketsFilename'),
                     'clean_protein_filename': request.POST.get('cleanProteinFilename')})
+                    
         post_type = request.POST.get('type')
         if post_type == 'process_protein':
             process_protein(request)
@@ -127,10 +129,14 @@ def jobs(request):
             job, docking = init_docking(request)
             store_protein(request, docking, job)
             store_ligand(request, docking, job)
+            request.meta_data = {
+                'processed': True
+            }
             request.session['job_metadata'] = [request.user.id,
                                                job.id, docking.id,
                                                settings]
-            return redirect('run_docking')                  # RUN!
+            print("ABOUT TO CALL RUNDOCKING")
+            return redirect(reverse('run_docking'))                  # RUN!
     else:
         # render the jobs application
         if request.user.is_authenticated:
@@ -155,9 +161,19 @@ def init_docking(request):
     job.job_name = f"job_{job.id}"
     job.save()
     # Create and link a new Docking instance
+    pockets_obj = json.loads(request.POST.get('pockets'))
+    if pockets_obj['option'] == '--max-pockets':
+        # TODO: set the path as a const and use it here
+        n = pockets_obj['value']
+        command = ['/home/aldo/pro/falcon/script4/max2pockets', str(n)]
+        # pocket string for internal use (setting docking.pockets)
+        pocket_str = subprocess.run(command, stdout=subprocess.PIPE, text=True)
+    else:  # assume option == "--pockets"
+        pocket_str = pockets_obj['value']
     docking = Docking.objects.create(
         user=request.user,
         job=job,
+        pockets=pocket_str,
     )
     return job, docking
 
@@ -201,12 +217,25 @@ def store_ligand(request, docking, job):
 
 
 def rundocking(request):
-    # user, job and docking here are just their IDs
-    user, job, docking, settings = request.session.get('job_metadata', [])
-    # unique_job_id = f"rqjob_{job}"
-    result = run_docking_script.delay(user, job, docking, settings)
-    job_id = result.id
-    return render(request, 'running.html', {'job_id': job_id})
+    if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+        print("HIT ELSE BLOCK IN RUNDOCKING")
+        return HttpResponse(status=204)
+    else:
+        print("ENTERED RUNDOCKING VIEW")
+        ref = request.META.get('HTTP_REFERER')
+        print(f"GET request originated from: {ref}")
+        print("GET REQUEST: ", request.body.decode('utf-8'))
+        for header, value in request.headers.items():
+            print(f"{header}: {value}")
+        if hasattr(request, 'meta_data') and request.meta_data.get('processed'):
+            print("Request came from the POST part of the jobs view")
+        # user, job and docking here are just their IDs
+        user, job, docking, settings = request.session.get('job_metadata', [])
+        # unique_job_id = f"rqjob_{job}"
+        result = run_docking_script.delay(user, job, docking, settings)
+        job_id = result.id
+        print("DELAY FOR TASK ", job_id)
+        return render(request, 'running.html', {'job_id': job_id})
 
 
 def check_progress(request):
@@ -238,7 +267,7 @@ def check_progress(request):
     output = job.meta.get('output', [])
     # current_output = '\n'.join(output)
     # TODO: see if we can log the progress incrementally (not sending the same past stuff over and over)
-    print("PROGRESS LOG: ", progress)
+    # print("PROGRESS LOG: ", progress)
     return JsonResponse({'progress': progress, 'output': output})
 
 
