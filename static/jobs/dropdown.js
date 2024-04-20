@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   //var contentSelector = document.getElementById("contentSelector");
   var dropdowns = document.querySelectorAll(".content-selector");
-  console.log("dropdowns: ", dropdowns);
 
   function showSelectedContent(dropdown) {
     var selectedValue = dropdown.value;

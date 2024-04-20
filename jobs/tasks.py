@@ -11,8 +11,6 @@ logging.basicConfig(filename='script_output.log', level=logging.INFO)
 
 
 @job
-# TODO: maybe we can change _inst to _id,
-# but making clear that the id refers to the model isntancss
 def run_docking_script(user_id, job_id, docking_id, settings):
     job = get_current_job()  # is this line necessary?
 
@@ -106,7 +104,7 @@ def process_pockets(protein_file, chains):
             inputpdb.write(protein_file.read())
             inputpdb.flush()
         # clean chains
-        script_path = '/home/aldo/pro/falcon/script4/receptor_pre.py'
+        script_path = '/home/aldo/pro/falcon/script4/receptor.py'
         chimera_cmd = '/home/aldo/.local/src/chimera/bin/chimera'
         chainspdb = tempfile.NamedTemporaryFile(suffix=".pdb", delete=False)
         clean_chains_cmd = f'export IF={inputpdb.name} OF={chainspdb.name} CHAINS={chains}; {chimera_cmd} --nogui {script_path}'

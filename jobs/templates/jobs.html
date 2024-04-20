@@ -16,12 +16,6 @@
     <!-- form id="runJob" action="{% url 'jobs' %}" method="post" enctype="multipart/form-data" -->
 
     <div class="jobscontainer">
-        {% if message %}
-            <div class="result-message">
-                {{ message }}
-            </div>
-        {% endif %}
-
         <!--jobsbox is each of the three columns that separate
         the menus for protein, chain and ligand-->
         <div class="jobsbox">
@@ -70,7 +64,7 @@
                     <label for="id_lform-ligand_name">Protein name:</label>
                     {{ docking_form.pform.protein_name }}
                     <br>
-                    <label for="id_lform-ligand_file">Ligand file:</label>
+                    <label for="id_lform-ligand_file">Protein file:</label>
                     {{ docking_form.pform.protein_file }}
                     <br><br>
                     <button type="button" onclick="submitProteinForm()">Submit protein</button>
@@ -139,7 +133,8 @@
                 <input type="number" id="maxpockets" name="maxpockets" value="1" min="1" max="16">
             </div>
             <div id="choosepockets" class="content-section" style="height: 350px; overflow-y: auto;">
-                <button type="button" onclick="loadPockets()">Choose pockets</button>
+                <!-- this button has a listener in pocketfuncs.js that calls load_pockets -->
+                <button type="button" id="choosepocketsbtn">Choose pockets</button>
                 <script src="{% static 'jobs/pockets_funcs.js' %}"></script>
                 <table id="pocketsTable">
                     <thead>

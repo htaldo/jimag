@@ -4,8 +4,18 @@ var cleanProteinFilename;
 var pocketsFilename;
 var preprocDone;
 
+window.clearPocketsTable = () => {
+    //refresh pocket table and chainString
+    const tableBody = document.querySelector('#pocketsTable tbody');
+    const stringDiv = document.getElementById('chainstring');
+    tableBody.innerHTML = '';
+    stringDiv.innerHTML = '';
+}
+
 //request to compute pockets via p2rank
-function loadPockets() {
+document.getElementById("choosepocketsbtn").onclick=async() => {
+    await window.clearPocketsTable();
+    await window.deletePockets();
     var pForm = document.getElementById('uploadProteinForm');
     var pFormData = new FormData(pForm);
     //var parsedPFormData = JSON.parse(pFormData);

@@ -1,5 +1,6 @@
 //import React, { useState } from 'react';
 //import ReactDOM from 'react-dom';
+import { renderReact18 } from 'molstar/lib/mol-plugin-ui/react18';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
@@ -63,7 +64,11 @@ const MyComponent: React.FC = () => {
 	    const parent = document.getElementById('chainsviewer')
 	    if (!parent) return;
 
-	    plugin = await createPluginUI(parent, MySpec);
+	    plugin = await createPluginUI({
+		target: parent, 
+		spec: MySpec,
+		render: renderReact18
+	    });
 
 	    //const receptor = 'https://files.rcsb.org/download/1a3n.pdb';
 	    //const data = await plugin.builders.data.download({ url: receptor }, { state: { isGhost: true } });
@@ -92,7 +97,7 @@ const MyComponent: React.FC = () => {
 		    }
 		    setSelected(localSelected);
 		    const chainString = localSelected.map(item => item.chainid).join(',');
-		    console.log("chainString: ", chainString);
+		    //console.log("chainString: ", chainString);
 		    const stringDiv = document.getElementById('chainstring');
 		    stringDiv.innerHTML = chainString;
 		}
@@ -112,16 +117,26 @@ let currentStructure: StateObjectRef<SO.Molecule.Structure>;
 let loadedReprs = [];
 let components = {};
 
-//https://stackoverflow.com/questions/50176213/accessing-exported-functions-from-html-file
-window.loadReceptor = async (receptor) => {
+window.deletePockets = async () => {
+    //const updates = plugin.build();
+    const updates = plugin.state.data.build();
+    //console.log(components);
+    for (const key in components) {
+	const component = components[key];
+	updates.delete(component.ref);
+    }
+    await updates.commit();
+
     //clean pocket variables
     loadedReprs = [];
     components = {};
-    //refresh pocket table and chainString
-    const tableBody = document.querySelector('#pocketsTable tbody');
-    const stringDiv = document.getElementById('chainstring');
-    tableBody.innerHTML = '';
-    stringDiv.innerHTML = '';
+}
+
+//https://stackoverflow.com/questions/50176213/accessing-exported-functions-from-html-file
+window.loadReceptor = async (receptor) => {
+    loadedReprs = [];
+    components = {};
+    window.clearPocketsTable();
     plugin.clear();
     //console.log(receptor);
     //de la definición de loadStructureFromData	(viewer/app.ts)
@@ -172,12 +187,12 @@ async function createPocketRepr (pocket: Pocket) {
 	let subSeq = item.subSeq;
 	let key = `${pocket.rank}${chain}`; //components key, like 1A, 1B
 	let query = createSequenceIdExpression(chain, subSeq);
-	console.log(`DEBUG: query `, JSON.stringify(query));
+	//console.log(`DEBUG: query `, JSON.stringify(query));
 	let err;
 	components[key] = await plugin.builders.structure.tryCreateComponentFromExpression(currentStructure, query, `pocket${key}`).catch((err) => {
 	    console.log("E: ", err);	
 	});
-	console.log(`DEBUG: components[${key}]: `, components[key]);
+	//console.log(`DEBUG: components[${key}]: `, components[key]);
 
 	let selector = await plugin.builders.structure.representation.addRepresentation(components[key], {
 	    type: 'molecular-surface',

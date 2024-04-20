@@ -47,6 +47,7 @@ def results(request, current_job=None, current_pocket=None):
         'job_info': job_info(current_job),
         'current_job': current_job,
         'current_job_files': current_job_files,
+        'current_pocket': current_pocket,
         'vina_results': vina_results,
         #'jobs': [job for job in Job.objects.filter(user=user)],
         'jobs': list(Job.objects.filter(user=user).order_by('-id')),
@@ -74,6 +75,7 @@ def job_info(job_id):
     info['created_at'] = job_instance.created_at
     info['receptor'] = Protein.objects.get(job=job_id).protein_name
     info['ligand'] = Ligand.objects.get(job=job_id).ligand_name
+    info['pockets'] = Docking.objects.get(job=job_id).pockets
     return info
 
 
@@ -82,24 +84,25 @@ def delete_job(request, job_id):
     job_instance = Job.objects.get(pk=job_id)
     job_dir = f"{settings.MEDIA_ROOT}/user_{user.id}/job_{job_id}"
     # TODO: remove redundant code
-    if (request.method == 'POST') and (user.profile.latest_job == job_id):
-        try:
-            shutil.rmtree(job_dir)
-        except OSError as e:
-            print(f"Error deleting directory: {e}")
+    if request.method == 'POST':
+        if job_id == user.profile.latest_job:
+            try:
+                shutil.rmtree(job_dir)
+            except OSError as e:
+                print(f"Error deleting directory: {e}")
 
-        job_instance.delete()
-        user.profile.latest_job = None
-        user.profile.save()
-        # user.profile.latest_job.delete()
-        user_job_ids = Job.objects.filter(user=user).values_list('id', flat=True)
-        first_job = min(user_job_ids)
-        return redirect('results', current_job=first_job)
-    elif request.method == 'POST':
-        try:
-            shutil.rmtree(job_dir)
-        except OSError as e:
-            print(f"Error deleting directory: {e}")
+            job_instance.delete()
+            user.profile.latest_job = None
+            user.profile.save()
+            # user.profile.latest_job.delete()
+            user_job_ids = Job.objects.filter(user=user).values_list('id', flat=True)
+            first_job = min(user_job_ids)
+            return redirect('results', current_job=first_job)
+        else:
+            try:
+                shutil.rmtree(job_dir)
+            except OSError as e:
+                print(f"Error deleting directory: {e}")
 
-        job_instance.delete()
-        return redirect('results')
+            job_instance.delete()
+            return redirect('results')

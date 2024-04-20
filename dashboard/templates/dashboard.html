@@ -19,7 +19,7 @@
         <ul>
             {% for job in jobs %}
                 <li>
-                    <a href="{% url 'results' job.id 1 %}">Job {{ job.id }}</a> 
+                    <a href="{% url 'results' job.id current_pocket %}">Job {{ job.id }}</a> 
                     <form action="{% url 'delete_job' job.id %}" method="POST">
                         {% csrf_token %}
                         <button>
@@ -29,9 +29,15 @@
                 </li>
                 {% if job.id == current_job %}
                     {% for pocket in pockets %}
-                        <li>
-                            <a href="{% url 'results' job.id pocket %}">-   Pocket {{ pocket }}</a> 
-                        </li>   
+                        {% if pocket == current_pocket %}
+                            <li>
+                                <a href="{% url 'results' job.id pocket %}" class="active">-   Pocket {{ pocket }}</a> 
+                            </li>   
+                        {% else %}
+                            <li>
+                                <a href="{% url 'results' job.id pocket %}">-   Pocket {{ pocket }}</a> 
+                            </li>   
+                        {% endif %}
                     {% endfor %}
                 {% endif %}
             {% endfor %}
@@ -72,25 +78,8 @@
             </script>
         </div>
         <div class="tab-content" id="tab3">
-        <!--
             <style>
-                #app2 {
-                    position: absolute;
-                    width: 67%;
-                    height: 600px;
-                }
-            </style>
-            <link rel="stylesheet" type="text/css" href="{% static 'molstar/molstar.css' %}" />
-            <script type="text/javascript" src="{% static 'molstar/molstar.js' %}"></script>
-            <div id="app2"></div>
-            <script type="text/javascript" src="{% static 'dashb/viewer2.js' %}"
-                defer
-                    data-conformers="{{ current_job_files.conformers }}";
-                    data-receptor="{{ current_job_files.receptor }}";>
-            </script>
-        -->
-            <style>
-                #pockets {
+                #pockets-viewer {
                     position: relative;
                     width: 67%;
                     height: 600px;
@@ -98,7 +87,7 @@
             </style>
             <link rel="stylesheet" type="text/css" href="{% static 'molstar/molstar.css' %}" />
             <script type="text/javascript" src="{% static 'molstar/molstar.js' %}"></script>
-            <div id="pockets"></div>
+            <div id="pockets-viewer"></div>
             <script type="text/javascript" src="{% static 'dashb/dock3_bundle.js' %}"
                 defer
                     data-conformers="{{ current_job_files.conformers }}";
@@ -112,6 +101,7 @@
             <p>Created at: {{ job_info.created_at }}</p>
             <p>Receptor name: {{ job_info.receptor }}</p>
             <p>Ligand name: {{ job_info.ligand }}</p>
+            <p>Pockets: {{ job_info.pockets }}</p>
         </div>
         <div class="tab-content" id="tab5">
             <a href="{% url 'download_output' current_job %}" class="btn btn-primary">Download output</a>

@@ -15,38 +15,19 @@ from .forms import ProteinForm, LigandForm, DockingForm
 # Create your views here.
 def process_protein(request):
     # currently the processing is being handled by the store functions
-    if request.method == "POST":
-        # protein_form = ProteinForm(request.POST, request.FILES)
-        if 'protein_file' in request.FILES:
-            # TODO: we should get rid of the first check in
-            # store_protein and store_ligand
-            # checks and extra functionality
-            protein_file = request.FILES['protein_file']
-            analyze_protein.delay(protein_file)
+    if request.method == "POST" and 'protein_file' in request.FILES:
+        # TODO: we should get rid of the first check in
+        # store_protein and store_ligand
+        # checks and extra functionality
+        protein_file = request.FILES['protein_file']
+        analyze_protein.delay(protein_file)
 
-            if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
-                return JsonResponse(
-                    {'status': 'success',
-                     'protein_file': protein_file.read().decode()})
-            else:
-                return render(request, 'jobs.html')  # process the job
-            # return render(request, 'jobs.html',
-            # {'protein_form': protein_form, 'message': message})
-    elif request.method == "GET":
-        protein_form = ProteinForm()
-        return render(request, 'jobs.html')
-
-
-# def process_ligand(request):
-#     if request.method == 'POST':
-#         ligand_form = LigandForm(request.POST, request.FILES)
-#         if ligand_form.is_valid():
-#             message = "Ligand uploaded successfully"
-#             return (request, 'jobs.html',
-#                     {'ligand_form': ligand_form, 'message': message})
-#     else:
-#         ligand_form = LigandForm()
-#     return render(request, 'jobs.html', {'ligand_form': ligand_form})
+        if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+            return JsonResponse(
+                {'status': 'success',
+                 'protein_file': protein_file.read().decode()})
+        else:
+            return render(request, 'jobs.html')  # process the job
 
 
 def process_ligand(request):
@@ -61,8 +42,6 @@ def process_ligand(request):
                      'ligand_file': ligand_file.read().decode()})
             else:
                 return render(request, 'jobs.html')  # process the job
-            # return render(request, 'jobs.html',
-            # {'protein_form': protein_form, 'message': message})
     elif request.method == "GET":
         ligand_form = LigandForm()
         return render(request, 'jobs.html')
@@ -106,7 +85,7 @@ def jobs(request):
         #    print('load_pockets')
 
         # elif post_type == 'run_job':
-        else:  # run docking
+        elif post_type == 'run_job':
             settings = {'exhaustiveness': request.POST.get('exhaustiveness'),
                         'num_modes': request.POST.get('modes'),
                         'chains': request.POST.get('chainString'),
@@ -186,9 +165,7 @@ def rundocking(request):
     if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
         return HttpResponse(status=204)
     else:
-        # user, job and docking here are just their IDs
         user, job, docking, settings = request.session.get('job_metadata', [])
-        # unique_job_id = f"rqjob_{job}"
         result = run_docking_script.delay(user, job, docking, settings)
         job_id = result.id
         return render(request, 'running.html', {'job_id': job_id})
@@ -219,11 +196,13 @@ def check_progress(request):
         return JsonResponse({'progress': progress,
                              'redirect_url': redirect_url})
 
-    output = job.meta.get('output', [])
+    # output = job.meta.get('output', [])
     # current_output = '\n'.join(output)
     # TODO: see if we can log the progress incrementally (not sending the same past stuff over and over)
     # print("PROGRESS LOG: ", progress)
-    return JsonResponse({'progress': progress, 'output': output})
+    # output lets us directly log the script output to the django console
+    # return JsonResponse({'progress': progress, 'output': output})
+    return JsonResponse({'progress': progress})
 
 
 def dummy(request):

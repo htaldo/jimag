@@ -8,8 +8,8 @@ module.exports = {
 		//filename: 'dock3_bundle.js',
 		//filename: 'dummy_bundle.js',
 		filename: 'chains_bundle.js',
-		path: path.resolve(__dirname, 'static', 'jobs')
 		//path: path.resolve(__dirname, 'static', 'dashb')
+		path: path.resolve(__dirname, 'static', 'jobs')
 		//path: path.resolve(__dirname, 'static')
 	},
 	module: {
