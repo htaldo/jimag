@@ -60,7 +60,7 @@ const MyComponent: React.FC = () => {
     const [selected, setSelected] = React.useState([]);
 
     React.useEffect(() => {
-	async function initializePlugin() {
+	async function createPlugin() {
 	    const parent = document.getElementById('chainsviewer')
 	    if (!parent) return;
 
@@ -104,7 +104,7 @@ const MyComponent: React.FC = () => {
 	    );
 	}
 
-	initializePlugin();
+	createPlugin();
 	return () => {
 	    //TODO: cleanup
 	};
@@ -226,8 +226,12 @@ async function pauseTilEnter(comment: string) {
 }
 //END debug functions
 
+/*
 ReactDOM.render(
     React.createElement(MyComponent),
     //<MyComponent />,
     document.getElementById('chainsviewer')
 );
+*/
+
+renderReact18(React.createElement(MyComponent),document.getElementById('chainsviewer'));
