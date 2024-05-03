@@ -20,8 +20,8 @@ def run_docking_script(user_id, job_id, docking_id, settings):
 
     try:
         script_path = f"{os.environ.get('SCRIPTDIR')}/multi.sh"
-        input_dir = f"{os.environ.get('PROJECTDROOT')}/media/user_{user_id}/job_{job_id}/docking_{docking_id}/input"
-        output_dir = f"{os.environ.get('PROJECTDROOT')}/media/user_{user_id}/job_{job_id}/docking_{docking_id}/output"
+        input_dir = f"{os.environ.get('PROJECTROOT')}/media/user_{user_id}/job_{job_id}/docking_{docking_id}/input"
+        output_dir = f"{os.environ.get('PROJECTROOT')}/media/user_{user_id}/job_{job_id}/docking_{docking_id}/output"
 
         # Pass preprocessing files to the script
         if settings['preproc_done']:
@@ -104,15 +104,15 @@ def process_pockets(protein_file, chains):
             inputpdb.write(protein_file.read())
             inputpdb.flush()
         # clean chains
-        script_path = f'{os.environ.get('SCRIPTDIR')}/receptor.py'
-        chimera_cmd = f'{os.environ.get('HOMEDIR')}/.local/src/chimera/bin/chimera'
+        script_path = f"{os.environ.get('SCRIPTDIR')}/receptor.py"
+        chimera_cmd = f"{os.environ.get('HOMEDIR')}/.local/src/chimera/bin/chimera"
         chainspdb = tempfile.NamedTemporaryFile(suffix=".pdb", delete=False)
         clean_chains_cmd = f'export IF={inputpdb.name} OF={chainspdb.name} CHAINS={chains}; {chimera_cmd} --nogui {script_path}'
         subprocess.run(clean_chains_cmd, shell=True)
         # chainspdb.flush()
         # get pockets with p2rank
-        prankcmd = f'{os.environ.get('HOMEDIR')}/.local/src/p2rank_2.4/prank'
-        prankconf = f'{os.environ.get('SCRIPTDIR')}/configs/blind.groovy'
+        prankcmd = f"{os.environ.get('HOMEDIR')}/.local/src/p2rank_2.4/prank"
+        prankconf = f"{os.environ.get('SCRIPTDIR')}/configs/blind.groovy"
         # pockets = tempfile.NamedTemporaryFile(suffix=".csv", delete=False)
         # pockets_cmd = f'{prankcmd} predict -c {prankconf} -f {chainspdb.name} -o {pockets.name}'
         pockets_cmd = f'{prankcmd} predict -c {prankconf} -f {chainspdb.name} -o /tmp/'
