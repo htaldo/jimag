@@ -5,8 +5,8 @@ var pocketsFilename;
 var preprocDone;
 
 window.clearPocketsTable = () => {
-    const tableBody = document.querySelector('#pocketsTable tbody');
-    tableBody.innerHTML = '';
+    const table = document.querySelector('#pocketsTable');
+    table.innerHTML = '';
 }
 
 window.clearChainString = () => {
@@ -16,6 +16,7 @@ window.clearChainString = () => {
 
 //request to compute pockets via p2rank
 document.getElementById("choosepocketsbtn").onclick=async() => {
+    i = 0; //reset the count
     await window.deletePockets();
     await window.clearPocketsTable();
     var pForm = document.getElementById('uploadProteinForm');
@@ -45,12 +46,21 @@ document.getElementById("choosepocketsbtn").onclick=async() => {
 }
 
 //request to poll pocket job status, and display the pockets when it's done
+let i = 0;
 function retrievePockets(jobId) {
     //console.log("JOBID: ", jobId);
+    const table = document.querySelector('#pocketsTable');
     fetch(`/retrieve_pockets/${jobId}/`)
     .then(response => response.json())
     .then(data => {
         if (data.status === 'pending') {
+	    i++;
+    	    table.innerHTML = `Loading (${i})... please wait!`;
+		if (i > 5) {
+    	    	    table.innerHTML = `This is taking too long,
+				       <br>
+				       something might have gone wrong.`;
+		}
             setTimeout(() => {
                 retrievePockets(jobId);
             }, 5000);
@@ -63,8 +73,13 @@ function retrievePockets(jobId) {
             preprocDone = true;
 
             const parsedPocketsCSV = parsePocketsCSV(pocketsFile);
-            displayPocketsTable(parsedPocketsCSV);
+	    if (parsedPocketsCSV != '') {
+            	displayPocketsTable(parsedPocketsCSV);
+	    } else {
+    		table.innerHTML = `Something went wrong!`
+	    }
         } else {
+	    // this won't work!
             console.log("retrievePockets: Something went wrong")
         }
     })
@@ -115,8 +130,24 @@ const parsePocket = (rank, prankIds) => {
 };
 
 const displayPocketsTable = (data) => {
-    //TODO: reset the table if the user presses the 'choose pockets' button again
+    const table = document.querySelector('#pocketsTable');
+    table.innerHTML = `
+	<thead>
+	</thead>
+	<tbody>
+	</tbody>
+    `
     const tableBody = document.querySelector('#pocketsTable tbody');
+    const tableHead = document.querySelector('#pocketsTable thead');
+    tableHead.innerHTML = `
+	<tr>
+            <th>Choose</th>
+            <th>Rank</th>
+            <th>Score</th>
+            <th>Probability</th>
+        </tr>
+
+    `
     data.forEach(entry => {
         const row = document.createElement('tr');
         //we can get rid of seq here; it's only for debugging purposes
