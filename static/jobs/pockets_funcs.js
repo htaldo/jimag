@@ -5,17 +5,19 @@ var pocketsFilename;
 var preprocDone;
 
 window.clearPocketsTable = () => {
-    //refresh pocket table and chainString
     const tableBody = document.querySelector('#pocketsTable tbody');
-    const stringDiv = document.getElementById('chainstring');
     tableBody.innerHTML = '';
+}
+
+window.clearChainString = () => {
+    const stringDiv = document.getElementById('chainstring');
     stringDiv.innerHTML = '';
 }
 
 //request to compute pockets via p2rank
 document.getElementById("choosepocketsbtn").onclick=async() => {
-    await window.clearPocketsTable();
     await window.deletePockets();
+    await window.clearPocketsTable();
     var pForm = document.getElementById('uploadProteinForm');
     var pFormData = new FormData(pForm);
     //var parsedPFormData = JSON.parse(pFormData);
@@ -59,8 +61,6 @@ function retrievePockets(jobId) {
             cleanProteinFilename = data.clean_protein_filename;
             pocketsFilename = data.pockets_filename;
             preprocDone = true;
-            console.log("CLEAN PROTEIN FILENAME: ", cleanProteinFilename);
-            console.log("POCKETS FILENAME: ", pocketsFilename);
 
             const parsedPocketsCSV = parsePocketsCSV(pocketsFile);
             displayPocketsTable(parsedPocketsCSV);

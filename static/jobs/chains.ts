@@ -136,6 +136,7 @@ window.deletePockets = async () => {
 window.loadReceptor = async (receptor) => {
     loadedReprs = [];
     components = {};
+    window.clearChainString();
     window.clearPocketsTable();
     plugin.clear();
     //console.log(receptor);
