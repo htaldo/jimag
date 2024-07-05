@@ -19,7 +19,7 @@
         <ul>
             {% for job in jobs %}
                 <li>
-                    <a href="{% url 'results' job.id 1 %}">Job {{ job.id }}</a> 
+                    <a href="{% url 'results' job.id 0 1 %}">Job {{ job.id }}</a> 
                     <form action="{% url 'delete_job' job.id %}" method="POST">
                         {% csrf_token %}
                         <button>
@@ -28,17 +28,28 @@
                     </form>
                 </li>
                 {% if job.id == current_job %}
-                    {% for pocket in pockets %}
-                        {% if pocket == current_pocket %}
-                            <li>
-                                <a href="{% url 'results' job.id pocket %}" class="active">-   Pocket {{ pocket }}</a> 
-                            </li>   
-                        {% else %}
-                            <li>
-                                <a href="{% url 'results' job.id pocket %}">-   Pocket {{ pocket }}</a> 
-                            </li>   
+
+
+                    {% for docking in dockings %}
+                        <li>
+                            <a href="{% url 'results' job.id docking.id 1 %}">───Docking {{ docking.id }}</a>
+                        </li>
+                        {% if docking.id == current_docking %}
+                            {% for pocket in pockets %}
+                                {% if pocket == current_pocket %}
+                                    <li>
+                                        <a href="{% url 'results' job.id 0 pocket %}" class="active">──────Pocket {{ pocket }}</a> 
+                                    </li>   
+                                {% else %}
+                                    <li>
+                                        <a href="{% url 'results' job.id 0 pocket %}">──────Pocket {{ pocket }}</a> 
+                                    </li>   
+                                {% endif %}
+                            {% endfor %}
                         {% endif %}
                     {% endfor %}
+
+
                 {% endif %}
             {% endfor %}
         </ul>

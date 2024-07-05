@@ -6,6 +6,8 @@ import * as ReactDOM from 'react-dom';
 
 import { DefaultPluginUISpec, PluginUISpec } from 'molstar/lib/mol-plugin-ui/spec';
 import { createPluginUI } from 'molstar/lib/mol-plugin-ui/index';
+import { ColorNames } from 'molstar/lib/mol-util/color/names';
+import { PluginCommands } from 'molstar/lib/mol-plugin/commands';
 import { PluginConfig } from 'molstar/lib/mol-plugin/config';
 import { InteractivityManager } from 'molstar/lib/mol-plugin-state/manager/interactivity';
 import { MolScriptBuilder as MS } from 'molstar/lib/mol-script/language/builder';
@@ -69,6 +71,9 @@ const MyComponent: React.FC = () => {
 		spec: MySpec,
 		render: renderReact18
 	    });
+
+	    const renderer = plugin.canvas3d!.props.renderer;
+	    PluginCommands.Canvas3D.SetSettings(plugin, { settings: { renderer: { ...renderer, backgroundColor: ColorNames.white /* or: 0xff0000 as Color */ } } });
 
 	    //const receptor = 'https://files.rcsb.org/download/1a3n.pdb';
 	    //const data = await plugin.builders.data.download({ url: receptor }, { state: { isGhost: true } });

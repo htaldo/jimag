@@ -10,27 +10,39 @@ import json
 
 
 # Create your views here.
-def results(request, current_job=None, current_pocket=None):
-    #current_job starts with a non-null value if the user directly visits the job id via url
+def results(request, current_job=None, current_docking=None, current_pocket=None):
+    #everything is done on basis of the current user
     user = request.user
+    jobs = Job.objects.filter(user=user)
+
+    #current_job starts with a non-null value if the user directly visits the job id via url
     if not current_job:
         latest_job = user.profile.latest_job
-        print(f"LATEST JOB:{latest_job}")
         if not latest_job: #if latest_job is null
-        # todo: consider the case where the user has no jobs
-            # TODO: This is redundant with delete_job()
-            user_job_ids = Job.objects.filter(user=user).values_list('id', flat=True)
-            print(f"USER JOB IDS:{user_job_ids}")
-            first_job = min(user_job_ids)
+            # todo: consider the case where the user has no jobs
+            # TODO: This is redundant with the lines in delete_job()
+            job_ids = jobs.values_list('id', flat=True)
+            first_job = min(job_ids)
             current_job = first_job
         else:
             current_job = latest_job
-    print(f"CURRENT JOB:{current_job}")
-    docking = Docking.objects.get(job=current_job).id
-    if not current_pocket:
-        current_pocket = [int(pocket) for pocket in Docking.objects.get(pk=docking).pockets.split(',')][0]
     if Job.objects.get(pk=current_job).user != request.user:
         return HttpResponseForbidden("You don't have access to this job.")
+
+    dockings = Docking.objects.filter(job=current_job)
+    if current_docking == None or current_docking == 0:
+        #find the first docking IN THE CURRENT JOB 
+        #TODO: cache this value so that it doesn't get calculated every time we change pockets in the same docking
+        docking_ids = dockings.values_list('id', flat=True)
+        first_docking = min(docking_ids)
+        current_docking = first_docking
+        #current_docking = Docking.objects.get(job=current_job).id
+    docking = current_docking
+    print("DOCKING: ", current_docking)
+
+    if not current_pocket:
+        current_pocket = [int(pocket) for pocket in Docking.objects.get(pk=docking).pockets.split(',')][0]
+
     wd = f"user_{user.id}/job_{current_job}/docking_{docking}/"
     od = f"{wd}output/"
     cpd = f"{wd}output/pocket_{current_pocket}/" # current pocket directory
@@ -43,22 +55,25 @@ def results(request, current_job=None, current_pocket=None):
     with open(vina_file, 'r') as file:
         vina_results = file.read()
 
+    print("DOCKINGS: ", dockings)
     return render(request, 'dashboard.html', {
         'job_info': job_info(current_job),
         'current_job': current_job,
         'current_job_files': current_job_files,
+        'current_docking' : current_docking,
         'current_pocket': current_pocket,
         'vina_results': vina_results,
         #'jobs': [job for job in Job.objects.filter(user=user)],
-        'jobs': list(Job.objects.filter(user=user).order_by('-id')),
-        'pockets': [int(pocket) for pocket in Docking.objects.get(pk=docking).pockets.split(',')]  # current job pockets
+        'jobs': list(jobs.order_by('-id')),
+        'dockings': list(Docking.objects.filter(job=current_job)),
+        'pockets': [int(pocket) for pocket in dockings.get(pk=docking).pockets.split(',')]  # current job pockets
     })
 
 
 def download_output(request, current_job):
     user = request.user
     docking = Docking.objects.get(job=current_job).id
-    wd = f"{settings.MEDIA_ROOT}/user_{user.id}/job_{current_job}/docking_{docking}/"
+    wd = f"{settings.MEDIA_ROOT}/user_{user.id}/job_{current_job}/docking_{current_docking}/"
 
     print(settings.MEDIA_ROOT)
     shutil.make_archive(f"{wd}output", 'zip', f"{wd}output/", verbose=True)
