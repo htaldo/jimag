@@ -6,8 +6,7 @@ from django.contrib.auth.models import User
 def gen_filepath(instance, filename):
     user_id = instance.user.id 
     job_id = instance.job.id
-    docking_id = instance.docking.id
-    return f"user_{user_id}/job_{job_id}/docking_{docking_id}/input/{filename}"
+    return f"user_{user_id}/job_{job_id}/input/{filename}"
 
 class Job(models.Model):
     job_type = models.CharField(max_length=50)
@@ -18,7 +17,6 @@ class Job(models.Model):
 class Protein(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     job = models.ForeignKey('Job', on_delete=models.CASCADE)
-    docking = models.ForeignKey('Docking', on_delete=models.CASCADE)
     protein_name = models.CharField(max_length=50, default='protein')
     created_at = models.DateTimeField(auto_now_add=True)
     pdb_id = models.CharField(max_length=50)
@@ -28,7 +26,6 @@ class Protein(models.Model):
 class Ligand(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     job = models.ForeignKey('Job', on_delete=models.CASCADE)
-    docking = models.ForeignKey('Docking', on_delete=models.CASCADE)
     ligand_name = models.CharField(max_length=50, default='ligand')
     created_at = models.DateTimeField(auto_now_add=True)
     external_id = models.CharField(max_length=50)
@@ -38,6 +35,8 @@ class Ligand(models.Model):
 class Docking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     job = models.ForeignKey('Job', on_delete=models.CASCADE)
+    protein = models.ForeignKey(Protein, on_delete=models.CASCADE, related_name='dockings')
+    ligand = models.ForeignKey(Ligand, on_delete=models.CASCADE, related_name='dockings')
     pockets = models.CharField(max_length=100)
 
 class Profile(models.Model):

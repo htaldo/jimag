@@ -38,11 +38,11 @@
                             {% for pocket in pockets %}
                                 {% if pocket == current_pocket %}
                                     <li>
-                                        <a href="{% url 'results' job.id 0 pocket %}" class="active">──────Pocket {{ pocket }}</a> 
+                                        <a href="{% url 'results' job.id docking.id pocket %}" class="active">──────Pocket {{ pocket }}</a> 
                                     </li>   
                                 {% else %}
                                     <li>
-                                        <a href="{% url 'results' job.id 0 pocket %}">──────Pocket {{ pocket }}</a> 
+                                        <a href="{% url 'results' job.id docking.id pocket %}">──────Pocket {{ pocket }}</a> 
                                     </li>   
                                 {% endif %}
                             {% endfor %}

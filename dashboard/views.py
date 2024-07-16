@@ -43,13 +43,12 @@ def results(request, current_job=None, current_docking=None, current_pocket=None
     if not current_pocket:
         current_pocket = [int(pocket) for pocket in Docking.objects.get(pk=docking).pockets.split(',')][0]
 
-    wd = f"user_{user.id}/job_{current_job}/docking_{docking}/"
-    od = f"{wd}output/"
-    cpd = f"{wd}output/pocket_{current_pocket}/" # current pocket directory
+    wd = f"user_{user.id}/job_{current_job}/"
+    cpd = f"{wd}docking_{docking}/pocket_{current_pocket}/" # current pocket directory
 
     current_job_files = {
         'conformers': f"/media/{cpd}modes.pdbqt",
-        'receptor': f"/media/{od}receptor.pdbqt",
+        'receptor': f"/media/{wd}receptor.pdbqt",
     }
     vina_file = f"{settings.MEDIA_ROOT}/{cpd}scores.txt"
     with open(vina_file, 'r') as file:
@@ -72,13 +71,15 @@ def results(request, current_job=None, current_docking=None, current_pocket=None
 
 def download_output(request, current_job):
     user = request.user
-    docking = Docking.objects.get(job=current_job).id
-    wd = f"{settings.MEDIA_ROOT}/user_{user.id}/job_{current_job}/docking_{current_docking}/"
+    td = f"{settings.MEDIA_ROOT}/user_{user.id}/tmp/"
+    wd = f"{settings.MEDIA_ROOT}/user_{user.id}/job_{current_job}/"
 
-    print(settings.MEDIA_ROOT)
-    shutil.make_archive(f"{wd}output", 'zip', f"{wd}output/", verbose=True)
+    os.makedirs(td, exist_ok=True)
+
+    print(f"zipping {wd}")
+    shutil.make_archive(f"{td}output", 'zip', wd, verbose=True)
     # create response to send the ZIP file for download
-    response = FileResponse(open(f"{wd}output.zip", 'rb'), content_type='application/zip')
+    response = FileResponse(open(f"{td}output.zip", 'rb'), content_type='application/zip')
     response['Content-Disposition'] = f'attachment; filename="output.zip"'
     return response
 
@@ -90,7 +91,8 @@ def job_info(job_id):
     info['created_at'] = job_instance.created_at
     info['receptor'] = Protein.objects.get(job=job_id).protein_name
     info['ligand'] = Ligand.objects.get(job=job_id).ligand_name
-    info['pockets'] = Docking.objects.get(job=job_id).pockets
+    #this needs refactoring becuase jobs can now have multiple dockings
+    info['pockets'] = Docking.objects.filter(job=job_id).first().pockets
     return info
 
 

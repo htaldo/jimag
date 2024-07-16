@@ -88,6 +88,7 @@ def jobs(request):
         elif post_type == 'run_job':
             settings = {'exhaustiveness': request.POST.get('exhaustiveness'),
                         'num_modes': request.POST.get('modes'),
+                        'num_runs': request.POST.get('runs'),
                         'chains': request.POST.get('chainString'),
                         'pockets': json.loads(request.POST.get('pockets')),
                         'preproc_done': request.POST.get('preprocDone')}
@@ -95,17 +96,17 @@ def jobs(request):
                 settings.update({'pockets_filename': request.POST.get('pocketsFilename'),
                                  'clean_protein_filename': request.POST.get('cleanProteinFilename')})
             docking_form = DockingForm(request.POST, request.FILES)
+            #THIS IS IMPORTANT. DOES HAVING TWO IDENTICAL CSRF TOKENS PROVOKE THE DOUBLE SUBMISSION?
             print("POST: ", request.POST)
 
-            job, docking = init_docking(request)
-            store_protein(request, docking, job)
-            store_ligand(request, docking, job)
+            job = init_job(request)
+            store_protein(request, job)
+            store_ligand(request, job)
             request.meta_data = {
                 'processed': True
             }
             request.session['job_metadata'] = [request.user.id,
-                                               job.id, docking.id,
-                                               settings]
+                                               job.id, settings]
             return redirect(reverse('run_docking'))                  # RUN!
     else:
         # render the jobs application
@@ -118,7 +119,7 @@ def jobs(request):
             return render(request, 'notloggedin.html')
 
 
-def init_docking(request):
+def init_job(request):
     # Create and link a new Job instance
     job = Job.objects.create(
         job_type='docking',
@@ -126,15 +127,17 @@ def init_docking(request):
     )
     job.job_name = f"job_{job.id}"
     job.save()
-    
+
+    """
     docking = Docking.objects.create(
         user=request.user,
         job=job,
     )
-    return job, docking
+    """
+    return job
 
 
-def store_protein(request, docking, job):
+def store_protein(request, job):
     # if 'protein_file' in request.FILES:  # will this still be necessary?
     protein_file = request.FILES['protein_file']
     protein_form = ProteinForm(request.POST, request.FILES)
@@ -142,20 +145,18 @@ def store_protein(request, docking, job):
         protein = protein_form.save(commit=False)
         protein.user = request.user
         protein.job = job
-        protein.docking = docking
         file_ext = os.path.splitext(protein.protein_file.name)[1]
         protein.protein_file.name = f'receptor{file_ext}'
         protein.save()
 
 
-def store_ligand(request, docking, job):
+def store_ligand(request, job):
     if 'ligand_file' in request.FILES:
         ligand_form = LigandForm(request.POST, request.FILES)
         if ligand_form.is_valid():
             ligand = ligand_form.save(commit=False)
             ligand.user = request.user
             ligand.job = job
-            ligand.docking = docking
             file_ext = os.path.splitext(ligand.ligand_file.name)[1]
             ligand.ligand_file.name = f'ligand{file_ext}'
             ligand.save()
@@ -165,8 +166,8 @@ def rundocking(request):
     if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
         return HttpResponse(status=204)
     else:
-        user, job, docking, settings = request.session.get('job_metadata', [])
-        result = run_docking_script.delay(user, job, docking, settings)
+        user, job, settings = request.session.get('job_metadata', [])
+        result = run_docking_script.delay(user, job, settings)
         job_id = result.id
         return render(request, 'running.html', {'job_id': job_id})
 
@@ -180,7 +181,7 @@ def check_progress(request):
     progress = job.meta.get('progress', 'Running')
 
     if progress == "Script completed successfully":
-        user_inst, job_inst, docking_inst, settings = request.session.get('job_metadata')
+        user_inst, job_inst, settings = request.session.get('job_metadata')
 
         if hasattr(request.user, 'profile'):
             request.user.profile.latest_job = job_inst

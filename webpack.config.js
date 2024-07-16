@@ -1,15 +1,15 @@
 const path = require('path')
 
 module.exports = {
-	//entry: './static/dashb/dock3.ts',
+	entry: './static/dashb/dock3.ts',
 	//entry: './static/dummy.ts',
-	entry: './static/jobs/chains.ts',
+	//entry: './static/jobs/chains.ts',
 	output: {
-		//filename: 'dock3_bundle.js',
+		filename: 'dock3_bundle.js',
 		//filename: 'dummy_bundle.js',
-		filename: 'chains_bundle.js',
-		//path: path.resolve(__dirname, 'static', 'dashb')
-		path: path.resolve(__dirname, 'static', 'jobs')
+		//filename: 'chains_bundle.js',
+		path: path.resolve(__dirname, 'static', 'dashb')
+		//path: path.resolve(__dirname, 'static', 'jobs')
 		//path: path.resolve(__dirname, 'static')
 	},
 	module: {
