@@ -116,7 +116,7 @@ def jobs(request):
                 'docking_form': docking_form
             })
         else:
-            return render(request, 'notloggedin.html')
+            return redirect('login')
 
 
 def init_job(request):

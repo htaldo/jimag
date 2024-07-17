@@ -23,7 +23,6 @@ from jobs.views import jobs, rundocking, check_progress, \
     process_protein, process_ligand, load_pockets, retrieve_pockets, dummy
 from users.views import register, log_in, log_out
 from dashboard.views import results, delete_job, download_output
-from uploader.views import UploadView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -46,7 +45,7 @@ urlpatterns = [
     path('download_output/<int:current_job>', download_output, name='download_output'),
     path('dummy/', dummy, name='dummy'),
     # TODO: delete this
-    path('', UploadView.as_view(), name='fileupload'),
+    path('', home, name='home'),
 ]
 
 if settings.DEBUG:
